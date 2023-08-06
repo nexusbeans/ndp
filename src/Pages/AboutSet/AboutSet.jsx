@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./AboutSet.scss";
 import { Col, Container, Row } from "react-bootstrap";
 import Header from "../../Components/Header/Header";
@@ -7,6 +7,9 @@ import ashishImg from '../../assets/images/ashish.jpg'
 import TitleWraper from "../../Components/TitleWraper";
 
 export default function AboutSet() {
+  useEffect(() => {
+    document.title = ": : NDP FOUNDATION -I AM ASHISH : :";
+  }, []);
   return (
     <>
       <Header />

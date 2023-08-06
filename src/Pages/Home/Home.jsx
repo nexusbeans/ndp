@@ -55,7 +55,7 @@ export default function Home() {
                   <li className="lidisc">Experience Truth as “I AM”</li>
                 </ul>
                 <p className="author bottom_titleLIne">
-                  NDP Foundation will communicate Sri Ashish’s learnings through
+                 <strong> NDP Foundation</strong> will communicate Sri Ashish’s learnings through
                   various conversations and media channels, first of which is a
                   book authored by Dr. Anil Joshi called I AM Ashish to “I AM”.
                 </p>

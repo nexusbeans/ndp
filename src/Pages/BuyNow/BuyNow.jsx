@@ -6,8 +6,10 @@ import booKImg from "../../assets/images/buy-book.png";
 import booKImgIC from "../../assets/images/titlei.png";
 import "./BuyNow.scss";
 import TitleWraper from "../../Components/TitleWraper";
-import { Link } from "react-router-dom";
-import BuyIcon from '../../assets/images/buy-iconitem.png'
+import BuyIcon_img from "../../assets/images/buyimgs.jpg";
+import bulkOrder from "../../assets/images/bulkorder.jpg";
+import BulkButton from "../../Components/Button/BulkButton";
+import Buybutton from "../../Components/Button/Buybutton";
 
 export default function BuyNow() {
   return (
@@ -36,11 +38,38 @@ export default function BuyNow() {
             <Row className=" support">
               <Col>
                 <div className="buy_items">
-                  <div className="buy_card">
-                    <div>
-                      <Link to="#" className="buyButton">
-                        BuyNow <span><img src={BuyIcon} alt="" /> </span>
-                      </Link>
+                  <div className="buy_card_outer">
+                    <div className="buy_card">
+                      <div className="bu_nowCard__inner">
+                        <img
+                          src={BuyIcon_img}
+                          alt="img"
+                          className="img-fluid order_iconbuld"
+                        />
+                      </div>
+                      <div className="bulkTitle">
+                        <h4>USA & Other Countries</h4>
+                      </div>
+                      <div className="buy_nowBtnItem_page">
+                        <Buybutton />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="buy_card_outer">
+                    <div className="buy_card">
+                      <div className="bu_nowCard__inner">
+                        <img
+                          src={bulkOrder}
+                          alt="img"
+                          className="img-fluid order_iconbuld"
+                        />
+                      </div>
+                      <div className="bulkTitle">
+                        <h4>Bulk Orders</h4>
+                      </div>
+                      <div className="buy_bulkBtnItem_page">
+                        <BulkButton />
+                      </div>
                     </div>
                   </div>
                 </div>

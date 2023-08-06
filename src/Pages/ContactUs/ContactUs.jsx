@@ -6,18 +6,16 @@ import Footer from "../../Components/Footer/Footer";
 import Iframe from "react-iframe";
 import TitleWraper from "../../Components/TitleWraper";
 import { Link } from "react-router-dom";
+import SocialIcons from "../../Components/SocialIcons";
 
 export default function ContactUs() {
   return (
     <>
-    <Header/>
+      <Header />
       <main className="Contactup_main default_layout" id="Contactus_mainID">
         <section className="sectin_contact story">
           <Container>
-            <TitleWraper
-                  MainTitle={"Contact Us"}
-                  subTitle={"Contact Us"}
-                />
+            <TitleWraper MainTitle={"Contact Us"} subTitle={"Contact Us"} />
             <Row className=" support">
               <Col md={12} className="contact_control">
                 {/*<div class="contactdata">*/}
@@ -47,20 +45,24 @@ export default function ContactUs() {
                     </div>
                  
                 </div> */}
-                <div className=" contmap contmap_items">
+                <div className="d-flex align-items-center gap-5 layer_fabContact ">
+                  <div className=" contmap contmap_items">
                     <div className="Inner_colBlock">
                       <i className="fa fa-envelope email" />
                     </div>
                     <div className=" addre">
                       <p> Email </p>
-                      <Link to="mailto:info@ndpfoundation.com"
-                       
+                      <Link
+                        to="mailto:info@ndpfoundation.com"
                         style={{ color: "#000!important" }}
                       >
-                        info@ndpfoundation.com 
+                        info@ndpfoundation.com
                       </Link>
                     </div>
-           
+                  </div>
+                  <div className="contact_fabIcon">
+                    <SocialIcons />
+                  </div>
                 </div>
               </Col>
               {/* <Col md={6} className="map">
@@ -75,11 +77,10 @@ export default function ContactUs() {
                 />
               </Col> */}
             </Row>
-     
           </Container>
         </section>
       </main>
-      <Footer/>
+      <Footer />
     </>
   );
 }

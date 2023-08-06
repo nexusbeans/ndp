@@ -13,6 +13,7 @@ const optionsNav = {
     autoplay: true,
     navText: ["Prev", "Next"],
     smartSpeed: 1000,
+    autoHeight:true,
     responsive: {
         0: {
             items: 1,
@@ -24,10 +25,10 @@ const optionsNav = {
             items: 1,
         },
         700: {
-            items: 1,
+            items: 2,
         },
         1000: {
-            items: 1,
+            items: 2,
 
         }
     },
