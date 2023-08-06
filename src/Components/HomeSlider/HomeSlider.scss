@@ -1,0 +1,14 @@
+.Home_slider{
+    .slider-items{
+        position: relative;
+    }
+    .owl-nav {
+        position: absolute;
+        top: 50%;
+        justify-content: space-between;
+        width: 100%;
+        display: flex;
+        transform: translateY(-50%);
+    }
+
+}

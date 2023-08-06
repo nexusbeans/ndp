@@ -1,0 +1,26 @@
+.banner_fold{
+    width: 100%;
+    height: 100%;
+    background: url(../../assets/images/bookbg.png) no-repeat;
+    background-size: cover;
+    padding: 60px 0 50px;
+
+}
+.unfold_Elements{
+    max-width: 570px;
+    width: 100%;
+}
+.img_bookLayer{
+    margin-bottom: -65px;
+    img{
+        transform: scale(1.2);
+    }
+}
+.user_foundImg{
+    img{
+        border-radius: 10px;
+    }
+}
+.reviewpadd{
+    margin: 41px 0 0;
+}

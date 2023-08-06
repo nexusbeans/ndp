@@ -1,0 +1,242 @@
+import React, { useEffect } from "react";
+import Header from "../../Components/Header/Header";
+import Footer from "../../Components/Footer/Footer";
+import HomeSlider from "../../Components/HomeSlider/HomeSlider";
+import { Button, Col, Container, Row } from "react-bootstrap";
+import aboutImg from "../../assets/images/ABOUT-NDP.jpg";
+import "./Home.scss";
+import contactImage from "../../assets/images/CONTACT-US-img.jpg";
+import TitleWraper from "../../Components/TitleWraper";
+import { FaUserPlus,FaLocationDot,FaEnvelope,FaComments } from "react-icons/fa6";
+
+export default function Home() {
+  useEffect(() => {
+    document.title = ": : NDP FOUNDATION -HOME : :";
+  }, []);
+  return (
+    <>
+      <Header />
+      <main className="Home_main default_layout mt-0" id="Home_mainID">
+        <HomeSlider />
+        <section className="section_Foundation story1">
+          <Container>
+            <TitleWraper
+              MainTitle={"About NDP Foundation"}
+              subTitle={"About NDP Foundation"}
+            />
+            <Row className="whatsbook" id="aboutndpfoun">
+              <Col md={6}>
+                <div className="about_image__outer">
+                  <img src={aboutImg} className="author img-fluid" alt="" />
+                </div>
+              </Col>
+              <Col md={6} className="leftpara">
+                <blockquote className="author">
+                  Non-Duality – A non-personal all-inclusive awareness. The
+                  underlying true nature of all existence is one and the
+                  same.
+                </blockquote>
+                <p className="author">
+                  NDP (Non-Duality Perspective) Foundation has been founded by
+                  Sri Ashish to communicate his learnings and experience on
+                  Realizing the Self.
+                </p>
+                <p className="author">
+                  The core learnings are captured in the Three-Fold Path below:
+                </p>
+                <ul className="list_itemBlock">
+                  <li className="lidisc">
+                    The Truth is non-dual <i>(Satya Advaita Hain)</i>
+                  </li>
+                  <li className="lidisc">
+                    Just “Be” in your daily life – practice discriminating
+                    between real and unreal, i.e. non-attachment to everything
+                  </li>
+                  <li className="lidisc">Experience Truth as “I AM”</li>
+                </ul>
+                <p className="author bottom_titleLIne">
+                  NDP Foundation will communicate Sri Ashish’s learnings through
+                  various conversations and media channels, first of which is a
+                  book authored by Dr. Anil Joshi called I AM Ashish to “I AM”.
+                </p>
+              </Col>
+            </Row>
+          </Container>
+        </section>
+
+        <section className="section_Universal story1 story_bg">
+          <Container className="parascrolled">
+            <h1 className="hd hd1111" style={{ color: "#e9ecef" }}>
+              Universal Truth
+            </h1>
+            <h2 className="hd1" id="universal">
+              <b>Creating Awareness of the Universal Truth</b>
+            </h2>
+            <Row className="story">
+              <div className="col-md-8 itia">
+                <div className="creatingpara">
+                  <p className="creatingawarness">
+                    <b>Buddhism: </b>
+                    <i>“We are all part of One indivisible whole”</i>
+                  </p>
+                  <p className="creatingawarness">
+                    <b>Christianity:</b>
+                    <i>
+                      “Jesus said to them: Amen, amen, I say to you, before
+                      Abraham was made, I AM.” – (John 8:58)
+                    </i>
+                  </p>
+                  <p className="creatingawarness">
+                    <b>Hindu Upanishads:</b>
+                    <i>
+                      “The eye cannot see it; mind cannot grasp it. <br />
+                      The deathless Self has neither caste nor race, <br />
+                      Neither eyes nor ears nor hands nor feet. <br />
+                      Sages say this Self is infinite in the great <br />
+                      And in the small, everlasting and changeless, <br />
+                      The source of life.” - (Mundaka i.1.6)
+                    </i>
+                  </p>
+                  <p className="creatingawarness">
+                    <b>Islam: </b>
+                    <i>
+                      Islam means surrender – unconditional surrender to the
+                      will of God. “There is no god but God and Muhammad is his
+                      messenger”
+                    </i>
+                  </p>
+                  <p className="creatingawarness">
+                    <b>Judaism: </b>
+                    <i>I AM who I AM” – (Book of Exodus 3:14)</i>
+                  </p>
+                </div>
+              </div>
+              <div className="col-md-4 parascrolled itia">
+                <div className="creatingpararight">
+                  <p className="creatingawarness">
+                    <i>
+                      All spiritual paths have only one key message. There is
+                      only one undivided, permanent, and eternal consciousness.
+                      Truth is non-dual, and Reality is singular. Humans also
+                      have one fundamental desire - to remain happy and
+                      eliminate suffering. This quest has existed throughout
+                      human history, and thousands of books and scriptures have
+                      been written and passed on from one generation to the
+                      other.
+                    </i>
+                  </p>
+                  <p className="creatingawarness">
+                    <i>
+                      I AM Ashish to “I AM” has been written to create awareness
+                      and simplify these two fundamental pursuits of human
+                      beings - discover the Self (the truth) and remain happy
+                      amid worldly chaos.
+                    </i>
+                  </p>
+                </div>
+              </div>
+            </Row>
+          </Container>
+        </section>
+
+        <section className="section_msgDrop reviewpadd">
+          <Container >
+            <TitleWraper
+              MainTitle={"Contact with Us"}
+              subTitle={"Drop a Message"}
+            />
+            <div className="row whatsbook">
+              <Col md={6}>
+                <div className="about_image__outer">
+                  <img
+                    src={contactImage} alt="" className="contact author"
+                  />
+                </div>
+              </Col>
+              <Col md={6} className="rightform">
+                <form action="mail1.php" method="post" className="rightform_elements">
+                  <div id="blocks" className="form-group">
+                    <div className="col-md-12">
+                      <div id="block" className="form-group">
+                        <input
+                          name="nameBA"
+                          id="nameBA"
+                          type="text"
+                          placeholder="Your Name"
+                          className="form-control form-field"
+                          required=""
+                        />
+                         <div className="icon_fields"><FaUserPlus/></div>
+
+                      </div>
+                    </div>
+                    <div className="col-md-12">
+                      <div className="clearfix" />
+                      <div id="block" className="form-group">
+                        <input
+                          name="emailBA"
+                          type="email"
+                          placeholder="Email Address"
+                          className="form-control form-field"
+                          required=""
+                        />
+                        <div className="icon_fields"><FaEnvelope/></div>
+                      </div>
+                    </div>
+                    <div className="col-md-12">
+                      <div className="clearfix" />
+                      <div id="block" className="form-group">
+                        <input
+                          name="residenceBA"
+                          type="text"
+                          placeholder="Country of Residence"
+                          className="form-control form-field"
+                          required=""
+                        />
+                      <div className="icon_fields"><FaLocationDot/></div>
+                      </div>
+                    </div>
+                    <div className="col-md-12">
+                      <div id="block" className="form-group">
+                        <select
+                          className="form-control form-field"
+                          name="selectcenterBA"
+                        >
+                          <option>Select Purpose</option>
+                          <option value="General Contact">
+                            General Contact
+                          </option>
+                          <option value="Book Related Questions">
+                            Book Related Questions
+                          </option>
+                        </select>
+                        <div className="icon_fields"><FaComments/></div>
+                      </div>
+                    </div>
+                    <div className="col-md-12">
+                      <div id="block" className="form-group1">
+                        <textarea
+                          name="messageBA"
+                          id="messageBA"
+                          placeholder="Enter your Message"
+                          className="form-control form-field"
+                          defaultValue={""}
+                        />
+                      </div>
+                    </div>
+                    <div className="button_Outer ">
+                      <Button className="submit_btn">
+                        Send
+                      </Button>
+                    </div>
+                  </div>
+                </form>
+              </Col>
+            </div>
+          </Container>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
+}

@@ -1,0 +1,18 @@
+.user_artical {
+    margin: 30px 0 0;
+}
+.Item_sectionUser {
+    background-color: #77c1c4;
+    box-shadow: 1px 0px 14px 0px rgba(0, 0, 0, 0.16);
+    p {
+        margin: 0;
+        padding: 30px 0;
+    }
+}
+.user_image {
+    justify-content: center;
+    display: flex;
+    img {
+        max-width: 100%;
+    }
+}

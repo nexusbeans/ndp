@@ -1,0 +1,42 @@
+.addre{
+    a{
+        color: #000;
+    }
+    p{
+        font-weight: 600;
+        margin: 0;
+    }
+
+}
+.contact_control{
+    i{
+        padding: 0;
+        margin: 0;
+        font-size: 40px !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+}
+.contmap {
+    .row{
+        align-items: center;
+    }
+}
+.map{
+    iframe{
+        width: 100%;
+    }
+}
+.contmap_items{
+    display: flex;
+   gap: 20px;
+    align-items: center;
+}
+@media screen and (max-width: 767px) {
+    .support {
+        padding-top: 0;
+    }
+
+}
