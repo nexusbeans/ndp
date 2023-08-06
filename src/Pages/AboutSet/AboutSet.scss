@@ -16,3 +16,21 @@
         max-width: 100%;
     }
 }
+.item_religion{
+    gap: 24px;
+}
+
+@media screen and (max-width:767px) {
+    .item_religion{
+        gap: 15px;
+        flex-direction: column;
+
+    }
+    .Item_sectionUser {
+        padding: 25px 0;
+    }
+    .Item_sectionUser p {
+ 
+        padding: 0px 0;
+    }
+}

@@ -81,10 +81,6 @@ body {
   padding-top: 7px;
 }
 
-.form-control {
-  width: 100%;
-}
-
 .footerright {
   background: #000000de;
   height: 180px;
@@ -128,8 +124,12 @@ body {
 
 .form-control {
   border: 1px solid #77c1c4;
+  color: #000000ad !important;
 }
 
+select {
+  color: #000000ad !important;
+}
 #leftt {
   left: -5%;
   color: #77c1c4;
@@ -327,10 +327,6 @@ a {
   color: #fff;
   font-size: 40px;
   background: rgb(0, 125, 185);
-}
-
-.form-control {
-  color: #555555b3 !important;
 }
 
 .yutbvideo_layer {
@@ -636,6 +632,8 @@ html {
 .leftparagraph {
   line-height: 28px;
   text-align: justify;
+  position: relative;
+  z-index: 2;
 }
 
 @media (orientation: landscape) {
@@ -894,7 +892,7 @@ nav.circle ul li a:after {
   background: transparent;
 }
 nav.circle ul li a:hover:after {
-  -webkit-animation: circle 1.5s ease-in forwards;
+  -webkit-animation: circle 1.5s ease-in forwars;
 }
 
 /* SHIFT */
@@ -999,7 +997,6 @@ nav.shift ul li a:hover:after {
   z-index: 1;
   left: 50%;
   transform: translateX(-50%);
-
 }
 
 .dropdown-content a {
@@ -1075,6 +1072,7 @@ nav.shift ul li a:hover:after {
 }
 .whyshouldcontnt {
   padding-top: 45px;
+  position: relative;
 }
 
 h1 {
@@ -1229,14 +1227,17 @@ a.anchor a:hover {
 }
 
 .default_layout {
-  margin: 0px 0 60px;
+  margin: 30px 0 60px;
 
   h2 {
     text-align: center;
     color: #f6921e;
   }
-}
 
+  .dropmsg {
+    padding: 0px 0 0px;
+  }
+}
 
 @media screen and (max-width: 1366px) {
   main {
@@ -1254,5 +1255,11 @@ a.anchor a:hover {
 @media screen and (max-width: 767px) {
   .default_layout {
     margin: 0px 0 30px;
+  }
+  .whtcontnt {
+    padding-top: 0px;
+  }
+  .layer_fabContact {
+    flex-direction: column;
   }
 }

@@ -13,6 +13,7 @@ import Policy from "./Pages/Policy/Policy";
 import TermsUsage from "./Pages/TermsUsage/TermsUsage";
 import IamBook from "./Pages/IamBook/IamBook";
 import Photos from "./Pages/Photos/Photos";
+import EventLive from "./Pages/EventLive/EventLive";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
       <Route path="policy-details" element={<Policy />} />
       <Route path="termsusage" element={<TermsUsage />} />
       <Route path="i-am-book" element={<IamBook />} />
+      <Route path="live-events" element={<EventLive />} />
       <Route path="photos" element={<Photos />} />
       <Route path="*" element={<PageError />} />
     </Routes>

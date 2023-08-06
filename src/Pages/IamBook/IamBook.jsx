@@ -22,7 +22,7 @@ export default function IamBook() {
             <Container>
               <Row>
                 <Col fluid>
-                  <div className="d-flex">
+                  <div className="d-flex unfold_Elements_outer">
                     <div className="ban_text unfold_Elements">
                       <strong>
                         UNFOLD AND <br />

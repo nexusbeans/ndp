@@ -13,7 +13,7 @@ export default function ContactUs() {
     <>
       <Header />
       <main className="Contactup_main default_layout" id="Contactus_mainID">
-        <section className="sectin_contact story">
+        <section className="sectin_contact">
           <Container>
             <TitleWraper MainTitle={"Contact Us"} subTitle={"Contact Us"} />
             <Row className=" support">

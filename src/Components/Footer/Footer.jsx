@@ -5,6 +5,7 @@ import twImage from '../../assets/images/tw.png'
 import youImage from '../../assets/images/youtube.png'
 import logoheader from '../../assets/images/logo.png'
 import { Link } from 'react-router-dom';
+import SocialIcons from '../SocialIcons';
 
 
 export default function Footer() {
@@ -13,7 +14,7 @@ export default function Footer() {
         <footer>
             <div className="footer_elemetsOuter ">
                 <div className="container footer_elemets__container">
-                    <div className="footer_elemets__row row">
+                    {/* <div className="footer_elemets__row row">
                         <div className="footer_col_element col-md-4">
                             <div className="footer_titelLayer">
                                 <div className="logo_footer">
@@ -108,29 +109,30 @@ export default function Footer() {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                     <div className="row footer__bottomBlock">
                         <div className="footer__blockInner">
-                            <div className="footer__leftBlockInner">
-                                <ul>
-                                    <li>
-                                        <a href="#">Terms of Service</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Privacy Policy</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Security</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className="footer__rightBlockInner">
+                        <div className='footSocial'>
+                            <SocialIcons/>
+                        </div>
+                        <div className="footer__rightBlockInner">
                                 <div className="coprightElemets">
                                     <p>
-                                    © Copyright NDP Foundation Inc.<a href="#"> reserve</a> All rights reserved.
+                                    © Copyright NDP Foundation Inc. <Link to="/">clarosalon.com</Link> All rights reserved.
                                     </p>
                                 </div>
                             </div>
+                            <div className="footer__leftBlockInner">
+                                <ul>
+                                    <li>
+                                        <Link to="/termsusage">Terms of Service</Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/policy-details">Privacy Policy</Link>
+                                    </li>
+                                </ul>
+                            </div>
+                
                         </div>
                     </div>
                 </div>

@@ -111,7 +111,7 @@ export default function Header() {
                           </Link>
                           <div className="dropdown-content">
                             <Link
-                             to="#"
+                             to="/live-events"
                             >
                               Live
                             </Link>

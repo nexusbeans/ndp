@@ -24,3 +24,32 @@
 .reviewpadd{
     margin: 41px 0 0;
 }
+
+// .read_bookOuter {
+    //     max-width: 990px;
+    //     width: 100%;
+    //     position: absolute;
+    //     bottom: -20px;
+    //     z-index: 1;
+    // }
+    
+    @media screen and (max-width:767px) {
+        .reviewpadd {
+            margin: 0 0 0;
+        }
+        .unfold_Elements_outer{
+            flex-direction: column;
+        }
+        .banner_fold {
+            padding: 20px 0 50px;
+        }
+        .img_bookLayer img {
+            transform: scale(1);
+        }
+        .ban_text strong {
+            font-size: 42px;
+            line-height: 50px;
+            max-width: 250px;
+            display: block;
+        }
+    }

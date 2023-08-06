@@ -68,7 +68,7 @@ export default function AboutSet() {
         <section className="Item_sectionUser">
           <Container>
             <Col>
-              <div className="d-flex gap-5">
+              <div className="d-flex item_religion">
               <p>
                 Prior to this time, <strong> Sri Ashish’s</strong> did not have any interest in
                 religion, spiritualism, or the non-material aspects of life. He
