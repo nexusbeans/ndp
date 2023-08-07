@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
 import { Col, Container, Row } from "react-bootstrap";
@@ -12,6 +11,7 @@ import BulkButton from "../../Components/Button/BulkButton";
 import Buybutton from "../../Components/Button/Buybutton";
 
 export default function BuyNow() {
+
   return (
     <>
       <Header />
@@ -47,10 +47,10 @@ export default function BuyNow() {
                           className="img-fluid order_iconbuld"
                         />
                       </div>
-                      <div className="bulkTitle">
+                      {/* <div className="bulkTitle">
                         <h4>USA & Other Countries</h4>
-                      </div>
-                      <div className="buy_nowBtnItem_page">
+                      </div> */}
+                      <div className="buy_nowBtnItem_page mt-2">
                         <Buybutton />
                       </div>
                     </div>
@@ -64,10 +64,10 @@ export default function BuyNow() {
                           className="img-fluid order_iconbuld"
                         />
                       </div>
-                      <div className="bulkTitle">
+                      {/* <div className="bulkTitle">
                         <h4>Bulk Orders</h4>
-                      </div>
-                      <div className="buy_bulkBtnItem_page">
+                      </div> */}
+                      <div className="buy_bulkBtnItem_page mt-2">
                         <BulkButton />
                       </div>
                     </div>

@@ -1,11 +1,16 @@
 import React from 'react';
 import "./Footer.scss";
-import fbImage from '../../assets/images/fb.png'
-import twImage from '../../assets/images/tw.png'
-import youImage from '../../assets/images/youtube.png'
-import logoheader from '../../assets/images/logo.png'
+// import fbImage from '../../assets/images/fb.png'
+// import twImage from '../../assets/images/tw.png'
+// import youImage from '../../assets/images/youtube.png'
+// import logoheader from '../../assets/images/logo.png'
 import { Link } from 'react-router-dom';
 import SocialIcons from '../SocialIcons';
+
+const adoholicTarget = () => {
+    window.open('https://adoholic.in', '_blank');
+};
+
 
 
 export default function Footer() {
@@ -118,7 +123,7 @@ export default function Footer() {
                         <div className="footer__rightBlockInner">
                                 <div className="coprightElemets">
                                     <p>
-                                    © Copyright NDP Foundation Inc. <Link to="/">clarosalon.com</Link> All rights reserved.
+                                    © Copyright NDP Foundation Inc. <Link to="/">domain.com</Link> All rights reserved. Developed by: <button className='blankTarget' onClick={adoholicTarget}> adoholic.in</button>
                                     </p>
                                 </div>
                             </div>

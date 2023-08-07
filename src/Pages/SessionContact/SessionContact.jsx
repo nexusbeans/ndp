@@ -4,6 +4,7 @@ import Footer from "../../Components/Footer/Footer";
 import "./SessionContact.scss";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import TitleWraper from "../../Components/TitleWraper";
+import { Link } from "react-router-dom";
 
 export default function SessionContact() {
   return (
@@ -40,9 +41,12 @@ export default function SessionContact() {
                   </ul>
                 </div>
                 <a href="https://nexusbeans.in/avideos.html">
-                  <button type="button" className="buynowbtn">
-                    <b>I AM Satsang</b>
-                  </button>
+
+                  <div className="button_Outer ">
+                      <Link to='/live-events' className="submit_btn">
+                      Satsang Registration
+                      </Link>
+                    </div>
                 </a>
               </Col>
               <Col md={6}>
@@ -98,10 +102,10 @@ export default function SessionContact() {
                       </div>
 
                       <div className="button_Outer ">
-                        <Button className="submit_btn">
-                          Send
-                        </Button>
-                      </div>
+                      <Button className="submit_btn">
+                        Send
+                      </Button>
+                    </div>
                     </div>
                   </form>
                 </div>

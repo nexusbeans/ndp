@@ -45,4 +45,10 @@
         filter: grayscale(1);
       }
     }
+  }.showElements {
+    display: none;
   }
+  .showElement_value {
+    display: block;
+  }
+  

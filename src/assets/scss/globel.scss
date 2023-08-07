@@ -162,6 +162,7 @@ a:hover {
 a {
   color: #fff;
   text-decoration: none;
+  display: inline-block;
 }
 .popup-link {
   display: flex;
@@ -1125,12 +1126,6 @@ h1 {
   content: ""; /* Plus icon */
 }
 
-@media (max-width: 800px) {
-  #container {
-    width: 90%;
-  }
-}
-
 .ban_sec {
   width: 100%;
 }
@@ -1239,6 +1234,12 @@ a.anchor a:hover {
   }
 }
 
+button.blankTarget {
+  padding: 0;
+  font-size: inherit;
+  background: unset;
+}
+
 @media screen and (max-width: 1366px) {
   main {
     p {
@@ -1254,7 +1255,7 @@ a.anchor a:hover {
 }
 @media screen and (max-width: 767px) {
   .default_layout {
-    margin: 0px 0 30px;
+    margin: 30px 0 30px;
   }
   .whtcontnt {
     padding-top: 0px;

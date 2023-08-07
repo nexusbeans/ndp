@@ -37,7 +37,7 @@ export default function VideoItems() {
                         }
                         onClick={() => handleTabClick(1)}
                       >
-                        Live Streaming
+                       Photo Gallery
                       </button>
 
                       <button

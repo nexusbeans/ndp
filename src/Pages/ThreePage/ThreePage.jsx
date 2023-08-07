@@ -22,15 +22,14 @@ export default function ThreePage() {
                   <Accordion defaultActiveKey="0">
                     <Accordion.Item eventKey="0">
                       <Accordion.Header className="accordion_header">
-                        {" "}
-                        The Truth is non-dual{" "}
+                        The Truth is non-dual
                         <span className="sub_text">
                           <i className="qs"> (Satya Advaita Hain)</i>
                         </span>
                       </Accordion.Header>
                       <Accordion.Body>
                         <div className="accordion_items">
-                          <p>Understanding of Truth Contemplation thereafter :</p>
+                          <p>Understanding of Truth Contemplation thereafter:</p>
                           <ul className="ulli">
                             <li className="lidisc1">
                               Satya Advaita Hain means the Truth is non-dual.
@@ -89,7 +88,7 @@ export default function ThreePage() {
                       <Accordion.Body>
                         <div className="accordion_items">
                           <p>
-                            Implementing this understanding in your daily life :
+                            Implementing this understanding in your daily life:
                           </p>
 
                               <ul className="ulli">
@@ -111,7 +110,6 @@ export default function ThreePage() {
                                   begin non-attachment to everything.
                                 </li>
                               </ul>
-                        
                         </div>
                       </Accordion.Body>
                     </Accordion.Item>
@@ -121,7 +119,7 @@ export default function ThreePage() {
                       </Accordion.Header>
                       <Accordion.Body>
                         <div className="accordion_items">
-                          <p>Direct Experience :</p>
+                          <p>Direct Experience:</p>
                           <ul className="ulli">
                             <li className="lidisc1">
                             As you begin to continue implementation in your daily life you will begin to see the change within and without.

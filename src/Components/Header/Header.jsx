@@ -131,13 +131,13 @@ export default function Header() {
                         <div className="dropdown">
                           <Link className="header zoom">GALLERY</Link>
                           <div className="dropdown-content">
-                            <Link to="/video-items">Videos</Link>
-                            <Link
+                            <Link to="/video-items">Photo & Videos</Link>
+                            {/* <Link
                               to="/photos"
                               className="ancher"
                             >
                               Photos
-                            </Link>
+                            </Link> */}
                           </div>
                         </div>
                       </li>

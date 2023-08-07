@@ -1,46 +1,66 @@
-.BookImage_section_title{
+.BookImage_section_title {
     padding-left: 50px;
-    img{
+    img {
         max-width: 400px;
         width: 100%;
     }
 }
-.centerLayer{
-   align-items: center;
+.centerLayer {
+    align-items: center;
 }
 section.BookSection {
     padding: 40px 0;
 }
 
-.buy_card{
+.buy_card {
     text-align: center;
-    &_outer{
+    &_outer {
         max-width: 370px;
         display: flex;
         padding: 30px;
-    border: 2px solid #e9ecef;
-    border-radius: 12px;
-    
+        border: 2px solid #e9ecef;
+        border-radius: 12px;
     }
-    .bulkTitle{
+    .bulkTitle {
         margin: 12px 0;
-      h4{
-        font-size: 18px;
-        font-weight: 700;
-      }
+        h4 {
+            font-size: 18px;
+            font-weight: 700;
+        }
     }
-    .buy_nowBtnItem{
+    .buy_nowBtnItem {
         display: flex;
         justify-content: center;
     }
 }
-.BuyNow_main{
-    margin:  0 0 50px;
+.BuyNow_main {
+    margin: 0 0 50px;
 }
-.buy_items{
+.buy_items {
     display: flex;
     justify-content: center;
     gap: 20px;
     width: 100%;
+}
 
+@media screen and (max-width: 767px) {
+    .BookImage_section_title {
+        padding: 20px 0 0;
+        display: flex;
+        justify-content: center;
+    }
+    .BookImage_section_title img {
+        max-width: 240px;
+    }
+    .buy_items {
+        flex-direction: column;
+    }
+    .BookImage_section {
+        img {
+            max-width: 250px;
+        }
+    }
+    .buy_card_outer {
+        padding: 20px;
+    }
 }
