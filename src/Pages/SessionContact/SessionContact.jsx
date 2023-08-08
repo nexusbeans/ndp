@@ -40,21 +40,17 @@ export default function SessionContact() {
                     </li>
                   </ul>
                 </div>
-                <a href="https://nexusbeans.in/avideos.html">
-
                   <div className="button_Outer ">
                       <Link to='/live-events' className="submit_btn">
                       Satsang Registration
                       </Link>
                     </div>
-                </a>
               </Col>
               <Col md={6}>
                 <div className="backgrounfoprm Block_itemsMain">
                   <h2>Submit Query</h2>
                   <form action="mail1.php" method="post" className="rightform">
                     <div id="blocks" className="form-group">
-
                       <div id="block" className="form-group">
                         <input
                           name="nameBA"
@@ -66,8 +62,6 @@ export default function SessionContact() {
                         />
                       </div>
 
-
-
                       <div id="block" className="form-group">
                         <input
                           name="emailBA"
@@ -78,7 +72,6 @@ export default function SessionContact() {
                         />
                       </div>
 
-
                       <div id="block" className="form-group">
                         <input
                           name="residenceBA"
@@ -88,8 +81,6 @@ export default function SessionContact() {
                           required=""
                         />
                       </div>
-
-
 
                       <div id="block" className="form-group1">
                         <textarea

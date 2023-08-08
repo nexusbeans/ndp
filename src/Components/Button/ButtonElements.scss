@@ -45,7 +45,8 @@
         filter: grayscale(1);
       }
     }
-  }.showElements {
+  }
+  .hideElements {
     display: none;
   }
   .showElement_value {

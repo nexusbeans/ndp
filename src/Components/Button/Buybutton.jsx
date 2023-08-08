@@ -3,65 +3,79 @@ import './ButtonElements.scss'
 import BuyIcon from '../../assets/images/buy-iconitem.png'
 
 const Buybutton = () => {
-  const [countryData, setCountryData] = useState({
+  const countryData = {
     US: { id: 'country-1' },
     IN: { id: 'country-2' },
     // IT: { id: 'country-3' },
     // NL: { id: 'country-4' },
     // SG: { id: 'country-5' },
-  });
+  };
 
-  const [countryInfo, setCountryInfo] = useState(null);
+
+  const [countryId, setCountryId] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch('https://ipapi.co/country/')
-      .then(response => response.text())
-      .then(data => {
-        const country = data.trim();
-        setCountryInfo(countryData[country]);
+      .then((response) => response.text())
+      .then((data) => {
+        const countryInfo = countryData[data];
+        if (countryInfo) {
+          setCountryId(countryInfo.id);
+        } else {
+          setCountryId('not-found');
+        }
+        setLoading(false);
       });
   }, []);
 
 
   return (
     <>
+    {loading ? (
+      <div>Loading Data</div>
+    ) : (
+    <>
       <div className="buy_nowBtnItem">
-        {Object.keys(countryData).map(countryCode => (
-          <div
-            key={countryCode}
-            id={countryData[countryCode].id}
-            className={countryInfo && countryInfo.id === countryData[countryCode].id ? 'showElements showElement_value' : 'showElements'}
-          >
-            <a className="buyButton" rel='noreferrer' target="_blank" href={getLinkForCountry(countryCode)}>
-              BuyNow <span><img src={BuyIcon} alt="buyicon" /> </span>
-            </a>
-          </div>
-        ))}
-        {countryInfo === null && (
-          <div id="not-found" className="showElements showElement_value">
-            Loading...
-          </div>
-        )}
+        <div id="country-1" className={countryId === 'country-1' ? 'showElements' : 'hideElements'}>
+          <a className="buyButton" target="_blank" rel="noopener noreferrer" href="https://adoholic.in">
+            BuyNow <span><img src={BuyIcon} alt="buyicon" /> </span>
+          </a>
+        </div>
+        <div id="country-2" className={countryId === 'country-2' ? 'showElements' : 'hideElements'}>
+          <a className="buyButton" target="_blank" rel="noopener noreferrer" href="https://www.amazon.in/">
+            BuyNow <span><img src={BuyIcon} alt="buyicon" /> </span>
+          </a>
+        </div>
+        {/* <div id="country-3" className={countryId === 'country-3' ? 'showElements' : 'hideElements'}>
+        <a className="buyButton"  target="_blank" rel="noopener noreferrer" href="https://www.flipkart.com/">
+           BuyNow <span><img src={BuyIcon} alt="buyicon" /> </span>
+        </a>
       </div>
+      <div id="country-4" className={countryId === 'country-4' ? 'showElements' : 'hideElements'}>
+        <a className="buyButton"  target="_blank" rel="noopener noreferrer" href="https://www.shopify.com/">
+          BuyNow <span><img src={BuyIcon} alt="buyicon" /> </span>
+        </a>
+      </div>
+      <div id="country-5" className={countryId === 'country-5' ? 'showElements' : 'hideElements'}>
+        <a className="buyButton"  target="_blank" rel="noopener noreferrer" href="https://www.godaddy.com/">
+          BuyNow <span><img src={BuyIcon} alt="buyicon" /> </span>
+        </a>
+      </div> */}
+        <div
+          id="not-found"
+          className={countryId === 'not-found' ? 'showElements' : 'hideElements'}
+        >
+          <a className="buyButton" target="_blank" rel="noopener noreferrer" href="https://www.amazon.com/">
+            BuyNow <span><img src={BuyIcon} alt="buyicon" /> </span>
+          </a>
+        </div>
+      </div>
+    </>
+    )}
     </>
   )
 }
 export default Buybutton
 
 
-function getLinkForCountry(countryCode) {
-  switch (countryCode) {
-    case 'US':
-      return 'https://www.amazon.com';
-    case 'IN':
-      return 'https://www.amazon.in/';
-    // case 'IT':
-    //   return 'https://www.flipkart.com/';
-    // case 'NL':
-    //   return 'https://www.shopify.com/';
-    // case 'SG':
-    //   return 'https://www.godaddy.com/';
-    default:
-      return '';
-  }
-}
