@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Header from "../../Components/Header/Header";
 import "./ContactUs.scss";
@@ -9,10 +9,20 @@ import { Link } from "react-router-dom";
 import SocialIcons from "../../Components/SocialIcons";
 
 export default function ContactUs() {
+  useEffect(() => {
+    document.title = ": : NDP FOUNDATION -CONTACT US : :";
+  }, []);
   return (
     <>
       <Header />
-      <main className="Contactup_main default_layout" id="Contactus_mainID">
+      <main className="Contactup_main default_layout mt-0" id="Contactus_mainID">
+      <section className="contact__banner">
+        <Container fluid>
+          <div className="banner_contactLayout">
+            <h2>Our Support</h2>
+          </div>
+        </Container>
+      </section>
         <section className="sectin_contact">
           <Container>
             <TitleWraper MainTitle={"Contact Us"} subTitle={"Contact Us"} />

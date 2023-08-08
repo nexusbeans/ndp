@@ -5,7 +5,7 @@ import HomeSlider from "../../Components/HomeSlider/HomeSlider";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import aboutImg from "../../assets/images/ABOUT-NDP.jpg";
 import "./Home.scss";
-import contactImage from "../../assets/images/CONTACT-US-img.jpg";
+import contactImage from "../../assets/images/touch.jpg";
 import TitleWraper from "../../Components/TitleWraper";
 import { FaUserPlus,FaLocationDot,FaEnvelope,FaComments } from "react-icons/fa6";
 

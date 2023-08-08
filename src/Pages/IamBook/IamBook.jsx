@@ -8,6 +8,7 @@ import readbook from "../../assets/images/readbook.png";
 import ndp from "../../assets/images/ndp.jpg";
 import img_bookSet from "../../assets/images/img_bookSet.png";
 import UserReviews from "../../Components/UserReviews";
+import Buybutton from "../../Components/Button/Buybutton";
 
 export default function IamBook() {
   useEffect(() => {
@@ -36,9 +37,8 @@ export default function IamBook() {
                           discovering their own true nature –{" "}
                           <i>
                             Sat-Chit-Ananda (Ever Existent-Ever Conscious-Ever
-                            Blissful) or (Being-Awareness-Bliss)
+                            Blissful) or (Being-Awareness-Bliss).
                           </i>{" "}
-                          .
                         </p>
                       </div>
                     </div>
@@ -114,7 +114,7 @@ export default function IamBook() {
             <Container >
             
               <h1 className="hd">Read this book</h1>
-              <h2 className="hd1" style={{ textAlign: "center" }}>
+              <h2 className="hd1" id="universal" style={{ textAlign: "center" }}>
                 <b style={{ color: "#333333c4" }}>
                   Why should you read this book?
                 </b>
@@ -185,6 +185,23 @@ export default function IamBook() {
                     that the spiritual mysticism has a perfect repeatable method
                     which remains to be explained by science.
                   </p>
+                </Col>
+              </Row>
+            </Container>
+          </section>
+          <section className="buy_looksection" id="LookUP">
+            <Container>
+              <Row>
+                <Col>
+                  <div className="layer_buyItems d-flex">
+                    <div className="LookTitle">
+                      <h3>Look Inside !</h3>
+                    </div>
+                    <div className="LookupBtn">
+                      <Buybutton/>
+                    </div>
+                  </div>
+
                 </Col>
               </Row>
             </Container>

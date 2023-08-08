@@ -123,7 +123,7 @@ export default function Footer() {
                         <div className="footer__rightBlockInner">
                                 <div className="coprightElemets">
                                     <p>
-                                    © Copyright NDP Foundation Inc. <Link to="/">domain.com</Link> All rights reserved. Developed by: <button className='blankTarget' onClick={adoholicTarget}> adoholic.in</button>
+                                    © Copyright NDP Foundation Inc. <Link to="/">ndpfoundation.com</Link> All rights reserved. Developed by: <button className='blankTarget' onClick={adoholicTarget}> adoholic.in</button>
                                     </p>
                                 </div>
                             </div>

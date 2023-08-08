@@ -72,9 +72,9 @@ export default function Header() {
                       </li>
                       <li>
                         <div className="dropdown">
-                          <Link className="header zoom">“I AM” – Book </Link>
+                          <Link  to="/i-am-book" className="header zoom">“I AM” – Book </Link>
                           <div className="dropdown-content">
-                            <Link to="/i-am-book" className="ancher">
+                            {/* <Link to="/i-am-book" className="ancher">
                               WHAT'S IN THE BOOK
                             </Link>
                             <Link
@@ -83,7 +83,7 @@ export default function Header() {
                             >
                               Why should you read this book?
                             </Link>
-                            <Link href="#" className="ancher">
+                            <Link href="" className="ancher">
                               LOOK INSIDE!
                             </Link>
                             <Link
@@ -97,7 +97,7 @@ export default function Header() {
                               className="ancher"
                             >
                               Reviews
-                            </Link>
+                            </Link> */}
                             <Link to="/BuyNow" className="ancher">
                               Buy Now
                             </Link>
@@ -110,11 +110,7 @@ export default function Header() {
                             EVENTS
                           </Link>
                           <div className="dropdown-content">
-                            <Link
-                             to="/live-events"
-                            >
-                              Live
-                            </Link>
+                            <Link to="/live-events">Live</Link>
                             <Link
                               to="/ashish/volunteering.html"
                               className="ancher"
@@ -148,11 +144,32 @@ export default function Header() {
                       </li>
                     </ul>
                   </nav>
+                  <div className="mobile_elmenets">
+                    <div className="donateIink d-flex ">
+                      <div className="NavBlockIcon">
+                        <Link to="/" target="_blank">
+                          <img
+                            src={ButtonLogo}
+                            className="headerlogo"
+                            alt="img"
+                          />
+                        </Link>
+                      </div>
+                      <div className="NavBlockIcon donateIcon">
+                        <Link to="" target="_blank">
+                          <img
+                            src={DonateImg}
+                            className="headerlogo"
+                            alt="img"
+                          />
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
-                
-                <div className="donateIink d-flex">
-                <div className="NavBlockIcon">
+                <div className="donateIink desktopBlock d-flex">
+                  <div className="NavBlockIcon">
                     <Link to="/" target="_blank">
                       <img src={ButtonLogo} className="headerlogo" alt="img" />
                     </Link>
@@ -162,7 +179,6 @@ export default function Header() {
                       <img src={DonateImg} className="headerlogo" alt="img" />
                     </Link>
                   </div>
-                 
                 </div>
                 <div
                   className="hamburger-linesOuter right_toggle"

@@ -15,7 +15,7 @@ const options = {
   dots: false,
   loop: true,
   autoplay: true,
-  navText: ["Prev", "Next"],
+  // navText: ["Prev", "Next"],
   smartSpeed: 1000,
   responsive: {
     0: {
@@ -43,7 +43,7 @@ export default function HomeSlider() {
     <>
       <section className='Home_slider'>
         <Container fluid>
-          <Row className="row">
+          <Row className="slider_elementsHome">
             <Col className='p-0'>
             <OwlCarousel className="slider-items owl-carousel" {...options}>
               <div class='item'>

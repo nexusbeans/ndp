@@ -50,6 +50,9 @@
         color: #0000006b;
     }
 }
+.mobile_elmenets{
+    display: none ;
+}
 
 .hamburger-lines {
     display: block;
@@ -97,6 +100,7 @@
         height: 36px;
     }
 }
+
 @media screen and (max-width: 767px) {
     .NavBarItem {
         transform: translateX(-100%);
@@ -112,6 +116,13 @@
     }
     .hamburger-linesOuter {
         display: block;
+    }
+    .mobile_elmenets{
+        display: block;
+        background: #fff;
+        justify-content: center;
+        display: flex;
+        padding-bottom: 30px;
     }
 
     .right_toggle_menu.right_toggle_menu_release {
@@ -137,8 +148,8 @@
             transform: rotate(-45deg);
         }
     }
-    .NavBlockIcon {
-        display: none;
+    .desktopBlock {
+        display: none !important;
     }
     // .NavItem_elements{
     //     position: relative;

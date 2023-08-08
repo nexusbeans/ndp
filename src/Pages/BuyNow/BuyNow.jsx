@@ -9,8 +9,13 @@ import BuyIcon_img from "../../assets/images/buyimgs.jpg";
 import bulkOrder from "../../assets/images/bulkorder.jpg";
 import BulkButton from "../../Components/Button/BulkButton";
 import Buybutton from "../../Components/Button/Buybutton";
+import { useEffect } from "react";
 
 export default function BuyNow() {
+  
+  useEffect(() => {
+    document.title = ": : NDP FOUNDATION -BUY NOW : :";
+  }, []);
 
   return (
     <>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Accordion, Col, Container, Row } from "react-bootstrap";
 import Header from "../../Components/Header/Header";
 import "./ThreePage.scss";
@@ -6,6 +6,9 @@ import Footer from "../../Components/Footer/Footer";
 import TitleWraper from "../../Components/TitleWraper";
 
 export default function ThreePage() {
+  useEffect(() => {
+    document.title = ": : NDP FOUNDATION -THREE-FOILD PATH : :";
+  }, []);
   return (
     <>
       <Header />

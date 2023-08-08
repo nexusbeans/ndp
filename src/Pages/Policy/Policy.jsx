@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Policy.scss";
 import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
@@ -6,6 +6,9 @@ import TitleWraper from "../../Components/TitleWraper";
 import { Col, Container, Row } from "react-bootstrap";
 
 const Policy = () => {
+  useEffect(() => {
+    document.title = ": : NDP FOUNDATION -Privact Policy : :";
+  }, []);
   return (
     <>
       <Header />

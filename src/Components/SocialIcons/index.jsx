@@ -16,7 +16,7 @@ const SocialIcons = () => {
           <li>
             <Link
               to="https://www.facebook.com/profile.php?id=100095348732723"
-              className="Icon_fab__link"
+              className="Icon_fab__link" target="_blank"
             >
               <FaFacebookF />
             </Link>{" "}
@@ -24,7 +24,7 @@ const SocialIcons = () => {
           <li>
             <Link
               to="https://www.youtube.com/@OfficialNdpfoundation"
-              className="Icon_fab__link"
+              className="Icon_fab__link" target="_blank"
             >
               <FaYoutube />
             </Link>{" "}
@@ -32,7 +32,7 @@ const SocialIcons = () => {
           <li>
             <Link
               to="https://www.instagram.com/ndpfoundationofficial/"
-              className="Icon_fab__link"
+              className="Icon_fab__link" target="_blank"
             >
               <FaInstagram />
             </Link>{" "}
@@ -40,7 +40,7 @@ const SocialIcons = () => {
           <li>
             <Link
               to="https://www.linkedin.com/company/97865333/admin/feed/posts/?feedType=following"
-              className="Icon_fab__link"
+              className="Icon_fab__link" target="_blank"
             >
               <FaLinkedinIn />
             </Link>{" "}

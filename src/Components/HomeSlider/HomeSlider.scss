@@ -1,5 +1,5 @@
-.Home_slider{
-    .slider-items{
+.Home_slider {
+    .slider-items {
         position: relative;
     }
     .owl-nav {
@@ -9,6 +9,29 @@
         width: 100%;
         display: flex;
         transform: translateY(-50%);
-    }
 
+        button {
+            span {
+                font-size: 60px;
+                color: #fff;
+                background: linear-gradient(117deg, rgb(119, 193, 196) 0%, rgb(246, 146, 30) 100%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
+        .owl-prev {
+            position: relative;
+            left: 25px;
+            span {
+            }
+        }
+        .owl-next {
+            position: relative;
+            right: 25px;
+            span {
+            }
+        }
+    }
 }

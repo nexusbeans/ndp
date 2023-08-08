@@ -23,8 +23,8 @@ export default function VideoItems() {
               <Col>
 
                 <TitleWraper
-                  MainTitle={"I AM Satsang"}
-                  subTitle={"I AM Satsang"}
+                  MainTitle={"Gallery"}
+                  subTitle={"Gallery"}
                 />
                 <div className=" streamingtab">
                   <div className="login-button-container clearfix">
@@ -55,9 +55,30 @@ export default function VideoItems() {
                 </div>
                 <div className="Video_block">
                   {activeTab === 1 && (
-                    <div className="login__form">
-                      <img src={img66} className="imggg img-fluid" alt="" />
-                      {/*<iframe width="1200" height="700" src="https://www.youtube.com/embed/Jx7B7yJsAwI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" style="border-radius: 13px;border: 4px solid #77c1c4;box-shadow: 0 0 11px rgb(0 0 0 / 68%);" allowfullscreen></iframe>*/}
+                    <div className="register__form">
+                      <div
+                        id="registration-form-wrapper "
+                        className="bottomframe Video_BlockItems"
+                      >
+                        <div className="Video_blockElements">
+                        <img src={img66} alt="" className="img-fluid"/>
+                        </div>
+                        <div className="Video_blockElements">
+                        <img src={img66} alt="" className="img-fluid"/>
+                        </div>
+                        <div className="Video_blockElements">
+                        <img src={img66} alt="" className="img-fluid"/>
+                        </div>
+                        <div className="Video_blockElements">
+                        <img src={img66} alt="" className="img-fluid"/>
+                        </div>
+                        <div className="Video_blockElements">
+                        <img src={img66} alt="" className="img-fluid"/>
+                        </div>
+                        <div className="Video_blockElements">
+                        <img src={img66} alt="" className="img-fluid"/>
+                        </div>
+                      </div>
                     </div>
                   )}
                   {activeTab === 2 && (
