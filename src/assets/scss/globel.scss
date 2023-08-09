@@ -1053,6 +1053,15 @@ nav.shift ul li a:hover:after {
 .map {
   padding-left: 0px !important;
 }
+.btnFix{
+  background: #fff;
+  &:hover{
+    background: #fff;
+  }
+  &:active{
+    background-color: #fff;
+  }
+}
 .formhd {
   font-size: 35px;
   color: #77c1c4;

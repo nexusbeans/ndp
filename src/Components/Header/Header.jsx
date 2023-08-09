@@ -75,10 +75,10 @@ export default function Header() {
                         <div className="dropdown">
                           <Link  to="/i-am-book" className="header zoom">“I AM” – Book </Link>
                           <div className="dropdown-content">
-                            <Link offset='80' target="_parent" to="#whatisinbook" className="ancher">
+                            {/* <Link offset='80' target="_parent" to="#whatisinbook" className="ancher">
                               WHAT'S IN THE BOOK
                             </Link>
-                            <AnchorLink
+                             <AnchorLink
                               href="#whatisinbook"
                               className="ancher" offset='80' 
                             >
@@ -98,7 +98,7 @@ export default function Header() {
                               className="ancher"
                             >
                               Reviews
-                            </Anchor>
+                            </Anchor> */}
                             <Link to="/BuyNow" className="ancher">
                               Buy Now
                             </Link>
