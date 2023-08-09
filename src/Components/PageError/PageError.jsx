@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import './PageError.scss'
@@ -6,6 +6,9 @@ import { Link } from 'react-router-dom'
 import { Col, Container, Row } from 'react-bootstrap'
 
 export default function PageError() {
+  useEffect(() => {
+    document.title = ": : NDP FOUNDATION -404 ERROR: :";
+  }, []);
   return (
     <>
         <Header/>

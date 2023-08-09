@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Anchor, Col, Container, Row } from "react-bootstrap";
 import "./Header.scss";
 import logoheader from "../../assets/images/logo.png";
 import DonateImg from "../../assets/images/Donatebtn.png";
 
 import ButtonLogo from "../../assets/images/button.png";
 import { Link, useLocation } from "react-router-dom";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 export default function Header() {
   const [isSticky, setIsSticky] = useState(false);
@@ -74,30 +75,30 @@ export default function Header() {
                         <div className="dropdown">
                           <Link  to="/i-am-book" className="header zoom">“I AM” – Book </Link>
                           <div className="dropdown-content">
-                            {/* <Link to="/i-am-book" className="ancher">
+                            <Link offset='80' target="_parent" to="#whatisinbook" className="ancher">
                               WHAT'S IN THE BOOK
                             </Link>
-                            <Link
-                              href="/ashish/i-am-book.html#readthisbook"
-                              className="ancher"
+                            <AnchorLink
+                              href="#whatisinbook"
+                              className="ancher" offset='80' 
                             >
                               Why should you read this book?
-                            </Link>
-                            <Link href="" className="ancher">
+                            </AnchorLink>
+                            <Anchor href="" className="ancher">
                               LOOK INSIDE!
-                            </Link>
-                            <Link
+                            </Anchor>
+                            <Anchor
                               href="/ashish/i-am-book.html#aboutauthor"
                               className="ancher"
                             >
                               About the Author
-                            </Link>
-                            <Link
+                            </Anchor>
+                            <Anchor
                               href="/ashish/i-am-book.html#review"
                               className="ancher"
                             >
                               Reviews
-                            </Link> */}
+                            </Anchor>
                             <Link to="/BuyNow" className="ancher">
                               Buy Now
                             </Link>
@@ -147,7 +148,7 @@ export default function Header() {
                   <div className="mobile_elmenets">
                     <div className="donateIink d-flex ">
                       <div className="NavBlockIcon">
-                        <Link to="/" target="_blank">
+                        <Link to="/i-am-book">
                           <img
                             src={ButtonLogo}
                             className="headerlogo"
@@ -170,7 +171,7 @@ export default function Header() {
 
                 <div className="donateIink desktopBlock d-flex">
                   <div className="NavBlockIcon">
-                    <Link to="/" target="_blank">
+                    <Link to="/i-am-book">
                       <img src={ButtonLogo} className="headerlogo" alt="img" />
                     </Link>
                   </div>

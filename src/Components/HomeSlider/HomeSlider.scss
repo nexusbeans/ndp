@@ -24,14 +24,15 @@
         .owl-prev {
             position: relative;
             left: 25px;
-            span {
-            }
         }
         .owl-next {
             position: relative;
             right: 25px;
-            span {
-            }
         }
+    }
+}
+@media screen and (max-width:767px) {
+    .Home_slider .owl-nav button span {
+        font-size: 30px;
     }
 }

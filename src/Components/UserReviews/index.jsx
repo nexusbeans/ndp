@@ -11,7 +11,6 @@ const optionsNav = {
     dots: false,
     loop: true,
     autoplay: true,
-    navText: ["Prev", "Next"],
     smartSpeed: 1000,
     autoHeight:true,
     responsive: {
