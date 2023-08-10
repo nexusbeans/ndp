@@ -113,36 +113,13 @@ const BulkButton = () => {
                       />
                     </div>
                   </div>
-                  <div className="button">
-                    <input
-                      name="submit"
-                      type="submit"
-                      defaultValue="Send"
-                      className="form-in-sub"
-                      style={{
-                        color: "rgb(255, 255, 255)",
-                        borderColor: "rgba(0, 0, 0, 0)",
-                        fontSize: 24,
-                        fontWeight: 500,
-                        textTransform: "none",
-                        borderRadius: 33,
-                        backgroundColor: "#77c1c4",
-                        textAlign: "center",
-                        padding: "8px 0px 8px 0px",
-                        width: "30%",
-              /* marginLeft: 20, */ margin: "24px 0px 0px 17px",
-                        height: 51
-                      }}
-                      data-nlok-ref-guid="7cf6ba16-7261-4572-9313-d3c237837b5b"
-                    />
-                    {/*<input name="submit" type="submit" value="Submit" class="form-in-sub" style="color: rgb(255, 255, 255);border-color: rgba(0, 0, 0, 0);font-size: 13px;font-weight: 500;text-transform: none;border-radius: 22px;background-color: #77c1c4;text-align: center;padding: 8px 0px 8px 0px;width: 30%;">*/}
-                    {/*<input  name="submit" type="submit" value="Submit" class="form-in-sub" style="color: rgb(255, 255, 255); border-color: rgba(0, 0, 0, 0); font-size: 13px; font-weight: 500;  text-transform: none; border-radius: 4px; background-color: #560f6d; text-align: center;padding: 8px 0px 8px 0px;width: 93%;" >*/}
-                  </div>
+                  <div className="button_Outer mt-3">
+                      <Button className="submit_btn">
+                        Send
+                      </Button>
+                    </div>
                 </div>
               </form>
-              {/*<p>Sri Ashish answers questions that are close to our heart but we never find a good solution to them. We struggle with them internally damaging our inner peace and happiness.</p>        */}
-              {/*   <p>Whether these are deeper questions related to God and spirituality or concerning worldly matters of children, relationships, and health. The book emphasizes how to truly know yourself and by knowing that how you can eliminate the root cause of all problems. The methods suggested are not easy to implement. Yet, they are most effective in achieving a state of constant happiness.</p>*/}
-              {/*   <p>This book allows you to explore the ideas of non-dualism and why it is so powerful among all spiritual paths. Why concepts like non-attachment and equanimity are the antidote to suffering and mental anguish that we all face in our daily lives.</p>*/}
             </div>
           </div>
 

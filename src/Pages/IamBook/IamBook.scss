@@ -8,6 +8,7 @@
 .unfold_Elements {
     max-width: 570px;
     width: 100%;
+    padding-right: 15px;
 }
 .img_bookLayer {
     margin-bottom: -65px;
@@ -25,7 +26,6 @@
 }
 .LookTitle {
     width: 50%;
-
     h3 {
         margin: 0;
         font-size: 30px;
@@ -72,13 +72,42 @@
 //     bottom: -20px;
 //     z-index: 1;
 // }
+.LookupBtn {
+    .submit_btn {
+        z-index: 1;
+    }
+}
+
+.read_bookOuter {
+    position: relative;
+    bottom: -21px;
+    &::after {
+        content: "";
+        right: -66%;
+        max-width: 360px;
+        width: 100%;
+        bottom: 3px;
+        position: absolute;
+        height: 58px;
+        background: url(../../assets/images/readbook-bottom.png) no-repeat;
+        background-size: contain;
+        z-index: -1;
+    }
+}
 
 @media screen and (max-width: 767px) {
+    
+.read_bookOuter {
+    &::after {
+        display: none;
+    }
+}
     .layer_buyItems {
         flex-direction: column;
         gap: 50px;
     }
-    .LookTitle,.LookupBtn {
+    .LookTitle,
+    .LookupBtn {
         width: 100%;
     }
     .LookupBtn::after {
@@ -89,7 +118,6 @@
         bottom: 0;
         right: 0;
     }
-    
 
     .LookTitle h3 {
         margin: 0;
@@ -115,5 +143,8 @@
         line-height: 50px;
         max-width: 250px;
         display: block;
+    }
+    .read_bookOuter {
+        bottom: 0px;
     }
 }

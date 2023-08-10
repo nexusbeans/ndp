@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
 import TitleWraper from "../../Components/TitleWraper";
-import { Col, Container, Row } from "react-bootstrap";
+import { Button, Col, Container, Row } from "react-bootstrap";
 import "./IamBook.scss";
 import readbook from "../../assets/images/readbook.png";
 import ndp from "../../assets/images/ndp.jpg";
@@ -18,7 +18,6 @@ export default function IamBook() {
     <>
       <Header />
       <main className="iamBook_main" id="IamBook_mainId">
-        <>
           <section className="ban_sec banner_fold">
             <Container>
               <Row>
@@ -111,8 +110,7 @@ export default function IamBook() {
             id="readthisbook"
             style={{ background: "#77c1c4" }}
           >
-            <Container >
-            
+            <Container>
               <h1 className="hd">Read this book</h1>
               <h2 className="hd1" id="universal" style={{ textAlign: "center" }}>
                 <b style={{ color: "#333333c4" }}>
@@ -120,8 +118,8 @@ export default function IamBook() {
                 </b>
               </h2>
               <Row className="whyshouldcontnt">
-                <Col md={6} className="relative">
-                  <div className="read_bookOuter">
+                <Col md={6} className="relative d-flex">
+                  <div className="read_bookOuter align-self-end">
                     <img src={readbook} className="img-fluid" alt="" />
                   </div>
                 </Col>
@@ -146,8 +144,6 @@ export default function IamBook() {
                     explains why non-attachment and equanimity are antidotes to
                     suffering and mental anguish in our daily lives.
                   </p>
-                  <br />
-                  <br />
                 </Col>
               </Row>
             </Container>
@@ -198,10 +194,12 @@ export default function IamBook() {
                       <h3>Look Inside !</h3>
                     </div>
                     <div className="LookupBtn">
-                      <Buybutton/>
+                      {/* <Buybutton/> */}
+                      <Button className="submit_btn">
+                        BUY NOW
+                      </Button>
                     </div>
                   </div>
-
                 </Col>
               </Row>
             </Container>
@@ -212,7 +210,7 @@ export default function IamBook() {
               <UserReviews />
             </div>
           </section>
-        </>
+  
       </main>
       <Footer />
     </>

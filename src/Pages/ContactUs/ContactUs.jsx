@@ -55,7 +55,7 @@ export default function ContactUs() {
                     </div>
                  
                 </div> */}
-                <div className="d-flex align-items-center gap-5 layer_fabContact ">
+                <div className="d-flex align-items-center gap-5 layer_fabContact justify-content-center ">
                   <div className=" contmap contmap_items">
                     <div className="Inner_colBlock">
                       <i className="fa fa-envelope email" />

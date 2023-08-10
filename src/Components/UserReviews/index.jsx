@@ -7,7 +7,7 @@ import aunty from '../../assets/images/m1.jpg'
 const optionsNav = {
     margin: 10,
     responsiveClass: true,
-    nav: true,
+    nav: false,
     dots: false,
     loop: true,
     autoplay: true,

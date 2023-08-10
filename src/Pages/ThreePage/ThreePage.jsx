@@ -93,7 +93,6 @@ export default function ThreePage() {
                           <p>
                             Implementing this understanding in your daily life:
                           </p>
-
                               <ul className="ulli">
                                 <li className="lidisc1">
                                   Through this understanding of Truth just “Be”
