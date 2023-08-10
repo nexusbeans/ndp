@@ -9,6 +9,8 @@ import ndp from "../../assets/images/ndp.jpg";
 import img_bookSet from "../../assets/images/img_bookSet.png";
 import UserReviews from "../../Components/UserReviews";
 import Buybutton from "../../Components/Button/Buybutton";
+import { Link } from "react-router-dom";
+import Modals from "../../Components/Modals/Modals";
 
 export default function IamBook() {
   useEffect(() => {
@@ -148,6 +150,22 @@ export default function IamBook() {
               </Row>
             </Container>
           </section>
+          <section className="buy_looksection" id="LookUP">
+            <Container>
+              <Row>
+                <Col>
+                  <div className="layer_buyItems">
+                    <div className="LookTitle">
+                    <Modals ButtonModalTitle={"Look Inside !"}
+                      bodydata={"Book Will Be Available For From 1st September 2023"}
+                    />
+                      
+                    </div>
+                  </div>
+                </Col>
+              </Row>
+            </Container>
+          </section>
           <section id="aboutauthor" className="abouttheauthor">
             <Container >
               <TitleWraper
@@ -185,32 +203,30 @@ export default function IamBook() {
               </Row>
             </Container>
           </section>
+
+          <section className="ReviewSlide reviewpadd">
+            <div className="container" id="review">
+              <TitleWraper MainTitle={"Reviews"} subTitle={"Reviews"} />
+              <UserReviews />
+            </div>
+          </section>
           <section className="buy_looksection" id="LookUP">
             <Container>
               <Row>
                 <Col>
                   <div className="layer_buyItems d-flex">
-                    <div className="LookTitle">
-                      <h3>Look Inside !</h3>
-                    </div>
                     <div className="LookupBtn">
                       {/* <Buybutton/> */}
-                      <Button className="submit_btn">
-                        BUY NOW
-                      </Button>
+                      <Modals ButtonModalTitle={"Look Inside !"}
+                      bodydata={"Book Will Be Available For From 1st September 2023"}
+                    />
+                     
                     </div>
                   </div>
                 </Col>
               </Row>
             </Container>
           </section>
-          <section className=" reviewpadd">
-            <div className="container" id="review">
-              <TitleWraper MainTitle={"Reviews"} subTitle={"Reviews"} />
-              <UserReviews />
-            </div>
-          </section>
-  
       </main>
       <Footer />
     </>

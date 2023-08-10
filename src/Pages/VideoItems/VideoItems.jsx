@@ -37,7 +37,7 @@ export default function VideoItems() {
                         }
                         onClick={() => handleTabClick(1)}
                       >
-                       Photo Gallery
+                        Photo Gallery
                       </button>
 
                       <button
@@ -56,7 +56,7 @@ export default function VideoItems() {
                 <div className="Video_block">
                   {activeTab === 1 && (
                     <div className="register__form">
-                      <div
+                      {/* <div
                         id="registration-form-wrapper "
                         className="bottomframe Video_BlockItems"
                       >
@@ -78,17 +78,21 @@ export default function VideoItems() {
                         <div className="Video_blockElements">
                         <img src={img66} alt="" className="img-fluid"/>
                         </div>
+                      </div> */}
+                      <div class="text-center">
+                      <h3 class="h2">This Page is Under Development</h3>
+              
                       </div>
                     </div>
                   )}
                   {activeTab === 2 && (
                     <div className="register__form">
-                      <div
+                      {/* <div
                         id="registration-form-wrapper "
                         className="bottomframe Video_BlockItems"
                       >
                         <div className="Video_blockElements">
-                          {/*<div class="frame">*/}
+        
                           <Iframe
                             width={350}
                             height={315}
@@ -99,10 +103,10 @@ export default function VideoItems() {
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowFullScreen=""
                           />
-                          {/*</div>*/}
+      
                         </div>
                         <div className="Video_blockElements">
-                          {/*<div clasiframes="frame">*/}
+                 
                           <Iframe
                             width={350}
                             height={315}
@@ -113,10 +117,10 @@ export default function VideoItems() {
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowFullScreen=""
                           />
-                          {/*</div>*/}
+       
                         </div>
                         <div className="Video_blockElements">
-                          {/*<div class="frame">*/}
+      
                           <Iframe
                             width={350}
                             height={315}
@@ -127,8 +131,6 @@ export default function VideoItems() {
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowFullScreen=""
                           />
-                          {/*<iframe width="300" height="315" style="border-radius: 12px;margin-left: 285%;" src="https://www.youtube.com/embed/Jx7B7yJsAwI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>*/}
-                          {/*</div>*/}
                         </div>
 
                         <div className="Video_blockElements">
@@ -167,6 +169,10 @@ export default function VideoItems() {
                             allowFullScreen=""
                           />
                         </div>
+                      </div> */}
+                      <div class="text-center">
+                      <h3 class="h2">This Page is Under Development</h3>
+              
                       </div>
                     </div>
                   )}

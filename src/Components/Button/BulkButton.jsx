@@ -43,29 +43,6 @@ const BulkButton = () => {
                         required=""
                         data-nlok-ref-guid="6bc796b6-1a94-4428-9ad9-fa69ddf2824b"
                       />
-                      <div
-                        id="norton-idsafe-field-styling-divId"
-                        style={{
-                          height: "43.63636363636363px",
-                          maxWidth: "43.63636363636363px",
-                          verticalAlign: "top",
-                          position: "absolute",
-                          top: "8.181818181818183px",
-                          left: "210.00274926686217px",
-                          cursor: "pointer",
-                          resize: "both",
-                          zIndex: 2147483646
-                        }}
-                      >
-                        <img
-                          id="norton-idsafe-field-logo-imgId"
-                          src="chrome-extension://admmjipmmciaobhojoghlmleefbicajg/images/ic-field-logo.svg"
-                          style={{
-                            height: "43.63636363636363px",
-                            maxWidth: "43.63636363636363px"
-                          }}
-                        />
-                      </div>
                     </div>
                   </div>
                   <div className="col-md-12">

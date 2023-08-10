@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Anchor, Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import "./Header.scss";
 import logoheader from "../../assets/images/logo.png";
 import DonateImg from "../../assets/images/Donatebtn.png";
 
 import ButtonLogo from "../../assets/images/button.png";
 import { Link, useLocation } from "react-router-dom";
-import AnchorLink from "react-anchor-link-smooth-scroll";
 
 export default function Header() {
   const [isSticky, setIsSticky] = useState(false);
@@ -112,12 +111,12 @@ export default function Header() {
                           </Link>
                           <div className="dropdown-content">
                             <Link to="/live-events">Live</Link>
-                            <Link
-                              to="/ashish/volunteering.html"
+                            {/* <Link
+                              to="/recording"
                               className="ancher"
                             >
                               Recordings
-                            </Link>
+                            </Link> */}
                             <Link to="/session-contact" className="ancher">
                               Session with Sri Ashish{" "}
                             </Link>
@@ -126,16 +125,16 @@ export default function Header() {
                       </li>
                       <li>
                         <div className="dropdown">
-                          <Link className="header zoom">GALLERY</Link>
-                          <div className="dropdown-content">
+                          <Link to="/video-items" className="header zoom">GALLERY</Link>
+                          {/* <div className="dropdown-content">
                             <Link to="/video-items">Photo & Videos</Link>
-                            {/* <Link
+                             <Link
                               to="/photos"
                               className="ancher"
                             >
                               Photos
-                            </Link> */}
-                          </div>
+                            </Link> 
+                          </div> */}
                         </div>
                       </li>
                       <li>
@@ -157,7 +156,7 @@ export default function Header() {
                         </Link>
                       </div>
                       <div className="NavBlockIcon donateIcon">
-                        <Link to="" target="_blank">
+                        <Link to="https://www.zeffy.com/en-US/donation-form/531ca771-879c-4969-90ac-e6dc287f0e61" target="_blank">
                           <img
                             src={DonateImg}
                             className="headerlogo"
@@ -176,7 +175,7 @@ export default function Header() {
                     </Link>
                   </div>
                   <div className="NavBlockIcon donateIcon">
-                    <Link to="" target="_blank">
+                    <Link to="https://www.zeffy.com/en-US/donation-form/531ca771-879c-4969-90ac-e6dc287f0e61" target="_blank">
                       <img src={DonateImg} className="headerlogo" alt="img" />
                     </Link>
                   </div>

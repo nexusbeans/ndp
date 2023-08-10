@@ -61,7 +61,6 @@ export default function ContactUs() {
                       <i className="fa fa-envelope email" />
                     </div>
                     <div className=" addre">
-                      <p> Email </p>
                       <Link
                         to="mailto:info@ndpfoundation.com"
                         style={{ color: "#000!important" }}

@@ -25,7 +25,7 @@ const options = {
       items: 1,
     },
     600: {
-      items: 2,
+      items: 1,
     },
     700: {
       items: 1,

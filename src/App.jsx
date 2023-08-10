@@ -14,6 +14,7 @@ import TermsUsage from "./Pages/TermsUsage/TermsUsage";
 import IamBook from "./Pages/IamBook/IamBook";
 import Photos from "./Pages/Photos/Photos";
 import EventLive from "./Pages/EventLive/EventLive";
+import Recording from "./Pages/Recording/Recording";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
       <Route path="i-am-book" element={<IamBook />} />
       <Route path="live-events" element={<EventLive />} />
       <Route path="photos" element={<Photos />} />
+      <Route path="recording" element={<Recording />} />
       <Route path="*" element={<PageError />} />
     </Routes>
     </BrowserRouter>

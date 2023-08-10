@@ -20,3 +20,35 @@
    display: flex;
    margin: auto;
 }
+
+.ReviewSlide {
+    .slider-items {
+        position: relative;
+    }
+    .owl-nav {
+        position: absolute;
+        top: 20%;
+        justify-content: space-between;
+        width: 100%;
+        display: flex;
+
+        button {
+            span {
+                font-size: 60px;
+                color: #fff;
+                background: linear-gradient(117deg, rgb(119, 193, 196) 0%, rgb(246, 146, 30) 100%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+        .owl-prev {
+            position: relative;
+            left: 10px;
+        }
+        .owl-next {
+            position: relative;
+            right: 10px;
+        }
+    }
+}
