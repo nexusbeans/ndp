@@ -10,6 +10,7 @@ import bulkOrder from "../../assets/images/bulkorder.jpg";
 import BulkButton from "../../Components/Button/BulkButton";
 import Buybutton from "../../Components/Button/Buybutton";
 import { useEffect } from "react";
+import Modals from "../../Components/Modals/Modals";
 
 export default function BuyNow() {
   
@@ -56,7 +57,10 @@ export default function BuyNow() {
                         <h4>USA & Other Countries</h4>
                       </div> */}
                       <div className="buy_nowBtnItem_page mt-2">
-                        <Buybutton />
+                        {/* <Buybutton /> */}
+                        <Modals ButtonModalTitle={"BUYNOW"}
+                      bodydata={"Book Will Be Available For From 1st September 2023"}
+                    />
                       </div>
                     </div>
                   </div>

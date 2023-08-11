@@ -15,15 +15,15 @@ export default function ContactUs() {
   return (
     <>
       <Header />
-      <main className="Contactup_main default_layout mt-0" id="Contactus_mainID">
+      <main className="Contactup_main default_layout mt-0 " id="Contactus_mainID">
       <section className="contact__banner">
         <Container fluid>
           <div className="banner_contactLayout">
-            <h2>Our Support</h2>
+            <h2>Our Experience</h2>
           </div>
         </Container>
       </section>
-        <section className="sectin_contact">
+        <section className="section_contact">
           <Container>
             <TitleWraper MainTitle={"Contact Us"} subTitle={"Contact Us"} />
             <Row className=" support">
@@ -55,7 +55,7 @@ export default function ContactUs() {
                     </div>
                  
                 </div> */}
-                <div className="d-flex align-items-center gap-5 layer_fabContact justify-content-center ">
+                <div className="d-flex align-items-center layer_fabContact justify-content-center ">
                   <div className=" contmap contmap_items">
                     <div className="Inner_colBlock">
                       <i className="fa fa-envelope email" />

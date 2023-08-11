@@ -45,7 +45,11 @@
     border: 4px solid #77c1c4;
     box-shadow: 0 0 11px rgb(0 0 0 / 68%);
 }
-
+.video_elements {
+    .story {
+        padding: 0px 0px 0px 0px;
+    }
+}
 @media screen and (max-width: 767px) {
 
 

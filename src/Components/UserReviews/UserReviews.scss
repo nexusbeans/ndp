@@ -1,15 +1,14 @@
-
-.hdreview{
+.hdreview {
     padding: 0 10px;
     font-size: 18px;
     margin: 15px 0 0;
 }
-.reviewLocation{
+.reviewLocation {
     font-size: 16px;
     margin: 0;
-    }
+}
 
-.user_review{
+.user_review {
     width: 110px;
     height: 110px;
     display: flex;
@@ -17,8 +16,8 @@
     border: 4px solid #fff;
     border-radius: 50%;
     overflow: hidden;
-   display: flex;
-   margin: auto;
+    display: flex;
+    margin: auto;
 }
 
 .ReviewSlide {
@@ -51,4 +50,5 @@
             right: 10px;
         }
     }
+
 }

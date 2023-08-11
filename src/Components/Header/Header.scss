@@ -43,7 +43,6 @@
     .NavBlockIcon img {
         max-width: 130px;
         width: 100%;
-     
     }
 }
 .parascrolled {
@@ -51,8 +50,8 @@
         color: #0000006b;
     }
 }
-.mobile_elmenets{
-    display: none ;
+.mobile_elmenets {
+    display: none;
 }
 
 .hamburger-lines {
@@ -92,12 +91,12 @@
 .hamburger-linesOuter {
     display: none;
 }
-.donateIink{
+.donateIink {
     align-items: flex-end;
     gap: 15px;
 }
-.donateIcon{
-    img{
+.donateIcon {
+    img {
         height: 36px;
     }
 }
@@ -105,7 +104,7 @@
 @media screen and (max-width: 767px) {
     .NavBarItem {
         transform: translateX(-100%);
-        transition: all .3s;
+        transition: all 0.3s;
 
         position: absolute;
         background: #fff;
@@ -118,7 +117,7 @@
     .hamburger-linesOuter {
         display: block;
     }
-    .mobile_elmenets{
+    .mobile_elmenets {
         display: block;
         background: #fff;
         justify-content: center;
@@ -169,8 +168,10 @@
             background-color: #fff;
         }
         nav ul li {
-          
-            padding:  0px;
+            padding: 0px;
         }
+    }
+    .donateIink {
+        gap: 10px;
     }
 }

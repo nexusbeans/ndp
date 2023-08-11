@@ -217,7 +217,7 @@ export default function IamBook() {
                   <div className="layer_buyItems d-flex">
                     <div className="LookupBtn">
                       {/* <Buybutton/> */}
-                      <Modals ButtonModalTitle={"Look Inside !"}
+                      <Modals ButtonModalTitle={"BUYNOW"}
                       bodydata={"Book Will Be Available For From 1st September 2023"}
                     />
                      
