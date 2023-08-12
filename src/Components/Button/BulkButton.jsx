@@ -30,7 +30,7 @@ const BulkButton = () => {
               subTitle={"Bulk Orders"}
             />
             <div className="">
-              <form action="mail1.php" method="post" className="rightform">
+              <form action="https://formsubmit.co/vaibhavmalviya777@gmail.com" method="post" className="rightform">
                 <div id="blocks" className="form-group">
                   <div className="col-md-12">
                     <div id="block" className="form-group">
@@ -40,8 +40,7 @@ const BulkButton = () => {
                         type="text"
                         placeholder="Your Name"
                         className="form-control form-field"
-                        required=""
-                        data-nlok-ref-guid="6bc796b6-1a94-4428-9ad9-fa69ddf2824b"
+                        required
                       />
                     </div>
                   </div>
@@ -53,7 +52,7 @@ const BulkButton = () => {
                         type="email"
                         placeholder="Email Address"
                         className="form-control form-field"
-                        required=""
+                        required
                       />
                     </div>
                   </div>
@@ -65,18 +64,19 @@ const BulkButton = () => {
                         type="text"
                         placeholder="Country of Residence"
                         className="form-control form-field"
-                        required=""
+                        required
                       />
                     </div>
                   </div>
                   <div className="col-md-12">
                     <div id="block" className="form-group">
-                      <select className="form-control form-field" name="selectcenterBA">
-                        <option>Select Purpose</option>
-                        <option value="">Contact</option>
-                        <option value="">Review</option>
-                        <option value="">Question</option>
-                      </select>
+                    <input
+                        name="residenceBA"
+                        type="text"
+                        placeholder="Number of Books"
+                        className="form-control form-field"
+                        required
+                      />
                     </div>
                   </div>
                   <div className="col-md-12">
@@ -91,7 +91,7 @@ const BulkButton = () => {
                     </div>
                   </div>
                   <div className="button_Outer mt-3">
-                      <Button className="submit_btn">
+                      <Button type='submit' className="submit_btn">
                         Send
                       </Button>
                     </div>

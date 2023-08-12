@@ -157,7 +157,7 @@ export default function IamBook() {
                   <div className="layer_buyItems">
                     <div className="LookTitle">
                     <Modals ButtonModalTitle={"Look Inside !"}
-                      bodydata={"Book Will Be Available For From 1st September 2023"}
+                      bodydata={"Book Will Be Available From 1st September 2023"}
                     />
                       
                     </div>
@@ -218,7 +218,7 @@ export default function IamBook() {
                     <div className="LookupBtn">
                       {/* <Buybutton/> */}
                       <Modals ButtonModalTitle={"BUYNOW"}
-                      bodydata={"Book Will Be Available For From 1st September 2023"}
+                      bodydata={"Book Will Be Available From 1st September 2023"}
                     />
                      
                     </div>

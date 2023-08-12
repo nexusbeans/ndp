@@ -56,17 +56,17 @@ export default function BuyNow() {
                       {/* <div className="bulkTitle">
                         <h4>USA & Other Countries</h4>
                       </div> */}
-                      <div className="buy_nowBtnItem_page mt-2">
+                      <div className="buy_nowBtnItem_page mt-2 d-flex justify-content-center">
                         {/* <Buybutton /> */}
                         <Modals ButtonModalTitle={"BUYNOW"}
-                      bodydata={"Book Will Be Available For From 1st September 2023"}
+                      bodydata={"Book Will Be Available From 1st September 2023"}
                     />
                       </div>
                     </div>
                   </div>
                   <div className="buy_card_outer">
                     <div className="buy_card">
-                      <div className="bu_nowCard__inner">
+                      <div className="bu_nowCard__inner r">
                         <img
                           src={bulkOrder}
                           alt="img"

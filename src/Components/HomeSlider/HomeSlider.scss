@@ -1,6 +1,9 @@
 .Home_slider {
     .slider-items {
         position: relative;
+        a{
+            width: 100%;
+        }
     }
     .owl-nav {
         position: absolute;

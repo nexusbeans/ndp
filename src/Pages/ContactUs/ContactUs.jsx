@@ -19,7 +19,7 @@ export default function ContactUs() {
       <section className="contact__banner">
         <Container fluid>
           <div className="banner_contactLayout">
-            <h2>Our Experience</h2>
+            <h2>Get in Touch</h2>
           </div>
         </Container>
       </section>
@@ -56,16 +56,16 @@ export default function ContactUs() {
                  
                 </div> */}
                 <div className="d-flex align-items-center layer_fabContact justify-content-center ">
-                  <div className=" contmap contmap_items">
+                  <div className="contmap contmap_items">
                     <div className="Inner_colBlock">
                       <i className="fa fa-envelope email" />
                     </div>
                     <div className=" addre">
                       <Link
-                        to="mailto:info@ndpfoundation.com"
+                        to="mailto:admin@ndpfoundation.com"
                         style={{ color: "#000!important" }}
                       >
-                        info@ndpfoundation.com
+                        admin@ndpfoundation.com
                       </Link>
                     </div>
                   </div>
