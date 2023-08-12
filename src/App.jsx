@@ -15,6 +15,7 @@ import IamBook from "./Pages/IamBook/IamBook";
 import Photos from "./Pages/Photos/Photos";
 import EventLive from "./Pages/EventLive/EventLive";
 import Recording from "./Pages/Recording/Recording";
+import FormSubmit from "./Pages/FormSubmit/FormSubmit";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
       <Route path="live-events" element={<EventLive />} />
       <Route path="photos" element={<Photos />} />
       <Route path="recording" element={<Recording />} />
+      <Route path="success" element={<FormSubmit />} />
       <Route path="*" element={<PageError />} />
     </Routes>
     </BrowserRouter>

@@ -10,8 +10,6 @@ import { useForm, ValidationError } from '@formspree/react';
 import { GoogleCaptcha } from "../../Components/GoogleCaptcha/GoogleCaptcha";
 
 
-
-
 function EventLive() {
   const [state, handleSubmit] = useForm("xyyqeplb");
   if (state.succeeded) {
@@ -35,6 +33,7 @@ function EventLive() {
               </Col>
               <Col md={6} className="rightform">
                 <form onSubmit={handleSubmit} method="post" className="rightform_elements">
+                <input type="hidden" value="Live Event Form" name="Form_Name" id="SESSION_PAGE_FORM" />
                   <div id="blocks" className="form-group">
                     <div className="col-md-12">
                       <div id="block" className="form-group">

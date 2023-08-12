@@ -106,7 +106,7 @@ const UserReviews = () => {
                 </div>
    
             </OwlCarousel>
-            </div>;
+            </div>
         </>
     )
 }

@@ -10,6 +10,7 @@ import TitleWraper from "../../Components/TitleWraper";
 import { FaUserPlus, FaLocationDot, FaEnvelope, FaComments } from "react-icons/fa6";
 import { useForm, ValidationError } from '@formspree/react';
 import { GoogleCaptcha } from "../../Components/GoogleCaptcha/GoogleCaptcha";
+import FormSubmit from "../FormSubmit/FormSubmit";
 
 
 export default function Home() {
@@ -20,7 +21,9 @@ export default function Home() {
 
   const [state, handleSubmit] = useForm("xyyqeplb");
   if (state.succeeded) {
-    return <p>Thanks for joining!</p>;
+    return (
+      <FormSubmit />
+    );
   }
   return (
     <>
@@ -164,6 +167,7 @@ export default function Home() {
               </Col>
               <Col md={6} className="rightform">
                 <form onSubmit={handleSubmit} method="post" className="rightform_elements">
+                  <input type="hidden" value="HOME_PAGE_FORM" name="Form_Name" id="HOME_PAGE_FORM" />
                   <div id="blocks" className="form-group">
                     <div className="col-md-12">
                       <div id="block" className="form-group">
@@ -186,6 +190,7 @@ export default function Home() {
                     <div className="col-md-12">
                       <div className="clearfix" />
                       <div id="block" className="form-group">
+
                         <input
                           id="email"
                           type="email"
