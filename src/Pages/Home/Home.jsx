@@ -227,7 +227,7 @@ export default function Home() {
                       <div id="block" className="form-group">
                         <select
                           className="form-control form-field"
-                          name="selectcenterBA" required
+                          name="Purpose" required
                         >
                           <option selected="true" disabled="disabled">Select Purpose</option>
                           <option value="General Contact">
