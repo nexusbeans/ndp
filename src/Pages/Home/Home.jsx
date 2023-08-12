@@ -7,12 +7,21 @@ import aboutImg from "../../assets/images/ABOUT-NDP.jpg";
 import "./Home.scss";
 import contactImage from "../../assets/images/touch.jpg";
 import TitleWraper from "../../Components/TitleWraper";
-import { FaUserPlus,FaLocationDot,FaEnvelope,FaComments } from "react-icons/fa6";
+import { FaUserPlus, FaLocationDot, FaEnvelope, FaComments } from "react-icons/fa6";
+import { useForm, ValidationError } from '@formspree/react';
+import { GoogleCaptcha } from "../../Components/GoogleCaptcha/GoogleCaptcha";
+
 
 export default function Home() {
+
   useEffect(() => {
     document.title = ": : NDP FOUNDATION -HOME : :";
   }, []);
+
+  const [state, handleSubmit] = useForm("xyyqeplb");
+  if (state.succeeded) {
+    return <p>Thanks for joining!</p>;
+  }
   return (
     <>
       <Header />
@@ -55,7 +64,7 @@ export default function Home() {
                   <li className="lidisc">Experience Truth as “I AM”</li>
                 </ul>
                 <p className="author bottom_titleLIne">
-                 <strong> NDP Foundation</strong> will communicate Sri Ashish’s learnings through
+                  <strong> NDP Foundation</strong> will communicate Sri Ashish’s learnings through
                   various conversations and media channels, first of which is a
                   book authored by Dr. Anil Joshi called I AM Ashish to “I AM”.
                 </p>
@@ -154,55 +163,68 @@ export default function Home() {
                 </div>
               </Col>
               <Col md={6} className="rightform">
-                <form action="mail1.php" method="post" className="rightform_elements">
+                <form onSubmit={handleSubmit} method="post" className="rightform_elements">
                   <div id="blocks" className="form-group">
                     <div className="col-md-12">
                       <div id="block" className="form-group">
                         <input
-                          name="nameBA"
-                          id="nameBA"
+                          name="nameuser"
+                          id="nameuser"
                           type="text"
                           placeholder="Your Name"
                           className="form-control form-field"
-                          required=""
+                          required
                         />
-                         <div className="icon_fields"><FaUserPlus/></div>
-
+                        <ValidationError
+                          prefix="Name User"
+                          field="nameuser"
+                          errors={state.errors}
+                        />
+                        <div className="icon_fields"><FaUserPlus /></div>
                       </div>
                     </div>
                     <div className="col-md-12">
                       <div className="clearfix" />
                       <div id="block" className="form-group">
                         <input
-                          name="emailBA"
+                          id="email"
                           type="email"
-                          placeholder="Email Address"
-                          className="form-control form-field"
-                          required=""
+                          name="email" className="form-control form-field" placeholder="Email Address"
                         />
-                        <div className="icon_fields"><FaEnvelope/></div>
+                        <ValidationError
+                          prefix="Email"
+                          field="email"
+                          errors={state.errors}
+                        />
+                        <div className="icon_fields"><FaEnvelope /></div>
                       </div>
                     </div>
                     <div className="col-md-12">
                       <div className="clearfix" />
                       <div id="block" className="form-group">
                         <input
-                          name="residenceBA"
+                          name="residence"
                           type="text"
                           placeholder="Country of Residence"
                           className="form-control form-field"
-                          required=""
+                          required
                         />
-                      <div className="icon_fields"><FaLocationDot/></div>
+                        <ValidationError
+                          prefix="residence"
+                          field="residence"
+                          errors={state.errors}
+                        />
+
+                        <div className="icon_fields"><FaLocationDot /></div>
                       </div>
                     </div>
                     <div className="col-md-12">
                       <div id="block" className="form-group">
                         <select
                           className="form-control form-field"
-                          name="selectcenterBA"
+                          name="selectcenterBA" required
                         >
-                          <option>Select Purpose</option>
+                          <option selected="true" disabled="disabled">Select Purpose</option>
                           <option value="General Contact">
                             General Contact
                           </option>
@@ -210,22 +232,26 @@ export default function Home() {
                             Book Related Questions
                           </option>
                         </select>
-                        <div className="icon_fields"><FaComments/></div>
+                        <div className="icon_fields"><FaComments /></div>
                       </div>
                     </div>
                     <div className="col-md-12">
                       <div id="block" className="form-group1">
                         <textarea
-                          name="messageBA"
-                          id="messageBA"
-                          placeholder="Enter your Message"
-                          className="form-control form-field"
-                          defaultValue={""}
+                          id="message"
+                          name="message" className="form-control form-field" placeholder="Enter your Message"
                         />
+                        <ValidationError
+                          prefix="Message"
+                          field="message"
+                          errors={state.errors}
+                        />
+
                       </div>
                     </div>
+                    <GoogleCaptcha />
                     <div className="button_Outer ">
-                      <Button className="submit_btn">
+                      <Button type='submit' className="submit_btn">
                         Send
                       </Button>
                     </div>

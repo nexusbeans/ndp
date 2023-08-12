@@ -5,9 +5,17 @@ import "./SessionContact.scss";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import TitleWraper from "../../Components/TitleWraper";
 import { Link } from "react-router-dom";
+import { useForm, ValidationError } from '@formspree/react';
+import { GoogleCaptcha } from "../../Components/GoogleCaptcha/GoogleCaptcha";
+import { FaUserPlus, FaLocationDot, FaEnvelope, FaComments } from "react-icons/fa6";
 
 export default function SessionContact() {
+  const [state, handleSubmit] = useForm("xyyqeplb");
+  if (state.succeeded) {
+    return <p>Thanks for joining!</p>;
+  }
   return (
+
     <>
       <Header />
       <main
@@ -49,56 +57,98 @@ export default function SessionContact() {
               <Col md={6}>
                 <div className="backgrounfoprm Block_itemsMain">
                   <h2>Submit Query</h2>
-                  <form action="mail1.php" method="post" className="rightform">
-                    <div id="blocks" className="form-group">
+                  <form onSubmit={handleSubmit} method="post" className="rightform_elements">
+                  <div id="blocks" className="form-group">
+                    <div className="col-md-12">
                       <div id="block" className="form-group">
+                      <input type="hidden" id="Event_Form" name="Event_Form" value="Event_Form"/>
                         <input
-                          name="nameBA"
-                          id="nameBA"
+                          name="nameuser"
+                          id="nameuser"
                           type="text"
                           placeholder="Your Name"
                           className="form-control form-field"
-                          required=""
+                          required
                         />
+                        <ValidationError
+                          prefix="Name User"
+                          field="nameuser"
+                          errors={state.errors}
+                        />
+                        <div className="icon_fields"><FaUserPlus /></div>
                       </div>
-
+                    </div>
+                    <div className="col-md-12">
+                      <div className="clearfix" />
                       <div id="block" className="form-group">
                         <input
-                          name="emailBA"
+                          id="email"
                           type="email"
-                          placeholder="Email Address"
-                          className="form-control form-field"
-                          required=""
+                          name="email" className="form-control form-field" placeholder="Email Address"
                         />
+                        <ValidationError
+                          prefix="Email"
+                          field="email"
+                          errors={state.errors}
+                        />
+                        <div className="icon_fields"><FaEnvelope /></div>
                       </div>
-
+                    </div>
+                    <div className="col-md-12">
+                      <div className="clearfix" />
                       <div id="block" className="form-group">
                         <input
-                          name="residenceBA"
+                          name="residence"
                           type="text"
                           placeholder="Country of Residence"
                           className="form-control form-field"
-                          required=""
+                          required
                         />
-                      </div>
+                        <ValidationError
+                          prefix="residence"
+                          field="residence"
+                          errors={state.errors}
+                        />
 
+                        <div className="icon_fields"><FaLocationDot /></div>
+                      </div>
+                    </div>
+                    {/* <div className="col-md-12">
+                      <div id="block" className="form-group">
+                        <select
+                          className="form-control form-field"
+                          name="selectcenterBA" required
+                        >
+                          <option selected="true" disabled="disabled">Date Pick</option>
+                          <option value="27 Aug 2023">
+                            27 Aug 2023
+                          </option>
+                        </select>
+                        <div className="icon_fields"><FaComments /></div>
+                      </div>
+                    </div> */}
+                    <div className="col-md-12">
                       <div id="block" className="form-group1">
                         <textarea
-                          name="messageBA"
-                          id="messageBA"
-                          placeholder="Enter your Message"
-                          className="form-control form-field"
-                          defaultValue={""}
+                          id="message"
+                          name="message" className="form-control form-field" placeholder="Enter your Message"
                         />
-                      </div>
+                        <ValidationError
+                          prefix="Message"
+                          field="message"
+                          errors={state.errors}
+                        />
 
-                      <div className="button_Outer ">
-                      <Button className="submit_btn">
+                      </div>
+                    </div>
+                    <GoogleCaptcha />
+                    <div className="button_Outer ">
+                      <Button type='submit' className="submit_btn">
                         Send
                       </Button>
                     </div>
-                    </div>
-                  </form>
+                  </div>
+                </form>
                 </div>
               </Col>
             </Row>

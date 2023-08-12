@@ -10,6 +10,7 @@
     .form-group1 {
         margin-bottom: 30px;
     }
+
 }
 .Title_sub__inner
 {
@@ -18,5 +19,10 @@
         li{
             margin-bottom: 20px;
         }
+    }
+}
+.Block_itemsMain{
+    .form-control {
+        min-height: 50px;
     }
 }
