@@ -50,5 +50,9 @@
             right: 10px;
         }
     }
+    .owl-carousel .owl-item img {
+        object-fit: cover;
+        object-position: top;
+    }
 
 }
