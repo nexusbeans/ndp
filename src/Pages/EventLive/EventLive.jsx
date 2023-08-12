@@ -8,12 +8,13 @@ import { FaUserPlus, FaLocationDot, FaEnvelope, FaComments, FaCalendar } from "r
 import EventCalender from '../../Components/EventCalender';
 import { useForm, ValidationError } from '@formspree/react';
 import { GoogleCaptcha } from "../../Components/GoogleCaptcha/GoogleCaptcha";
+import FormSubmit from '../FormSubmit/FormSubmit';
 
 
 function EventLive() {
   const [state, handleSubmit] = useForm("xyyqeplb");
   if (state.succeeded) {
-    return <p>Thanks for joining!</p>;
+    return <><FormSubmit/></>;
   }
   return (
     <>
@@ -37,7 +38,6 @@ function EventLive() {
                   <div id="blocks" className="form-group">
                     <div className="col-md-12">
                       <div id="block" className="form-group">
-                      <input type="hidden" id="Event_Form" name="Event_Form" value="Event_Form"/>
                         <input
                           name="nameuser"
                           id="nameuser"
