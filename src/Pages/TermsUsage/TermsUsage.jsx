@@ -9,7 +9,7 @@ const TermsUsage = () => {
   return (
     <>
       <Header />
-      <main className="TermsMain" id="TermsMainID">
+      <main className="TermsMain default_layout " id="TermsMainID">
         <section className="Terms_section story">
           <Container>
             <Row>

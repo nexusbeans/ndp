@@ -16,10 +16,10 @@ const adoholicTarget = () => {
 export default function Footer() {
     return (
         <>
-        <footer>
-            <div className="footer_elemetsOuter ">
-                <div className="container footer_elemets__container">
-                    {/* <div className="footer_elemets__row row">
+            <footer>
+                <div className="footer_elemetsOuter ">
+                    <div className="container footer_elemets__container">
+                        {/* <div className="footer_elemets__row row">
                         <div className="footer_col_element col-md-4">
                             <div className="footer_titelLayer">
                                 <div className="logo_footer">
@@ -115,34 +115,34 @@ export default function Footer() {
                             </div>
                         </div>
                     </div> */}
-                    <div className="row footer__bottomBlock">
-                        <div className="footer__blockInner">
-                        <div className='footSocial'>
-                            <SocialIcons/>
-                        </div>
-                        <div className="footer__rightBlockInner">
-                                <div className="coprightElemets">
-                                    <p>
-                                    © Copyright NDP Foundation Inc. <Link to="/">ndpfoundation.com</Link> All rights reserved. Developed by: <button className='blankTarget' onClick={adoholicTarget}> adoholic.in</button>
-                                    </p>
+                        <div className="row footer__bottomBlock">
+                            <div className="footer__blockInner">
+                                <div className='footSocial wFooter'>
+                                    <SocialIcons />
                                 </div>
+                                <div className="footer__rightBlockInner wFooter">
+                                    <div className="coprightElemets">
+                                        <p>
+                                            © Copyright NDP Foundation Inc. <Link to="/">ndpfoundation.com</Link> All rights reserved. Developed by: <button className='blankTarget' onClick={adoholicTarget}> adoholic.in</button>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="footer__leftBlockInner wFooter">
+                                    <ul>
+                                        <li>
+                                            <Link to="/termsusage">Terms of Service</Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/policy-details">Privacy Policy</Link>
+                                        </li>
+                                    </ul>
+                                </div>
+
                             </div>
-                            <div className="footer__leftBlockInner">
-                                <ul>
-                                    <li>
-                                        <Link to="/termsusage">Terms of Service</Link>
-                                    </li>
-                                    <li>
-                                        <Link to="/policy-details">Privacy Policy</Link>
-                                    </li>
-                                </ul>
-                            </div>
-                
                         </div>
                     </div>
                 </div>
-            </div>
-        </footer>
+            </footer>
         </>
     )
 }
