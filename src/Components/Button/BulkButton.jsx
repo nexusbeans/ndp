@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
 import './ButtonElements.scss'
 import bulkButtonicon from '../../assets/images/bulkOrder.png'
 import Button from 'react-bootstrap/Button';
@@ -7,7 +6,7 @@ import Modal from 'react-bootstrap/Modal';
 import TitleWraper from '../TitleWraper';
 import { useForm, ValidationError } from '@formspree/react';
 import { GoogleCaptcha } from "../../Components/GoogleCaptcha/GoogleCaptcha";
-import { FaUserPlus, FaLocationDot, FaEnvelope, FaComments } from "react-icons/fa6";
+import { FaUserPlus, FaLocationDot, FaEnvelope, } from "react-icons/fa6";
 import FormSubmit from '../../Pages/FormSubmit/FormSubmit';
 
 

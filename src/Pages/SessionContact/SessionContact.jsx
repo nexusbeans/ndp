@@ -7,7 +7,7 @@ import TitleWraper from "../../Components/TitleWraper";
 import { Link } from "react-router-dom";
 import { useForm, ValidationError } from '@formspree/react';
 import { GoogleCaptcha } from "../../Components/GoogleCaptcha/GoogleCaptcha";
-import { FaUserPlus, FaLocationDot, FaEnvelope, FaComments } from "react-icons/fa6";
+import { FaUserPlus, FaLocationDot, FaEnvelope } from "react-icons/fa6";
 import FormSubmit from "../FormSubmit/FormSubmit";
 
 export default function SessionContact() {

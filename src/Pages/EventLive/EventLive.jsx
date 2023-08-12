@@ -4,7 +4,7 @@ import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import TitleWraper from '../../Components/TitleWraper';
-import { FaUserPlus, FaLocationDot, FaEnvelope, FaComments, FaCalendar } from "react-icons/fa6";
+import { FaUserPlus, FaLocationDot, FaEnvelope, FaComments } from "react-icons/fa6";
 import EventCalender from '../../Components/EventCalender';
 import { useForm, ValidationError } from '@formspree/react';
 import { GoogleCaptcha } from "../../Components/GoogleCaptcha/GoogleCaptcha";
