@@ -1322,7 +1322,7 @@ a.anchor a:hover {
 
 .default_layout {
   margin: 30px 0 60px;
-  min-height: calc(100vh - 248px);
+  min-height: calc(100vh - 278px);
   max-height: 100%;
 
   h2 {
@@ -1353,6 +1353,9 @@ button.blankTarget {
   padding: 0;
   font-size: inherit;
   background: unset;
+}
+.grecaptcha-badge { 
+  visibility: hidden;
 }
 
 @media screen and (max-width: 1366px) {
