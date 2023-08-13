@@ -28,7 +28,7 @@ export default function AboutSet() {
 
             <div className="user_artical">
               <p>
-              <strong>Sri Ashish</strong> transformation began in December 2015 after he
+              <strong>Sri Ashish's</strong> transformation began in December 2015 after he
                 experienced a traumatic event in his personal life. Unable to
                 find answers or any direction in his life, he intently prayed
                 one night – “Lord, you have trumped me this time. I have no
@@ -80,7 +80,7 @@ export default function AboutSet() {
               </p>
 
               <p>
-                <strong> Sri Ashish</strong> transformation is a living testimonial of what is
+                <strong> Sri Ashish's</strong> transformation is a living testimonial of what is
                 possible. It is an inspirational story for all of us who aspire
                 to pursue a spiritual path but get lost in scriptures, dogmas,
                 and rituals. We lose the eternal truth that we already are what
