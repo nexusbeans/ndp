@@ -38,7 +38,7 @@
 }
 .contact__banner {
     background: url(../../assets/images/mig.jpg) no-repeat;
-    background-attachment: fixed;
+    background-attachment: fixed !important;
     min-height: 300px;
     background-size: cover;
     width: 100%;
@@ -67,7 +67,7 @@
             color: #fff;
 
             margin: 0;
-            padding-right: 100px;
+            padding-right: 20px;
         }
     }
 }

@@ -16,6 +16,7 @@ import Photos from "./Pages/Photos/Photos";
 import EventLive from "./Pages/EventLive/EventLive";
 import Recording from "./Pages/Recording/Recording";
 import FormSubmit from "./Pages/FormSubmit/FormSubmit";
+import BlogPost from "./Pages/BlogPost/BlogPost";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
       <Route path="photos" element={<Photos />} />
       <Route path="recording" element={<Recording />} />
       <Route path="success" element={<FormSubmit />} />
+      <Route path="blogpost" element={<BlogPost />} />
       <Route path="*" element={<PageError />} />
     </Routes>
     </BrowserRouter>

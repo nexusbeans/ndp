@@ -17,7 +17,7 @@ export default function ContactUs() {
       <Header />
       <main className="Contactup_main default_layout mt-0 " id="Contactus_mainID">
       <section className="contact__banner">
-        <Container fluid>
+        <Container>
           <div className="banner_contactLayout">
             <h2>Get in Touch</h2>
           </div>
