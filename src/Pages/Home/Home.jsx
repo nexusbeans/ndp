@@ -257,7 +257,7 @@ export default function Home() {
                     <GoogleCaptcha />
                     <div className="button_Outer ">
                       <Button type='submit' className="submit_btn">
-                        Send
+                        Register
                       </Button>
                     </div>
                   </div>

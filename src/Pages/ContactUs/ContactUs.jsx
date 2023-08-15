@@ -62,10 +62,10 @@ export default function ContactUs() {
                     </div>
                     <div className=" addre">
                       <Link
-                        to="mailto:admin@ndpfoundation.com"
+                        to="mailto:info@ndpfoundation.com"
                         style={{ color: "#000!important" }}
                       >
-                        admin@ndpfoundation.com
+                        info@ndpfoundation.com
                       </Link>
                     </div>
                   </div>

@@ -100,6 +100,23 @@
         height: 36px;
     }
 }
+.stroke{
+    .active{
+        font-weight: 600;
+        &::after {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 100%;
+            content: ".";
+            color: transparent;
+            background: #78c2c3;
+            height: 2px;
+        }
+    }
+}
 @media screen and (max-width: 1199px) {
     .donateIink {
         align-items: flex-end;

@@ -5,7 +5,7 @@ import logoheader from "../../assets/images/logo.png";
 import DonateImg from "../../assets/images/Donatebtn.png";
 
 import ButtonLogo from "../../assets/images/button.png";
-import { Link, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 export default function Header() {
   const [isSticky, setIsSticky] = useState(false);
@@ -47,9 +47,8 @@ export default function Header() {
           <Row>
             <Col>
               <div
-                className={` NavItem_elements right_toggle_menu ${
-                  menuReleased ? "right_toggle_menu_release" : ""
-                }`}
+                className={` NavItem_elements right_toggle_menu ${menuReleased ? "right_toggle_menu_release" : ""
+                  }`}
               >
                 <div className="logo_items">
                   <Link to="/">
@@ -60,19 +59,16 @@ export default function Header() {
                 <div className="NavBarItem">
                   <nav className="stroke">
                     <ul>
+
                       <li>
-                        <Link to="/aboutset" className="header zoom">
-                          About SRI ASHISH
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/three-page" className="header zoom">
+                        <NavLink to="/three-page" className={({ isActive, isPending }) =>
+                          isPending ? "pending" : isActive ? "active header zoom" : "header zoom"}>
                           THREE-FOLD PATH
-                        </Link>
+                        </NavLink>
                       </li>
                       <li>
                         <div className="dropdown">
-                          <Link  to="/i-am-book" className="header zoom">“I AM” – Book </Link>
+                          <NavLink to="/i-am-book" className="header zoom">“I AM” – Book </NavLink>
                           <div className="dropdown-content">
                             {/* <Link offset='80' target="_parent" to="#whatisinbook" className="ancher">
                               WHAT'S IN THE BOOK
@@ -98,17 +94,24 @@ export default function Header() {
                             >
                               Reviews
                             </Anchor> */}
-                            <Link to="/BuyNow" className="ancher">
+                            <NavLink to="/BuyNow" className="ancher">
                               Buy Now
-                            </Link>
+                            </NavLink>
                           </div>
                         </div>
                       </li>
                       <li>
+                        <NavLink to="/aboutset" className={({ isActive, isPending }) =>
+                          isPending ? "pending" : isActive ? "active header zoom" : " header zoom"}>
+                          About SRI ASHISH
+                        </NavLink>
+                      </li>
+                      <li>
                         <div className="dropdown">
-                          <Link href="" className="header zoom">
+                          <NavLink className={({ isActive, isPending }) =>
+                            isPending ? "pending" : isActive ? " header zoom" : "header zoom"}>
                             EVENTS
-                          </Link>
+                          </NavLink>
                           <div className="dropdown-content">
                             <Link to="/live-events">Live</Link>
                             {/* <Link
@@ -117,15 +120,16 @@ export default function Header() {
                             >
                               Recordings
                             </Link> */}
-                            <Link to="/session-contact" className="ancher">
+                            <NavLink to="/session-contact" className="ancher">
                               Session with Sri Ashish{" "}
-                            </Link>
+                            </NavLink>
                           </div>
                         </div>
                       </li>
                       <li>
                         <div className="dropdown">
-                          <Link to="/video-items" className="header zoom">GALLERY</Link>
+                          <NavLink to="/video-items" className={({ isActive, isPending }) =>
+                            isPending ? "pending" : isActive ? "active header zoom" : "header zoom"}>GALLERY</NavLink>
                           {/* <div className="dropdown-content">
                             <Link to="/video-items">Photo & Videos</Link>
                              <Link
@@ -138,9 +142,10 @@ export default function Header() {
                         </div>
                       </li>
                       <li>
-                        <Link to="/contact-us" className="header zoom">
+                        <NavLink to="/contact-us" className={({ isActive, isPending }) =>
+                          isPending ? "pending" : isActive ? "active header zoom" : "header zoom"}>
                           Contact Us
-                        </Link>
+                        </NavLink>
                       </li>
                     </ul>
                   </nav>

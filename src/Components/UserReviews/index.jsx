@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './UserReviews.scss'
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
@@ -9,6 +9,7 @@ import Jaishree from '../../assets/images/Jaishree.jpg'
 import Jagruti from '../../assets/images/Jagruti.jpg'
 import Giselle2 from '../../assets/images/Giselle2.jpg'
 import Giselle1 from '../../assets/images/Giselle1.jpg'
+import { Button } from 'react-bootstrap';
 const optionsNav = {
     margin: 10,
     responsiveClass: true,
@@ -38,6 +39,7 @@ const optionsNav = {
     },
 };
 const UserReviews = () => {
+    const [isReadMoreShow, setReadMoreShown] = useState(false)
     return (
         <>
         <div className='ReviewSlide'>
@@ -97,6 +99,7 @@ const UserReviews = () => {
                 <div className="item">
                     <div className="box">
                         <p className="reviewpara">When an individual faces drastic life changing experiences that place him in the only path to salvation and finds discovery of self, his world is unlocked with sudden enlightenment and spiritual blessings.  As Ashish's passion for his new life unravels and begins to unconditionally share his spiritual journey, Ashish crosses paths with Dr. Joshi, whom through their close friendship finds interest, enthusiasm and understanding to Ashish's spiritual journey.  Dr. Joshi has invested years in research, documenting and understanding Ashish's spiritual journey and has put together written literature based on facts and structure for the reader's understanding in capturing the true essence of Ashish's spiritual journey and studies that has brought him ultimate and unconditional happiness.  </p>
+                        <Button>read more</Button>
                         <div className="user_review">
                         <img src={Giselle1} className="review_user" alt="" />
                         </div>
