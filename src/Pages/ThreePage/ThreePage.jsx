@@ -70,7 +70,7 @@ export default function ThreePage() {
                               directly experienced as indescribable bliss. This
                               original state of Being is called Sat Chit Ananda
                               – Being-Consciousness-Bliss or
-                              Being-Awareness-Bliss
+                              Being-Awareness-Bliss.
                             </li>
                             <li className="lidisc1">
                               Your original Being has never changed and will
@@ -104,7 +104,7 @@ export default function ThreePage() {
                                 </li>
                                 <li className="lidisc1">
                                   Practice self-inquiry and unconditional
-                                  surrender
+                                  surrender.
                                 </li>
                                 <li className="lidisc1">
                                   Practice discriminating between real and
@@ -127,7 +127,7 @@ export default function ThreePage() {
                             As you begin to continue implementation in your daily life you will begin to see the change within and without.
                             </li>
                             <li className="lidisc1">
-                            Eventually it will become automatic, and you will experience your true nature – perpetual, unchanging and unwavering joy as “I AM”
+                            Eventually it will become automatic, and you will experience your true nature – perpetual, unchanging and unwavering joy as “I AM”.
                             </li>
                           </ul>
                         </div>

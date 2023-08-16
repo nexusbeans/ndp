@@ -59,7 +59,12 @@ export default function Header() {
                 <div className="NavBarItem">
                   <nav className="stroke">
                     <ul>
-
+                    <li>
+                        <NavLink to="/aboutset" className={({ isActive, isPending }) =>
+                          isPending ? "pending" : isActive ? "active header zoom" : " header zoom"}>
+                          About SRI ASHISH
+                        </NavLink>
+                      </li>
                       <li>
                         <NavLink to="/three-page" className={({ isActive, isPending }) =>
                           isPending ? "pending" : isActive ? "active header zoom" : "header zoom"}>
@@ -100,12 +105,7 @@ export default function Header() {
                           </div>
                         </div>
                       </li>
-                      <li>
-                        <NavLink to="/aboutset" className={({ isActive, isPending }) =>
-                          isPending ? "pending" : isActive ? "active header zoom" : " header zoom"}>
-                          About SRI ASHISH
-                        </NavLink>
-                      </li>
+
                       <li>
                         <div className="dropdown">
                           <NavLink className={({ isActive, isPending }) =>
