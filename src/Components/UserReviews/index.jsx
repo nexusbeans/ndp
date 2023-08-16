@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "./UserReviews.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
@@ -45,7 +44,6 @@ const UserReviews = () => {
           navigation={true}
           modules={[Autoplay, Pagination, Navigation]}
           className="mySwiper"
-
         >
           <SwiperSlide>
             <div className="item">

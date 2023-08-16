@@ -1,77 +1,65 @@
-import React from 'react'
-import Banner1 from '../../assets/images/Banner-1.jpg'
-import Banner2 from '../../assets/images/BANNER-2.jpg'
-import Banner3 from '../../assets/images/BANNER-3.jpg'
-import { Col, Container, Row } from 'react-bootstrap'
-import OwlCarousel from 'react-owl-carousel';
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
-import './HomeSlider.scss'
-
-const options = {
-  margin: 0,
-  responsiveClass: true,
-  nav: true,
-  dots: false,
-  loop: true,
-  autoplay: true,
-  // navText: ["Prev", "Next"],
-  smartSpeed: 1000,
-  responsive: {
-    0: {
-      items: 1,
-    },
-    400: {
-      items: 1,
-    },
-    600: {
-      items: 1,
-    },
-    700: {
-      items: 1,
-    },
-    1000: {
-      items: 1,
-
-    }
-  },
-};
+import React from "react";
+import Banner1 from "../../assets/images/Banner-1.jpg";
+import Banner2 from "../../assets/images/BANNER-2.jpg";
+import Banner3 from "../../assets/images/BANNER-3.jpg";
+import { Col, Container, Row } from "react-bootstrap";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import "swiper/css";
+import "./HomeSlider.scss";
+import { Link } from "react-router-dom";
 
 export default function HomeSlider() {
   return (
-
     <>
-      <section className='Home_slider'>
+      <section className="Home_slider">
         <Container fluid>
           <Row className="slider_elementsHome">
-            <Col className='p-0'>
-            <OwlCarousel className="slider-items owl-carousel" {...options}>
-              <div class='item'>
-                <a href="https://nexusbeans.in/a/i-am-book.html"
-                ><img src={Banner1} className="bannerimg" alt=""
-                  /></a>
-              </div>
-              <div class='item'>
-                <a href="https://nexusbeans.in/a/i-am-book.html"
-                ><img src={Banner2} className="bannerimg" alt=""
-                  /></a>
-              </div>
-              <div class='item'>
-                <a href="https://nexusbeans.in/a/i-am-book.html"
-                ><img src={Banner3} className="bannerimg" alt=""
-                  /></a>
-              </div>
-            </OwlCarousel>
-       
-
+            <Col className="p-0">
+              <Swiper
+                centeredSlides={true}
+                autoplay={{
+                  delay: 2500,
+                  disableOnInteraction: false,
+                }}
+                // install Swiper modules
+                navigation={true}
+                modules={[Autoplay, Pagination, Navigation]}
+                spaceBetween={0}
+                slidesPerView={1}
+                pagination={{ clickable: true }}
+                scrollbar={{ draggable: true }}
+                onSwiper={(swiper) => console.log(swiper)}
+                onSlideChange={() => console.log("slide change")}
+              >
+                <SwiperSlide className="slider-items">
+                  {" "}
+                  <div class="item">
+                    <Link to="/i-am-book">
+                      <img src={Banner1} className="bannerimg" alt="" />
+                    </Link>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide className="slider-items">
+                  {" "}
+                  <div class="item">
+                    <Link to="/i-am-book">
+                      <img src={Banner2} className="bannerimg" alt="" />
+                    </Link>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide className="slider-items">
+                  <div class="item">
+                    <Link to="/i-am-book">
+                      <img src={Banner3} className="bannerimg" alt="" />
+                    </Link>
+                  </div>
+                </SwiperSlide>
+              </Swiper>
             </Col>
           </Row>
-
         </Container>
-
       </section>
     </>
-  )
+  );
 }
-
-

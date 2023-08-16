@@ -90,3 +90,16 @@
         text-align: center;
     }
 }
+
+.blog_card_content:after {
+  content: "";
+  position: absolute;
+  /* top: 0; */
+  left: 0;
+  right: 0;
+  background: rgb(119, 193, 196);
+  background: linear-gradient(117deg, rgb(119, 193, 196) 0%, rgb(246, 146, 30) 100%);
+  width: 100%;
+  height: 10px;
+  bottom: 0;
+}

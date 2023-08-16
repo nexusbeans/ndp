@@ -1,41 +1,28 @@
 .Home_slider {
     .slider-items {
         position: relative;
-        a{
+
+        a {
             width: 100%;
         }
     }
-    .owl-nav {
-        position: absolute;
-        top: 50%;
-        justify-content: space-between;
-        width: 100%;
-        display: flex;
-        transform: translateY(-50%);
 
-        button {
-            span {
-                font-size: 60px;
-                color: #fff;
-                background: linear-gradient(117deg, rgb(119, 193, 196) 0%, rgb(246, 146, 30) 100%);
-                background-clip: text;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-            }
-        }
+    .slider-items {
+        position: relative;
+    }
 
-        .owl-prev {
-            position: relative;
-            left: 25px;
-        }
-        .owl-next {
-            position: relative;
-            right: 25px;
-        }
+    .swiper-pagination {
+        display: none;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        color: #fff;
     }
 }
+
 @media screen and (max-width:767px) {
-    .Home_slider .owl-nav button span {
-        font-size: 30px;
+    .swiper-button-prev:after,.swiper-button-next:after{ 
+        font-size: 20px !important;
     }
 }

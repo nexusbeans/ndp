@@ -34,8 +34,8 @@ export default function IamBook() {
                         <p>
                           <b> I AM Ashish </b> to “I AM” brings the essence of
                           universal spiritualism and the wisdom of non-dualism
-                          to today’s world. It empowers the individuals in
-                          discovering their own true nature –{" "}
+                          to today's world. It empowers the individuals in
+                          discovering their own true nature -{" "}
                           <i>
                             Sat-Chit-Ananda (Ever Existent-Ever Conscious-Ever
                             Blissful) or (Being-Awareness-Bliss).
@@ -61,7 +61,6 @@ export default function IamBook() {
                 MainTitle={"What's in the book?"}
                 subTitle={"What's in the book?"}
               />
-
               <Row className="whtcontnt">
                 <Col md={6}>
                   <p>
@@ -157,9 +156,8 @@ export default function IamBook() {
                   <div className="layer_buyItems">
                     <div className="LookTitle">
                     <Modals ButtonModalTitle={"Look Inside !"}
-                      bodydata={"Book Will Be Available From 1st September 2023"}
+                      bodydata={"Book Will Be Available From 1st September 2023"}
                     />
-                      
                     </div>
                   </div>
                 </Col>
@@ -184,7 +182,7 @@ export default function IamBook() {
                     IntelliH, a virtual care and remote patient monitoring firm
                     that helps physicians and nurses deliver health care through
                     its digital health platform. Prior to starting IntelliH,
-                    Anil was a professor at Harvard University’s School of
+                    Anil was a professor at Harvard University's School of
                     Dental Medicine and taught epidemiology, medical
                     informatics, and biostatistics.
                   </p>
@@ -203,7 +201,6 @@ export default function IamBook() {
               </Row>
             </Container>
           </section>
-
           <section className="ReviewSlide reviewpadd">
             <div className="container" id="review">
               <TitleWraper MainTitle={"Reviews"} subTitle={"Reviews"} />
@@ -218,9 +215,8 @@ export default function IamBook() {
                     <div className="LookupBtn">
                       {/* <Buybutton/> */}
                       <Modals ButtonModalTitle={"BUYNOW"}
-                      bodydata={"Book Will Be Available From 1st September 2023"}
-                    />
-                     
+                      bodydata={"Book Will Be Available From 1st September 2023"}
+                    />                   
                     </div>
                   </div>
                 </Col>
