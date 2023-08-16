@@ -134,9 +134,8 @@
         padding: 10px;
     }
     .NavBarItem {
-        transform: translateX(-100%);
+        transform: translateY(-500%);
         transition: all 0.3s;
-
         position: absolute;
         background: #fff;
         width: 100%;
@@ -144,6 +143,7 @@
         top: 55px;
         left: 0;
         right: 0;
+        z-index: -1;
     }
     .hamburger-linesOuter {
         display: block;
@@ -160,13 +160,13 @@
 
     .right_toggle_menu.right_toggle_menu_release {
         .NavBarItem {
-            transform: translateX(0%);
+            transform: translateY(0%);
         }
         .hamburger-lines {
             height: 26px;
         }
         .menu-items {
-            transform: translateX(0);
+            transform: translateY(0);
         }
 
         .hamburger-lines .line1 {
