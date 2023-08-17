@@ -19,9 +19,9 @@ function ReadMore({ text, showChar = 160 }) {
         {shouldShowEllipsis && (
           <span className="morecontent">
             <span>{text.slice(showChar)}</span>
-            <Button className="morelink" onClick={toggleReadMore}>
+            <button className="morelink " onClick={toggleReadMore}>
               {isExpanded ? "Show less" : "Show more"}
-            </Button>
+            </button>
           </span>
         )}
       </p>

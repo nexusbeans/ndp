@@ -36,7 +36,9 @@ export default function AboutSet() {
                 morning, he woke up with “SRF” imprinted on his mind. On further
                 searching he was introduced to Paramhansa Yogananda and to
                 Self-Realization Fellowship, an organization started by
-                Paramhansa Yogananda. Sri Ashish ordered his first book on the
+                Paramhansa Yogananda.
+                </p><p>
+                 Sri Ashish ordered his first book on the
                 subject of Self-Realization called “An Autobiography of a Yogi”.
                 This was the first turning point in Sri Ashish’s life which
                 arose an awakening in him. For the next three years he read over
@@ -50,7 +52,9 @@ export default function AboutSet() {
                 introduced to Ramana Maharshi (an Indian Hindu sage and
                 jivanmukta – liberated being) and his method of Self-Inquiry.
                 This point on, Ramana Maharshi became Sri Ashish’s guiding
-                light. In February 2020, Sri Ashish visited Ramana’s ashram at
+                light.</p>
+                <p>
+                 In February 2020, Sri Ashish visited Ramana’s ashram at
                 Tiruvannamalai, India, following which he began practicing
                 Self-Inquiry (Jnana Yoga) and Surrender (Bhakti Yoga) as per
                 Ramana’s teachings. Prior to this visit, he had only practiced

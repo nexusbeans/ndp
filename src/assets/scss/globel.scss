@@ -1359,6 +1359,14 @@ button.blankTarget {
   visibility: hidden;
 }
 
+.btn:focus-visible {
+  background-color: transparent !important;
+  border-color: unset !important;
+  box-shadow: unset !important;
+  color: unset !important;
+  outline: unset !important;
+}
+
 @media screen and (max-width: 1366px) {
   main {
     p {

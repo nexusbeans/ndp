@@ -60,7 +60,7 @@ export default function Header() {
                   <nav className="stroke">
                     <ul>
                     <li>
-                        <NavLink to="/aboutset" className={({ isActive, isPending }) =>
+                        <NavLink to="/about-sri-ashish" className={({ isActive, isPending }) =>
                           isPending ? "pending" : isActive ? "active header zoom" : " header zoom"}>
                           About SRI ASHISH
                         </NavLink>

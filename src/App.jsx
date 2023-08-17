@@ -23,7 +23,7 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route index ="/" element={<Home />}></Route>
-      <Route path="aboutset" element={<AboutSet />} />
+      <Route path="about-sri-ashish" element={<AboutSet />} />
       <Route path="three-page" element={<ThreePage />} />
       <Route path="contact-us" element={<ContactUs />} />
       <Route path="video-items" element={<VideoItems />} />
