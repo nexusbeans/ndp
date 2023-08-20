@@ -7,22 +7,22 @@ import { useHistory } from 'react-router-dom';
 
 function FormSubmit() {
   
-  // useEffect(() => {
-  //   const timeout = setTimeout(() => {
-  //     window.location.replace('https://ndpfoundation.com/');
-  //   }, 2000);
-
-  //   return () => clearTimeout(timeout);
-  // }, []);
   useEffect(() => {
     const timeout = setTimeout(() => {
-      window.history.back(); // Go back to the previous page
-    }, 2000); // 2000 seconds
+      window.location.replace('https://ndpfoundation.com/');
+    }, 2000);
 
-    return () => {
-      clearTimeout(timeout); // Clear the timeout if the component unmounts
-    };
+    return () => clearTimeout(timeout);
   }, []);
+  // useEffect(() => {
+  //   const timeout = setTimeout(() => {
+  //     window.history.back(); // Go back to the previous page
+  //   }, 2000); // 2000 seconds
+
+  //   return () => {
+  //     clearTimeout(timeout); // Clear the timeout if the component unmounts
+  //   };
+  // }, []);
   return (
 
     <>
