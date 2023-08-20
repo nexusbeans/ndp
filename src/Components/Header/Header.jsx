@@ -72,7 +72,7 @@ export default function Header() {
                                About Us
                           </NavLink>
                           <div className="dropdown-content">
-                            <Link to="/about-sri-ashish">SRI ASHISH</Link>
+                            <Link to="/about-sri-ashish">About Sri Ashish</Link>
                             {/* <Link
                               to="/recording"
                               className="ancher"
