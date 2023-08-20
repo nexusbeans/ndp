@@ -12,7 +12,7 @@ import FormSubmit from '../FormSubmit/FormSubmit';
 
 
 function EventLive() {
-  const [state, handleSubmit] = useForm("mpzgplvn");
+  const [state, handleSubmit] = useForm("xgejkovp");
   if (state.succeeded) {
     return <><FormSubmit/></>;
   }
