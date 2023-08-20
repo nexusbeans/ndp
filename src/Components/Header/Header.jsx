@@ -59,11 +59,31 @@ export default function Header() {
                 <div className="NavBarItem">
                   <nav className="stroke">
                     <ul>
-                    <li>
+                    {/* <li>
                         <NavLink to="/about-sri-ashish" className={({ isActive, isPending }) =>
                           isPending ? "pending" : isActive ? "active header zoom" : " header zoom"}>
                           About SRI ASHISH
                         </NavLink>
+                      </li> */}
+                      <li>
+                        <div className="dropdown">
+                          <NavLink className={({ isActive, isPending }) =>
+                            isPending ? "pending" : isActive ? " header zoom" : "header zoom"}>
+                               About Us
+                          </NavLink>
+                          <div className="dropdown-content">
+                            <Link to="/about-sri-ashish">SRI ASHISH</Link>
+                            {/* <Link
+                              to="/recording"
+                              className="ancher"
+                            >
+                              Recordings
+                            </Link> */}
+                            <NavLink to="/blogpost" className="ancher">
+                              Poem By Sri Ashish{" "}
+                            </NavLink>
+                          </div>
+                        </div>
                       </li>
                       <li>
                         <NavLink to="/three-page" className={({ isActive, isPending }) =>
@@ -75,30 +95,30 @@ export default function Header() {
                         <div className="dropdown">
                           <NavLink to="/i-am-book" className="header zoom">“I AM” – Book </NavLink>
                           <div className="dropdown-content">
-                            {/* <Link offset='80' target="_parent" to="#whatisinbook" className="ancher">
+                            <Link offset='80' target="_parent" to="#whatisinbook" className="ancher Value_targetHidden">
                               WHAT'S IN THE BOOK
                             </Link>
-                             <AnchorLink
+                             <Link
                               href="#whatisinbook"
-                              className="ancher" offset='80' 
+                              className="ancher Value_targetHidden" offset='80' 
                             >
                               Why should you read this book?
-                            </AnchorLink>
-                            <Anchor href="" className="ancher">
+                            </Link>
+                            <Link href="" className="ancher Value_targetHidden">
                               LOOK INSIDE!
-                            </Anchor>
-                            <Anchor
+                            </Link>
+                            <Link
                               href="/ashish/i-am-book.html#aboutauthor"
-                              className="ancher"
+                              className="ancher Value_targetHidden"
                             >
                               About the Author
-                            </Anchor>
-                            <Anchor
+                            </Link>
+                            <Link
                               href="/ashish/i-am-book.html#review"
-                              className="ancher"
+                              className="ancher Value_targetHidden"
                             >
                               Reviews
-                            </Anchor> */}
+                            </Link>
                             <NavLink to="/BuyNow" className="ancher">
                               Buy Now
                             </NavLink>
