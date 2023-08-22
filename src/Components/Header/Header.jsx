@@ -69,7 +69,7 @@ export default function Header() {
                         <div className="dropdown">
                           <NavLink className={({ isActive, isPending }) =>
                             isPending ? "pending" : isActive ? " header zoom" : "header zoom"}>
-                               About Us
+                               SRI ASHISH
                           </NavLink>
                           <div className="dropdown-content">
                             <Link to="/about-sri-ashish">About Sri Ashish</Link>
@@ -79,9 +79,9 @@ export default function Header() {
                             >
                               Recordings
                             </Link> */}
-                            <NavLink to="/blogpost" className="ancher">
+                            {/* <NavLink to="/blogpost" className="ancher">
                               Poem By Sri Ashish{" "}
-                            </NavLink>
+                            </NavLink> */}
                           </div>
                         </div>
                       </li>
