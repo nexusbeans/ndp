@@ -9,6 +9,7 @@ import EventCalender from '../../Components/EventCalender';
 import { useForm, ValidationError } from '@formspree/react';
 import { GoogleCaptcha } from "../../Components/GoogleCaptcha/GoogleCaptcha";
 import FormSubmit from '../FormSubmit/FormSubmit';
+import SliderBlock from '../../Components/SliderBlock';
 
 
 function EventLive() {
@@ -31,7 +32,7 @@ function EventLive() {
             <Row className='event_listRow'>
               <Col md={6}>
                 <div className='live_eventPage'>
-                  <EventCalender />
+                  <SliderBlock />
                 </div>
               </Col>
               <Col md={6} className="rightform">

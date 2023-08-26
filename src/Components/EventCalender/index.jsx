@@ -4,6 +4,7 @@ import calImg from "../../assets/images/Calendar.jpg";
 import { Calendar, momentLocalizer } from 'react-big-calendar';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import moment from 'moment';
+import SlideBlock from "../../Components/SliderBlock";
 
 
 const localizer = momentLocalizer(moment);
@@ -25,8 +26,8 @@ const EventCalender = () => {
 
   return (
     <>
-      <div className="wraper_calender">
-        <img src={calImg} alt="cal-img" className="img-fluid"/>
+      {/* <div className="wraper_calender"> */}
+        {/* <img src={calImg} alt="cal-img" className="img-fluid"/> */}
         {/* <div>
           <Calendar
             localizer={localizer}
@@ -37,7 +38,8 @@ const EventCalender = () => {
             
           />
         </div> */}
-      </div>
+      {/* </div> */}
+      <SlideBlock/>
     </>
   );
 };

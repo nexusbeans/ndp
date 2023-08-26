@@ -1,25 +1,46 @@
-import React from 'react'
-import './SliderBlock.scss'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
+import React from "react";
+import "./SliderBlock.scss";
+import calImg from "../../assets/images/Calendar.jpg";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import "swiper/css";
+import { SectionWraper } from "../../assets/scss/globel";
 
-const index = () => {
+const SliderBlock = () => {
+  const sliderData = [
+    { id: 1, image: calImg },
+    { id: 2, image: calImg },
+  ];
+
   return (
-    <>
-    <Swiper
-      spaceBetween={50}
-      slidesPerView={3}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
-    >
-      <SwiperSlide>Slide 1</SwiperSlide>
-      <SwiperSlide>Slide 2</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 4</SwiperSlide>
-   
-    </Swiper>
-    </>
-  )
-}
+    <SectionWraper>
+      <Swiper
+        centeredSlides={true}
 
-export default index
+        // install Swiper modules
+        navigation={true}
+        modules={[Autoplay, Pagination, Navigation]}
+        spaceBetween={0}
+        slidesPerView={1}
+        pagination={{ clickable: true }}
+        scrollbar={{ draggable: true }}
+        onSwiper={(swiper) => console.log(swiper)}
+        onSlideChange={() => console.log("slide change")}
+      >
+        {sliderData.map((slide) => (
+          <SwiperSlide key={slide.id}>
+            <div className="wraper_calender">
+              <img
+                src={slide.image}
+                alt={`cal-img-${slide.id}`}
+                className="img-fluid"
+              />
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </SectionWraper>
+  );
+};
+
+export default SliderBlock;

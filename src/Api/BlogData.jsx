@@ -32,15 +32,13 @@ const blogData = [
           <li>Be aware of Maya, for she is not real</li>
           <li>Be aware of your bondage, for it is not real</li>
           <li>Be aware of your liberation, for it is not real</li>
+          <li> Be aware of Consciousness, for it is the Self</li>
+          <li>Be aware of your Self, for that is the only Reality!</li>
         </ul>
       </div>
     ),
     subline: (
       <>
-        <ul>
-          <li> Be aware of Consciousness, for it is the Self</li>
-          <li>Be aware of your Self, for that is the only Reality!</li>
-        </ul>
 
       </>
     ),
@@ -80,14 +78,12 @@ const blogData = [
           <li>How can I be afraid, when I have the greatest Strength of all</li>
           <li>How can I be cruel, when I have the greatest Kindness of all</li>
           <li>How can I be deluded, when I have the greatest Reality of all</li>
+          <li> How can I be asleep, when I have fully Awakened now!</li>
         </ul>
       </div>
     ),
     subline: (
       <>
-        <ul>
-          <li> How can I be asleep, when I have fully Awakened now!</li>
-        </ul>
 
       </>
     ),

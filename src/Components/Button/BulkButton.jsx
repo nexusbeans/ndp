@@ -6,7 +6,7 @@ import Modal from 'react-bootstrap/Modal';
 import TitleWraper from '../TitleWraper';
 import { useForm, ValidationError } from '@formspree/react';
 import { GoogleCaptcha } from "../../Components/GoogleCaptcha/GoogleCaptcha";
-import { FaUserPlus, FaLocationDot, FaEnvelope, } from "react-icons/fa6";
+import { FaUserPlus, FaLocationDot, FaEnvelope, FaAddressBook, } from "react-icons/fa6";
 import FormSubmit from '../../Pages/FormSubmit/FormSubmit';
 
 
@@ -125,7 +125,7 @@ const BulkButton = () => {
                         errors={state.errors}
                       />
 
-                      <div className="icon_fields"><FaLocationDot /></div>
+                      <div className="icon_fields"><FaAddressBook /></div>
                     </div>
                   </div>
                   <div className="col-md-12">

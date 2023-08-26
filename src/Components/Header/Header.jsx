@@ -141,7 +141,7 @@ export default function Header() {
                               Recordings
                             </Link> */}
                             <NavLink to="/session-contact" className="ancher">
-                              Session with Sri Ashish{" "}
+                              Session with Sri ashish
                             </NavLink>
                           </div>
                         </div>
