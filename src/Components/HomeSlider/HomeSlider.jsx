@@ -41,13 +41,13 @@ export default function HomeSlider() {
                     </a>
                   </div>
                 </SwiperSlide>
-                <SwiperSlide className="slider-items">
+                {/* <SwiperSlide className="slider-items">
                   <div class="item">
                     <Link to="/live-events">
                       <img src={Banner4} className="bannerimg" alt="" />
                     </Link>
                   </div>
-                </SwiperSlide>
+                </SwiperSlide> */}
                 <SwiperSlide className="slider-items">
                   {" "}
                   <div class="item">

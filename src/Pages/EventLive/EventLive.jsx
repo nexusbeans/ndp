@@ -18,6 +18,11 @@ function EventLive() {
   if (state.succeeded) {
     return <><FormSubmit/></>;
   }
+  const eventOnclick = () => {
+    window.open('https://tc.touchcast.com/showtime/ndp/login', '_blank');
+};
+
+
 
   return (
     <>
@@ -25,7 +30,7 @@ function EventLive() {
       <main className='eventLive_main default_layout mt-0'>
       <section className='banner_itemsevents'>
         <Container fluid>
-          <img src={Banner5} alt='bannerimage' className='img-fluid'/>
+          <img src={Banner5} alt='bannerimage' className='img-fluid set_pointer' onClick={eventOnclick}/>
         </Container>
       </section>
 
