@@ -129,8 +129,8 @@ export default function Footer() {
                                     <div className="coprightElemets">
                                         <p>
                                             © Copyright NDP Foundation Inc. <Link to="/">ndpfoundation.com</Link> All rights reserved. Developed by: <button className='blankTarget' onClick={adoholicTarget}> adoholic.in </button> 
-                                            <span> Images Designed by</span> <button className='blankTarget' onClick={FreepikTarget}> Freepik</button> , and by Soumya Bansal
                                         </p>
+                                        <p> <span> Images Designed by</span> <button className='blankTarget' onClick={FreepikTarget}> Freepik</button> , and by Soumya Bansal</p>
                                     </div>
                                 </div>
                                 <div className="footer__leftBlockInner wFooter">

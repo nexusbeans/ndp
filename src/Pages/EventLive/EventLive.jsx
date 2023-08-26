@@ -10,6 +10,7 @@ import { useForm, ValidationError } from '@formspree/react';
 import { GoogleCaptcha } from "../../Components/GoogleCaptcha/GoogleCaptcha";
 import FormSubmit from '../FormSubmit/FormSubmit';
 import SliderBlock from '../../Components/SliderBlock';
+import Banner5 from "../../assets/images/NDP_Banner1.jpg";
 
 
 function EventLive() {
@@ -21,9 +22,15 @@ function EventLive() {
   return (
     <>
       <Header />
-      <main className='eventLive_main default_layout'>
+      <main className='eventLive_main default_layout mt-0'>
+      <section className='banner_itemsevents'>
+        <Container fluid>
+          <img src={Banner5} alt='bannerimage' className='img-fluid'/>
+        </Container>
+      </section>
 
-        <section className='section_eventsLive section_msgDrop '>
+
+        <section className='section_eventsLive section_msgDrop mt-3'>
           <Container>
             <TitleWraper
               MainTitle={"Live Event"}
@@ -99,9 +106,9 @@ function EventLive() {
                           name="selectcenterBA" required
                         >
                           <option selected="true" disabled="disabled">Date Pick</option>
-                          <option value="27 Aug 2023">
+                          {/* <option value="27 Aug 2023">
                             27 Aug 2023
-                          </option>
+                          </option> */}
                           <option value="17 Sep 2023">
                             17 Sep 2023
                           </option>

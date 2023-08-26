@@ -42,7 +42,7 @@ const blogData = [
 
       </>
     ),
-    author: "Ashish Kumar",
+    author: "SRI ASHISH",
     date: "March 21, 2020",
     bottomline: (
       <>
@@ -87,7 +87,7 @@ const blogData = [
 
       </>
     ),
-    author: "Ashish Kumar",
+    author: "SRI ASHISH",
     date: "319 Dwapara (December 2019)",
     bottomline: (
       <>

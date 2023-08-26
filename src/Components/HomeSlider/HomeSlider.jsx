@@ -3,6 +3,7 @@ import Banner1 from "../../assets/images/Banner-1.jpg";
 import Banner2 from "../../assets/images/BANNER-2.jpg";
 import Banner3 from "../../assets/images/BANNER-3.jpg";
 import Banner4 from "../../assets/images/BANNER-4.jpg.jpg";
+import Banner5 from "../../assets/images/NDP_Banner1.jpg";
 import { Col, Container, Row } from "react-bootstrap";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
@@ -33,6 +34,13 @@ export default function HomeSlider() {
                 onSwiper={(swiper) => console.log(swiper)}
                 onSlideChange={() => console.log("slide change")}
               >
+               <SwiperSlide className="slider-items">
+                  <div class="item">
+                    <a href="https://tc.touchcast.com/showtime/ndp/login" target="_blank" rel="noreferrer">
+                      <img src={Banner5} className="bannerimg" alt="" />
+                    </a>
+                  </div>
+                </SwiperSlide>
                 <SwiperSlide className="slider-items">
                   <div class="item">
                     <Link to="/live-events">
