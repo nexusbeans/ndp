@@ -16,10 +16,12 @@ function EventLive() {
   if (state.succeeded) {
     return <><FormSubmit/></>;
   }
+
   return (
     <>
       <Header />
       <main className='eventLive_main default_layout'>
+
         <section className='section_eventsLive section_msgDrop '>
           <Container>
             <TitleWraper
@@ -98,6 +100,9 @@ function EventLive() {
                           <option selected="true" disabled="disabled">Date Pick</option>
                           <option value="27 Aug 2023">
                             27 Aug 2023
+                          </option>
+                          <option value="17 Sep 2023">
+                            17 Sep 2023
                           </option>
                         </select>
                         <div className="icon_fields"><FaComments /></div>

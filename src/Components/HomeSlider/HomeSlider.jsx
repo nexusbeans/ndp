@@ -2,6 +2,7 @@ import React from "react";
 import Banner1 from "../../assets/images/Banner-1.jpg";
 import Banner2 from "../../assets/images/BANNER-2.jpg";
 import Banner3 from "../../assets/images/BANNER-3.jpg";
+import Banner4 from "../../assets/images/BANNER-4.jpg.jpg";
 import { Col, Container, Row } from "react-bootstrap";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
@@ -19,7 +20,7 @@ export default function HomeSlider() {
               <Swiper
                 centeredSlides={true}
                 autoplay={{
-                  delay: 2500,
+                  delay: 3500,
                   disableOnInteraction: false,
                 }}
                 // install Swiper modules
@@ -32,6 +33,13 @@ export default function HomeSlider() {
                 onSwiper={(swiper) => console.log(swiper)}
                 onSlideChange={() => console.log("slide change")}
               >
+                <SwiperSlide className="slider-items">
+                  <div class="item">
+                    <Link to="/live-events">
+                      <img src={Banner4} className="bannerimg" alt="" />
+                    </Link>
+                  </div>
+                </SwiperSlide>
                 <SwiperSlide className="slider-items">
                   {" "}
                   <div class="item">
@@ -55,6 +63,7 @@ export default function HomeSlider() {
                     </Link>
                   </div>
                 </SwiperSlide>
+
               </Swiper>
             </Col>
           </Row>

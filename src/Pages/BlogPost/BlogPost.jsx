@@ -14,15 +14,16 @@ function BlogPost() {
           <img src={poemimage} alt="img" />
         </div> */}
         <div className="dateTitle">
-          <div className="dateTitleInner">
-            <p>{blog.author}</p>
-          </div>
+          <div className="dateTitleInner"><p>{blog.title}</p></div>
         </div>
         <div className="blog_card_content">
           <h3>{blog.title}</h3>
           <p>{blog.content}</p>
           <div className="name_items">
+            <p>{blog.subline}</p>
+            <p>{blog.author}</p>
             <p>{blog.date}</p>
+            <p> {blog.bottomline}</p>
           </div>
         </div>
       </div>
@@ -36,7 +37,7 @@ function BlogPost() {
         <section className="contact__banner blogPost_section_main">
           <Container>
             <div className="banner_contactLayout">
-              <h2>Poem By Shri Ashish</h2>
+              <h2>Poems By Sri Ashish</h2>
             </div>
           </Container>
         </section>

@@ -79,9 +79,9 @@ export default function Header() {
                             >
                               Recordings
                             </Link> */}
-                            {/* <NavLink to="/blogpost" className="ancher">
-                              Poem By Sri Ashish{" "}
-                            </NavLink> */}
+                            <NavLink to="/blogpost" className="ancher">
+                              Poems By Sri Ashish{" "}
+                            </NavLink>
                           </div>
                         </div>
                       </li>
