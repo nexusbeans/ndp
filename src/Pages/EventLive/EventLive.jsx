@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './EventLive.scss'
 import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
@@ -11,9 +11,23 @@ import { GoogleCaptcha } from "../../Components/GoogleCaptcha/GoogleCaptcha";
 import FormSubmit from '../FormSubmit/FormSubmit';
 import SliderBlock from '../../Components/SliderBlock';
 import Banner5 from "../../assets/images/NDP_Banner1.jpg";
-import selectOptions from "../../Api/LiveEventOption";
+// import selectOptions from "../../Api/LiveEventOption";
+import axios from 'axios';
 
 function EventLive() {
+  const [selectOptions, selectOptionsData] = useState([]);
+
+  useEffect(() => {
+    // Fetch slider data using Axios
+    axios.get("/data/LiveEventOption.json")
+      .then(response => {
+        selectOptionsData(response.data);
+      })
+      .catch(error => {
+        console.error("Error fetching slider data:", error);
+      });
+  }, []);
+
   const [state, handleSubmit] = useForm("xgejkovp");
   if (state.succeeded) {
     return <><FormSubmit/></>;
@@ -21,6 +35,8 @@ function EventLive() {
   const eventOnclick = () => {
     window.open('https://tc.touchcast.com/showtime/ndp/login', '_blank');
 };
+
+
 
   return (
     <>
@@ -31,8 +47,6 @@ function EventLive() {
           <img src={Banner5} alt='bannerimage' className='img-fluid set_pointer' onClick={eventOnclick}/>
         </Container>
       </section>
-
-
         <section className='section_eventsLive section_msgDrop mt-3'>
           <Container>
             <TitleWraper

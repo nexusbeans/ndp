@@ -1,18 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./SliderBlock.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import { SectionWraper } from "../../assets/scss/globel";
-import sliderData from "../../Api/CalenderData";
+// import sliderData from "../../Api/CalenderData";
+import axios from "axios";
+
 
 const SliderBlock = () => {
+  const [sliderData, SwiperSlideData] = useState([]);
+
+  useEffect(() => {
+    // Fetch slider data using Axios
+    axios.get("/data/CalenderData.json")
+      .then(response => {
+        SwiperSlideData(response.data);
+      })
+      .catch(error => {
+        console.error("Error fetching slider data:", error);
+      });
+  }, []);
+
   return (
     <SectionWraper>
       <Swiper
         centeredSlides={true}
-
-        // install Swiper modules
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
         spaceBetween={0}

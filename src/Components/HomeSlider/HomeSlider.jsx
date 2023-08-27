@@ -6,10 +6,24 @@ import "swiper/css";
 import "./HomeSlider.scss";
 import { Link } from "react-router-dom";
 // import sliderImageData from "../../Api/sliderImageData.json";
-import sliderImageData from "../../Api/HomesliderData";
+// import sliderImageData from "../../Api/HomesliderData";
+import axios from "axios";
 
 
 export default function HomeSlider() {
+  const [sliderImageData, setSliderImageData] = useState([]);
+
+  useEffect(() => {
+    // Fetch slider data using Axios
+    axios.get("/data/HomesliderData.json")
+      .then(response => {
+        setSliderImageData(response.data);
+      })
+      .catch(error => {
+        console.error("Error fetching slider data:", error);
+      });
+  }, []);
+
   
   return (
     <>

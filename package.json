@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "homepage": "https://ndpfoundation.com",
   "private": true,
+  "proxy": "https://ndpfoundation.com",
+  
   "dependencies": {
     "@formspree/react": "^2.5.0",
     "@testing-library/jest-dom": "^5.17.0",

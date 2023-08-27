@@ -1,12 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./BlogPost.scss";
 import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
 import { Col, Container, Row } from "react-bootstrap";
 import poemimage from "../../assets/images/poem.jpg";
 import blogData from "../../Api/BlogData";
+import axios from "axios";
 
 function BlogPost() {
+  // const [blogData, blogItemsData] = useState([]);
+
+  // useEffect(() => {
+  //   // Fetch slider data using Axios
+  //   axios.get("/data/BlogData.json")
+  //     .then(response => {
+  //       blogItemsData(response.data);
+  //     })
+  //     .catch(error => {
+  //       console.error("Error fetching slider data:", error);
+  //     });
+  // }, []);
+
   const blogItems = blogData.map((blog, index) => (
     <Col md={12} key={index}>
       <div className="blog_card">
