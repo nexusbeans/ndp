@@ -11,7 +11,7 @@ import { GoogleCaptcha } from "../../Components/GoogleCaptcha/GoogleCaptcha";
 import FormSubmit from '../FormSubmit/FormSubmit';
 import SliderBlock from '../../Components/SliderBlock';
 import Banner5 from "../../assets/images/NDP_Banner1.jpg";
-
+import selectOptions from "../../Api/LiveEventOption";
 
 function EventLive() {
   const [state, handleSubmit] = useForm("xgejkovp");
@@ -21,8 +21,6 @@ function EventLive() {
   const eventOnclick = () => {
     window.open('https://tc.touchcast.com/showtime/ndp/login', '_blank');
 };
-
-
 
   return (
     <>
@@ -110,14 +108,11 @@ function EventLive() {
                           className="form-control form-field"
                           name="selectcenterBA" required
                         >
-                          <option selected="true" disabled="disabled">Date Pick</option>
-                          {/* <option value="27 Aug 2023">
-                            27 Aug 2023
-                          </option> */}
-                          <option value="17 Sep 2023">
-                            17 Sep 2023
-                          </option>
-                        </select>
+                         <option value="" disabled>Select Date</option>
+                        {selectOptions.map((option, index) => (
+                          <option key={index} value={option.value}>{option.label}</option>
+                        ))}
+                      </select>
                         <div className="icon_fields"><FaComments /></div>
                       </div>
                     </div>

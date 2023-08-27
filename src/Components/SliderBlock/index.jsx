@@ -1,18 +1,12 @@
 import React from "react";
 import "./SliderBlock.scss";
-import calImg from "../../assets/images/Calendar.jpg";
-import calImg2 from "../../assets/images/cal2.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import { SectionWraper } from "../../assets/scss/globel";
+import sliderData from "../../Api/CalenderData";
 
 const SliderBlock = () => {
-  const sliderData = [
- 
-    { id: 2, image: calImg2 },
-  ];
-
   return (
     <SectionWraper>
       <Swiper
