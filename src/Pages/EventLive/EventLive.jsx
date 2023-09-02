@@ -42,11 +42,11 @@ function EventLive() {
     <>
       <Header />
       <main className='eventLive_main default_layout mt-0'>
-      <section className='banner_itemsevents'>
+      {/* <section className='banner_itemsevents'>
         <Container fluid>
           <img src={Banner5} alt='bannerimage' className='img-fluid set_pointer' onClick={eventOnclick}/>
         </Container>
-      </section>
+      </section> */}
         <section className='section_eventsLive section_msgDrop mt-3'>
           <Container>
             <TitleWraper
