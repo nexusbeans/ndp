@@ -57,10 +57,10 @@ export default function BuyNow() {
                         <h4>USA & Other Countries</h4>
                       </div> */}
                       <div className="buy_nowBtnItem_page mt-2 d-flex justify-content-center">
-                        {/* <Buybutton /> */}
-                        <Modals ButtonModalTitle={"BUYNOW"}
+                        <Buybutton />
+                        {/* <Modals ButtonModalTitle={"BUYNOW"}
                       bodydata={"Book Will Be Available From 1st September 2023"}
-                    />
+                    /> */}
                       </div>
                     </div>
                   </div>

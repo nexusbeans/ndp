@@ -1,5 +1,4 @@
 [
-    { "id": 1, "image": "../assets/images/Calendar.jpg" },
-    { "id": 2, "image": "../assets/images/cal2.jpg" }
-  ]
+  { "id": 1, "image": "https://ndpfoundation.com/siteimagedata/event-calender/images/cal2.jpg" }
+]
   

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './ButtonElements.scss'
 import BuyIcon from '../../assets/images/buy-iconitem.png'
+import Modals from "../../Components/Modals/Modals";
 
 const Buybutton = () => {
   const countryData = {
@@ -43,9 +44,12 @@ const Buybutton = () => {
           </a>
         </div>
         <div id="country-2" className={countryId === 'country-2' ? 'showElements' : 'hideElements'}>
-          <a className="buyButton" target="_blank" rel="noopener noreferrer" href="https://www.amazon.in/">
+          {/* <a className="buyButton" target="_blank" rel="noopener noreferrer" href="https://www.amazon.in/">
             BuyNow <span><img src={BuyIcon} alt="buyicon" /> </span>
-          </a>
+          </a> */}
+          <Modals ButtonModalTitle={"BUYNOW"}
+                      bodydata={"Book Will Be Available From 1st September 2023"}
+                    />
         </div>
         {/* <div id="country-3" className={countryId === 'country-3' ? 'showElements' : 'hideElements'}>
         <a className="buyButton"  target="_blank" rel="noopener noreferrer" href="https://www.flipkart.com/">
