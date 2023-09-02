@@ -6,13 +6,34 @@ import img66 from "../../assets/images/66.jpg";
 import { Col, Container, Row } from "react-bootstrap";
 import Iframe from "react-iframe";
 import TitleWraper from "../../Components/TitleWraper";
+import axios from "axios";
 
 export default function VideoItems() {
-
+  const [videoUrls, youtubeData] = useState([]);
   const [activeTab, setActiveTab] = useState(1);
+
+  // const videoUrls = [
+  //   "https://www.youtube.com/embed/ng7Xxhed-dQ?si=jsOPBZKCL2aBzZRp",
+  //   "https://www.youtube.com/embed/I0pGAi_6Ei4?si=lInwXRUPolnBf6xk",
+  //   "https://www.youtube.com/embed/uHUPQzs_zo8?si=cLlg4aOgYPzaQt8b",
+  // ];
+
   const handleTabClick = (id) => {
     setActiveTab(id);
   };
+
+  useEffect(() => {
+    // Fetch slider data using Axios
+    axios.get("/data/Youtubevideo.json")
+      .then(response => {
+        youtubeData(response.data);
+      })
+      .catch(error => {
+        console.error("Error fetching slider data:", error);
+      });
+  }, []);
+
+
   return (
     <>
       <Header />
@@ -21,11 +42,7 @@ export default function VideoItems() {
           <Container>
             <Row>
               <Col>
-
-                <TitleWraper
-                  MainTitle={"Gallery"}
-                  subTitle={"Gallery"}
-                />
+                <TitleWraper MainTitle={"Gallery"} subTitle={"Gallery"} />
                 <div className=" streamingtab">
                   <div className="login-button-container clearfix">
                     <div className="btn_defaultVideo sign-in">
@@ -55,124 +72,27 @@ export default function VideoItems() {
                 </div>
                 <div className="Video_block">
                   {activeTab === 1 && (
-                    <div className="register__form">
-                      {/* <div
-                        id="registration-form-wrapper "
-                        className="bottomframe Video_BlockItems"
-                      >
-                        <div className="Video_blockElements">
-                        <img src={img66} alt="" className="img-fluid"/>
-                        </div>
-                        <div className="Video_blockElements">
-                        <img src={img66} alt="" className="img-fluid"/>
-                        </div>
-                        <div className="Video_blockElements">
-                        <img src={img66} alt="" className="img-fluid"/>
-                        </div>
-                        <div className="Video_blockElements">
-                        <img src={img66} alt="" className="img-fluid"/>
-                        </div>
-                        <div className="Video_blockElements">
-                        <img src={img66} alt="" className="img-fluid"/>
-                        </div>
-                        <div className="Video_blockElements">
-                        <img src={img66} alt="" className="img-fluid"/>
-                        </div>
-                      </div> */}
-                      <div class="text-center">
+                    <div class="text-center">
                       <h3 class="h2">This Page is Under Development</h3>
-              
-                      </div>
                     </div>
                   )}
                   {activeTab === 2 && (
                     <div className="register__form">
-                      {/* <div
+                      <div
                         id="registration-form-wrapper "
                         className="bottomframe Video_BlockItems"
                       >
-                        <div className="Video_blockElements">
-        
-                          <Iframe
-                            width={350}
-                            height={315}
-                            className="yutbvideo"
-                            src="https://www.youtube.com/embed/Jx7B7yJsAwI"
-                            title="YouTube video player"
-                            frameBorder={0}
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowFullScreen=""
-                          />
-      
-                        </div>
-                        <div className="Video_blockElements">
-                 
-                          <Iframe
-                            width={350}
-                            height={315}
-                            className="yutbvideo"
-                            src="https://www.youtube.com/embed/Jx7B7yJsAwI"
-                            title="YouTube video player"
-                            frameBorder={0}
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowFullScreen=""
-                          />
-       
-                        </div>
-                        <div className="Video_blockElements">
-      
-                          <Iframe
-                            width={350}
-                            height={315}
-                            className="yutbvideo"
-                            src="https://www.youtube.com/embed/Jx7B7yJsAwI"
-                            title="YouTube video player"
-                            frameBorder={0}
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowFullScreen=""
-                          />
-                        </div>
-
-                        <div className="Video_blockElements">
-                          <Iframe
-                            width={350}
-                            height={315}
-                            className="yutbvideo"
-                            src="https://www.youtube.com/embed/Jx7B7yJsAwI"
-                            title="YouTube video player"
-                            frameBorder={0}
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowFullScreen=""
-                          />
-                        </div>
-                        <div className="Video_blockElements">
-                          <Iframe
-                            width={350}
-                            height={315}
-                            className="yutbvideo"
-                            src="https://www.youtube.com/embed/Jx7B7yJsAwI"
-                            title="YouTube video player"
-                            frameBorder={0}
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowFullScreen=""
-                          />
-                        </div>
-                        <div className="Video_blockElements">
-                          <Iframe
-                            width={350}
-                            height={315}
-                            className="yutbvideo"
-                            src="https://www.youtube.com/embed/Jx7B7yJsAwI"
-                            title="YouTube video player"
-                            frameBorder={0}
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowFullScreen=""
-                          />
-                        </div>
-                      </div> */}
-                      <div class="text-center">
-                      <h3 class="h2">This Page is Under Development</h3>
-              
+                        {videoUrls.map((url, index) => (
+                          <div key={index} className="Video_blockElements">
+                            <Iframe
+                              src={url}
+                              title={`YouTube video ${index + 1}`}
+                              frameBorder={0}
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                              allowFullScreen=""
+                            />
+                          </div>
+                        ))}
                       </div>
                     </div>
                   )}

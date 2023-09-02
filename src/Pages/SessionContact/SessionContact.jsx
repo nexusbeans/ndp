@@ -41,7 +41,7 @@ export default function SessionContact() {
         <section className="story">
           <Container>
             <TitleWraper
-              MainTitle={"Sir Ashish"}
+              MainTitle={"Sri Ashish"}
               subTitle={"Sessions with Sri Ashish"}
             />
             <Row className="support" id="textspprt">

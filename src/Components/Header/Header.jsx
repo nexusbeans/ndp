@@ -134,12 +134,12 @@ export default function Header() {
                           </NavLink>
                           <div className="dropdown-content">
                             <Link to="/live-events">Live</Link>
-                            {/* <Link
+                            <Link
                               to="/recording"
                               className="ancher"
                             >
                               Recordings
-                            </Link> */}
+                            </Link>
                             <NavLink to="/session-contact" className="ancher">
                               Session with Sri ashish
                             </NavLink>
