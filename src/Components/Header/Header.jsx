@@ -134,12 +134,12 @@ export default function Header() {
                           </NavLink>
                           <div className="dropdown-content">
                             <Link to="/live-events">Live</Link>
-                            <Link
+                            {/* <Link
                               to="/recording"
                               className="ancher"
                             >
                               Recordings
-                            </Link>
+                            </Link> */}
                             <NavLink to="/session-contact" className="ancher">
                               Session with Sri ashish
                             </NavLink>
@@ -165,6 +165,12 @@ export default function Header() {
                         <NavLink to="/contact-us" className={({ isActive, isPending }) =>
                           isPending ? "pending" : isActive ? "active header zoom" : "header zoom"}>
                           Contact Us
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink to="/signup-dashboard" className={({ isActive, isPending }) =>
+                          isPending ? "pending" : isActive ? "active header zoom" : "header zoom"}>
+                          Login
                         </NavLink>
                       </li>
                     </ul>

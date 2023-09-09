@@ -7,23 +7,28 @@ import aboutImg from "../../assets/images/ABOUT-NDP.jpg";
 import "./Home.scss";
 import contactImage from "../../assets/images/touch.jpg";
 import TitleWraper from "../../Components/TitleWraper";
-import { FaUserPlus, FaLocationDot, FaEnvelope, FaComments } from "react-icons/fa6";
-import { useForm, ValidationError } from '@formspree/react';
+import {
+  FaUserPlus,
+  FaLocationDot,
+  FaEnvelope,
+  FaComments,
+  FaEarthAsia,
+  FaRocket,
+  FaComment,
+} from "react-icons/fa6";
+import { useForm, ValidationError } from "@formspree/react";
 import { GoogleCaptcha } from "../../Components/GoogleCaptcha/GoogleCaptcha";
 import FormSubmit from "../FormSubmit/FormSubmit";
-
+import HubspotForm from "react-hubspot-form";
 
 export default function Home() {
-
   useEffect(() => {
     document.title = ": : NDP FOUNDATION -HOME : :";
   }, []);
 
   const [state, handleSubmit] = useForm("xgejkovp");
   if (state.succeeded) {
-    return (
-      <FormSubmit />
-    );
+    return <FormSubmit />;
   }
   return (
     <>
@@ -45,8 +50,7 @@ export default function Home() {
               <Col md={6} className="leftpara">
                 <blockquote className="author">
                   Non-Duality – A non-personal all-inclusive awareness. The
-                  underlying true nature of all existence is one and the
-                  same.
+                  underlying true nature of all existence is one and the same.
                 </blockquote>
                 <p className="author">
                   NDP (Non-Duality Perspective) Foundation has been founded by
@@ -67,9 +71,10 @@ export default function Home() {
                   <li className="lidisc">Experience Truth as “I AM”</li>
                 </ul>
                 <p className="author bottom_titleLIne">
-                  <strong> NDP Foundation</strong> will communicate Sri Ashish’s learnings through
-                  various conversations and media channels, first of which is a
-                  book authored by Dr. Anil Joshi called I AM Ashish to “I AM”.
+                  <strong> NDP Foundation</strong> will communicate Sri Ashish’s
+                  learnings through various conversations and media channels,
+                  first of which is a book authored by Dr. Anil Joshi called I
+                  AM Ashish to “I AM”.
                 </p>
               </Col>
             </Row>
@@ -150,9 +155,72 @@ export default function Home() {
             </Row>
           </Container>
         </section>
+        <section className="section_ourvision">
+          <Container>
+            <TitleWraper MainTitle={"Our Vision"} subTitle={"Our Vision"} />
+            <Row className="whatsbook">
+              {/* <div class="col-md-3 col-sm-6">
+                    <div class="serviceBox">
+                      <div class="service-icon">
+                        <span>
+                          <i class="fa fa-globe"></i>
+                        </span>
+                      </div>
+                      <h3 class="title">Web Design</h3>
+                      <p class="description">
+                        Lorem ipsum dolor sit amet conse ctetur adipisicing
+                        elit.
+                      </p>
+                    </div>
+                  </div> */}
+              <div class="col-md-4 col-sm-6">
+                <div class="serviceBox red">
+                  <div class="service-icon">
+                    <span>
+                      <FaRocket />
+                    </span>
+                  </div>
+                  <h3 class="title">MISSION</h3>
+                  <p class="description">
+                    To Spread Awareness and Message of Non-Dualism and
+                    Self-Realization
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <div class="serviceBox blue">
+                  <div class="service-icon">
+                    <span>
+                      <FaComment />
+                    </span>
+                  </div>
+                  <h3 class="title">PURPOSE</h3>
+                  <p class="description">
+                    To Impart Knowledge and Learnings of Sri Ashish as per his
+                    Three-Fold Path
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <div class="serviceBox green">
+                  <div class="service-icon">
+                    <span>
+                      <FaEarthAsia />
+                    </span>
+                  </div>
+                  <h3 class="title">GOAL</h3>
+                  <p class="description">
+                    To fulfill mission and purpose of Foundation through Digital
+                    and Physical (Ashram) presence{" "}
+                  </p>
+                </div>
+              </div>
+            </Row>
+          </Container>
+        </section>
 
         <section className="section_msgDrop reviewpadd">
-          <Container >
+          <Container>
             <TitleWraper
               MainTitle={"Contact with Us"}
               subTitle={"Drop a Message"}
@@ -160,13 +228,11 @@ export default function Home() {
             <div className="row whatsbook">
               <Col md={6}>
                 <div className="about_image__outer">
-                  <img
-                    src={contactImage} alt="" className="contact author"
-                  />
+                  <img src={contactImage} alt="" className="contact author" />
                 </div>
               </Col>
               <Col md={6} className="rightform">
-                <form onSubmit={handleSubmit} method="post" className="rightform_elements">
+                {/* <form onSubmit={handleSubmit} method="post" className="rightform_elements">
                   <input type="hidden" value="HOME_PAGE_FORM" name="Form_Name" id="HOME_PAGE_FORM" />
                   <div id="blocks" className="form-group">
                     <div className="col-md-12">
@@ -261,7 +327,15 @@ export default function Home() {
                       </Button>
                     </div>
                   </div>
-                </form>
+                </form> */}
+
+                <HubspotForm
+                  portalId="43797893"
+                  formId="b722e9e2-e4cf-44e8-9295-85a2ad512f54"
+                  onSubmit={() => console.log("Submit!")}
+                  onReady={(form) => console.log("Form ready!")}
+                  loading={<div>Loading...</div>}
+                />
               </Col>
             </div>
           </Container>

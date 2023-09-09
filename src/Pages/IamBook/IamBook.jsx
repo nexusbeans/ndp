@@ -9,6 +9,7 @@ import ndp from "../../assets/images/ndp.jpg";
 import img_bookSet from "../../assets/images/img_bookSet.png";
 import UserReviews from "../../Components/UserReviews";
 import Buybutton from "../../Components/Button/Buybutton";
+import LookoutButton from "../../Components/Button/LookoutButton";
 import { Link } from "react-router-dom";
 import Modals from "../../Components/Modals/Modals";
 import BuyIcon from "../../assets/images/buy-iconitem.png";
@@ -157,12 +158,7 @@ export default function IamBook() {
               <Col>
                 <div className="layer_buyItems">
                   <div className="LookTitle">
-                    <Modals
-                      ButtonModalTitle={"Look Inside !"}
-                      bodydata={
-                        "Book Will Be Available From 1st September 2023"
-                      }
-                    />
+<LookoutButton/>
                   </div>
                 </div>
               </Col>

@@ -15,6 +15,7 @@ body {
   transition: 300ms all;
 }
 
+
 /* width */
 ::-webkit-scrollbar {
   width: 4px;
@@ -485,11 +486,6 @@ html {
   padding: 0px 30px 0px 0px;
 }
 
-.wrapper {
-  position: absolute;
-  /*overflow: hidden;*/
-  z-index: 99999;
-}
 
 .section {
   width: 100vw;

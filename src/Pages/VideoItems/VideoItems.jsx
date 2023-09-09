@@ -10,6 +10,8 @@ import axios from "axios";
 
 export default function VideoItems() {
   const [videoUrls, youtubeData] = useState([]);
+  const [videoRecording, videoRecordingData] = useState([]);
+
   const [activeTab, setActiveTab] = useState(1);
 
   // const videoUrls = [
@@ -24,15 +26,27 @@ export default function VideoItems() {
 
   useEffect(() => {
     // Fetch slider data using Axios
-    axios.get("/data/Youtubevideo.json")
-      .then(response => {
+    axios
+      .get("/data/Youtubevideo.json")
+      .then((response) => {
         youtubeData(response.data);
       })
-      .catch(error => {
+      .catch((error) => {
         console.error("Error fetching slider data:", error);
       });
   }, []);
 
+  useEffect(() => {
+    // Fetch slider data using Axios
+    axios
+      .get("/data/VideoRecording.json")
+      .then((response) => {
+        videoRecordingData(response.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching slider data:", error);
+      });
+  }, []);
 
   return (
     <>
@@ -54,7 +68,7 @@ export default function VideoItems() {
                         }
                         onClick={() => handleTabClick(1)}
                       >
-                        Photo Gallery
+                        Video Gallery
                       </button>
 
                       <button
@@ -65,18 +79,23 @@ export default function VideoItems() {
                         }
                         onClick={() => handleTabClick(2)}
                       >
-                        Video Gallery
+                        Recordings
+                      </button>
+                      <button
+                        className={
+                          activeTab === 3
+                            ? "active btn sign-in__button  btn_trigervideo"
+                            : "btn sign-in__button  btn_trigervideo"
+                        }
+                        onClick={() => handleTabClick(3)}
+                      >
+                        Photo Gallery
                       </button>
                     </div>
                   </div>
                 </div>
                 <div className="Video_block">
                   {activeTab === 1 && (
-                    <div class="text-center">
-                      <h3 class="h2">This Page is Under Development</h3>
-                    </div>
-                  )}
-                  {activeTab === 2 && (
                     <div className="register__form">
                       <div
                         id="registration-form-wrapper "
@@ -94,6 +113,31 @@ export default function VideoItems() {
                           </div>
                         ))}
                       </div>
+                    </div>
+                  )}
+                  {activeTab === 2 && (
+                    <div className="register__form">
+                      <div
+                        id="registration-form-wrapper "
+                        className="bottomframe Video_BlockItems"
+                      >
+                        {videoRecording.map((url, index) => (
+                          <div key={index} className="Video_blockElements">
+                            <Iframe
+                              src={url}
+                              title={`YouTube video ${index + 1}`}
+                              frameBorder={0}
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                              allowFullScreen=""
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                  {activeTab === 3 && (
+                    <div class="text-center">
+                      <h3 class="h2">This Page is Under Development</h3>
                     </div>
                   )}
                 </div>

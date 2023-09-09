@@ -44,6 +44,7 @@
 
 .morelink {
   display: block;
+  box-shadow: none;
 }
 
 .container_text {
@@ -78,5 +79,6 @@
   &:hover {
     background: unset;
     color: #fff;
+    box-shadow: none;
   }
 }

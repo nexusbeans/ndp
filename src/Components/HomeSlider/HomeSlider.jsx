@@ -38,6 +38,7 @@ export default function HomeSlider() {
                   disableOnInteraction: false,
                 }}
                 navigation={true}
+                loop={true}
                 modules={[Autoplay, Pagination, Navigation]}
                 spaceBetween={0}
                 slidesPerView={1}
@@ -49,7 +50,7 @@ export default function HomeSlider() {
                 {sliderImageData.map((item) => (
                   <SwiperSlide key={item.id} className="slider-items">
                     <div className="item">
-                      <Link to="/i-am-book">
+                      <Link to={item.link}>
                         <img src={item.imageUrl} className="bannerimg" alt="" />
                       </Link>
                     </div>
