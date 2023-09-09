@@ -26,8 +26,8 @@ export default function Recording() {
       <main className="main_recording default_layout ">
         <Container>
         <TitleWraper
-              MainTitle={"Live Event"}
-              subTitle={"Live Event"}
+              MainTitle={"Recording"}
+              subTitle={"Recording"}
             />
           <Row>
             <Col>
