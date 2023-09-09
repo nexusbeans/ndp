@@ -1,13 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import DynamicImage from "../../../Components/DynamicImage";
 
 const Dashboardslidebar = () => {
   const logOut = () => {
     window.localStorage.clear();
     window.location.href = "./login-dashboard";
   };
+
+  const [isMenuOpen, setMenuOpen] = useState([]);
+
+  const handleMenuClick = (index) => {
+    const updatedOpenItems = [...isMenuOpen];
+    updatedOpenItems[index] = !updatedOpenItems[index];
+    setMenuOpen(updatedOpenItems);
+  };
+
+
   return (
-    <>
+    <div id="dashboarcontrol">
       <header className="codex-header">
         <div className="header-contian d-flex justify-content-between align-items-center">
           <div className="header-left d-flex align-items-center">
@@ -333,7 +344,467 @@ const Dashboardslidebar = () => {
           </div>
         </div>
       </header>
-    </>
+      <aside className="codex-sidebar">
+        <div className="logo-gridwrap">
+          <Link className="codexbrand-logo" to="/dashboard">
+            <DynamicImage imageName="logo.png" />
+          </Link>
+          <div className="sidebar-action">
+            <i data-feather="menu" />
+          </div>
+        </div>
+        <div className="icon-logo">
+          <a href="index.html">
+            <img
+              className="img-fluid"
+              src="../assets/images/logo/icon-logo.png"
+              alt="theeme-logo"
+            />
+          </a>
+        </div>
+        <div className="codex-menuwrapper">
+          <ul className="codex-menu custom-scroll" data-simplebar="">
+            <li className="cdxmenu-title">
+              <h5>Dashboards</h5>
+            </li>
+            <li className="menu-item">
+              <a href="index.html">
+                <div className="icon-item">
+                  <i data-feather="home" />
+                </div>
+                <span>default</span>
+              </a>
+            </li>
+            <li className="menu-item">
+              <a href="ecommerce.html">
+                <div className="icon-item">
+                  <i data-feather="airplay" />
+                </div>
+                <span>ecommerce</span>
+              </a>
+            </li>
+            <li className="cdxmenu-title">
+              <h5>application</h5>
+            </li>
+            <li className="menu-item">
+              <a href="calendar.html">
+                <div className="icon-item">
+                  <i data-feather="calendar" />
+                </div>
+                <span>calendar</span>
+              </a>
+            </li>
+            <li className="menu-item">
+              <a href="chat.html">
+                <div className="icon-item">
+                  <i data-feather="message-square" />
+                </div>
+                <span>chat</span>
+              </a>
+            </li>
+            <li className="menu-item">
+              <a href="todo.html">
+                <div className="icon-item">
+                  <i data-feather="clock" />
+                </div>
+                <span>todo</span>
+              </a>
+            </li>
+            <li className="menu-item">
+              <Link href="javascript:void(0);" onClick={() => handleMenuClick(0)}>
+                <div className="icon-item">
+                  <i data-feather="mail" />
+                </div>
+                <span>email</span>
+                <i className="fa fa-angle-down" />
+              </Link>
+              <ul className={`submenu-list ${isMenuOpen[0] ? 'd-block' : ''}`}>
+                <li>
+                  <a href="email-inbox.html">email inbox</a>
+                </li>
+                <li>
+                  <a href="email-read.html">email read</a>
+                </li>
+              </ul>
+            </li>
+            <li className="menu-item">
+              <a href="javascript:void(0);">
+                <div className="icon-item">
+                  {" "}
+                  <i data-feather="user" />
+                </div>
+                <span>Users</span>
+                <i className="fa fa-angle-down" />
+              </a>
+              <ul className="submenu-list">
+                <li>
+                  <a href="profile.html">profile</a>
+                </li>
+                <li>
+                  <a href="user-list.html">user list</a>
+                </li>
+                <li>
+                  <a href="user-edit.html">user edit</a>
+                </li>
+              </ul>
+            </li>
+            <li className="menu-item">
+              <a href="javascript:void(0);">
+                <div className="icon-item">
+                  <i data-feather="shopping-bag" />
+                </div>
+                <span>ecommerce</span>
+                <i className="fa fa-angle-down" />
+              </a>
+              <ul className="submenu-list">
+                <li>
+                  <a href="product.html">product</a>
+                </li>
+                <li>
+                  <a href="product-detail.html">product detail</a>
+                </li>
+                <li>
+                  <a href="add-product.html">add product</a>
+                </li>
+                <li>
+                  <a href="product-list.html">product list</a>
+                </li>
+                <li>
+                  <a href="order-history.html">order history</a>
+                </li>
+                <li>
+                  <a href="cart.html">cart</a>
+                </li>
+                <li>
+                  <a href="wishlist.html">wishlist</a>
+                </li>
+                <li>
+                  <a href="checkout.html">checkout</a>
+                </li>
+                <li>
+                  <a href="pricing.html">pricing</a>
+                </li>
+              </ul>
+            </li>
+            <li className="menu-item">
+              <a href="invoice.html">
+                <div className="icon-item">
+                  <i data-feather="file-minus" />
+                </div>
+                <span>invoice</span>
+              </a>
+            </li>
+            <li className="cdxmenu-title">
+              <h5>pages</h5>
+            </li>
+            <li className="menu-item">
+              <Link onClick={() => handleMenuClick(1)}>
+                <div className="icon-item">
+                  <i data-feather="command" />
+                </div>
+                <span>blog</span>
+                <i className="fa fa-angle-down" />
+              </Link>
+              <ul className={`submenu-list ${isMenuOpen[1] ? 'd-block' : ''}`}>
+                <li>
+                  <Link to="/blogposter">blog list</Link>
+                </li>
+                <li>
+                  <Link to="/blogposter-add">blog-add</Link>
+                </li>
+              </ul>
+            </li>
+            <li className="menu-item">
+              <a href="javascript:void(0);">
+                <div className="icon-item">
+                  <i data-feather="key" />
+                </div>
+                <span>Authentication</span>
+                <i className="fa fa-angle-down" />
+              </a>
+              <ul className="submenu-list">
+                <li>
+                  <a href="login.html">login </a>
+                </li>
+                <li>
+                  <a href="register.html">register</a>
+                </li>
+                <li>
+                  <a href="forgot-password.html">forgot password</a>
+                </li>
+                <li>
+                  <a href="new-password.html">reset password</a>
+                </li>
+                <li>
+                  <a href="verify-email.html">verify email</a>
+                </li>
+                <li>
+                  <a href="verify-pin.html">verify pin</a>
+                </li>
+              </ul>
+            </li>
+            <li className="menu-item">
+              <a href="error-page.html">
+                <div className="icon-item">
+                  <i data-feather="alert-triangle" />
+                </div>
+                <span>error 404</span>
+              </a>
+            </li>
+            <li className="menu-item">
+              <a href="coming-soon.html">
+                <div className="icon-item">
+                  <i data-feather="watch" />
+                </div>
+                <span>coming soon</span>
+              </a>
+            </li>
+            <li className="menu-item">
+              <a href="javascript:void(0);">
+                <div className="icon-item">
+                  <i data-feather="pie-chart" />
+                </div>
+                <span>Charts</span>
+                <i className="fa fa-angle-down" />
+              </a>
+              <ul className="submenu-list">
+                <li>
+                  <a href="chart-apex.html">apex chart</a>
+                </li>
+                <li className="menu-item">
+                  <a href="chart-echarts.html">echarts</a>
+                </li>
+                <li className="menu-item">
+                  <a href="chart-morris.html">morris charts</a>
+                </li>
+                <li className="menu-item">
+                  <a href="chart-chartsjs.html">charts js</a>
+                </li>
+                <li className="menu-item">
+                  <a href="chart-sparkline.html">sparkline charts</a>
+                </li>
+              </ul>
+            </li>
+            <li className="menu-item">
+              <a href="contacts.html">
+                <div className="icon-item">
+                  <i data-feather="phone-call" />
+                </div>
+                <span>contacts</span>
+              </a>
+            </li>
+            <li className="menu-item">
+              <a href="gallery.html">
+                <div className="icon-item">
+                  <i data-feather="image" />
+                </div>
+                <span>gallery</span>
+              </a>
+            </li>
+            <li className="cdxmenu-title">
+              <h5>Components</h5>
+            </li>
+            <li className="menu-item">
+              <a href="javascript:void(0);">
+                <div className="icon-item">
+                  {" "}
+                  <i data-feather="book" />
+                </div>
+                <span>form</span>
+                <i className="fa fa-angle-down" />
+              </a>
+              <ul className="submenu-list">
+                <li>
+                  <a href="element-input.html">form element</a>
+                </li>
+                <li>
+                  <a href="element-checkbox-radio.html">checkbox &amp; radio</a>
+                </li>
+                <li>
+                  <a href="element-datepicker.html">datepicker</a>
+                </li>
+                <li>
+                  <a href="element-uidatepicker.html">ui datepicker</a>
+                </li>
+                <li>
+                  <a href="element-datetimepicker.html">datetimepicker</a>
+                </li>
+                <li>
+                  <a href="form.html">basic form</a>
+                </li>
+                <li>
+                  <a href="form-validation.html">validation</a>
+                </li>
+              </ul>
+            </li>
+            <li className="menu-item">
+              <a href="javascript:void(0);">
+                <div className="icon-item">
+                  {" "}
+                  <i data-feather="database" />
+                </div>
+                <span>Table</span>
+                <i className="fa fa-angle-down" />
+              </a>
+              <ul className="submenu-list">
+                <li>
+                  <a href="data-table.html">Datatable</a>
+                </li>
+                <li>
+                  <a href="data-table-advance.html">Datatable Advance</a>
+                </li>
+                <li>
+                  <a href="data-table-ajax.html">Datatable Ajax</a>
+                </li>
+              </ul>
+            </li>
+            <li className="menu-item">
+              <a href="javascript:void(0);">
+                <div className="icon-item">
+                  <i data-feather="layout" />
+                </div>
+                <span>Advance element</span>
+                <i className="fa fa-angle-down" />
+              </a>
+              <ul className="submenu-list">
+                <li>
+                  <a href="timeline-one.html">timeline one</a>
+                </li>
+                <li>
+                  <a href="timeline-two.html">timeline two</a>
+                </li>
+                <li>
+                  <a href="element-select2.html">select 2</a>
+                </li>
+                <li>
+                  <a href="element-switch.html">switch</a>
+                </li>
+                <li>
+                  <a href="element-dropzone.html">dropzone</a>
+                </li>
+                <li>
+                  <a href="element-rangeslider.html">range slider</a>
+                </li>
+                <li>
+                  <a href="bootstrap-notify.html">bootstrap notify</a>
+                </li>
+                <li>
+                  <a href="element-sweetalert2.html">sweetalert2</a>
+                </li>
+                <li>
+                  <a href="element-scrollbar.html">scrollbar</a>
+                </li>
+                <li>
+                  <a href="element-lightbox.html">light box</a>
+                </li>
+              </ul>
+            </li>
+            <li className="menu-item">
+              <a href="javascript:void(0);">
+                <div className="icon-item">
+                  <i data-feather="layout" />
+                </div>
+                <span>Componet</span>
+                <i className="fa fa-angle-down" />
+              </a>
+              <ul className="submenu-list">
+                <li>
+                  <a href="element-typography.html">typography</a>
+                </li>
+                <li>
+                  <a href="element-color.html">color</a>
+                </li>
+                <li>
+                  <a href="element-themeclass.html">helper class</a>
+                </li>
+                <li>
+                  <a href="element-alert.html">Alert</a>
+                </li>
+                <li>
+                  <a href="element-avtar.html">Avtar</a>
+                </li>
+                <li>
+                  <a href="element-button.html">Button</a>
+                </li>
+                <li>
+                  <a href="element-grid.html">grid</a>
+                </li>
+                <li>
+                  <a href="element-dropdown.html">Dropdown</a>
+                </li>
+                <li>
+                  <a href="element-breadcrumb.html">Breadcrumb</a>
+                </li>
+                <li>
+                  <a href="element-collapse.html">Collapse</a>
+                </li>
+                <li>
+                  <a href="element-accordion.html">Accordion</a>
+                </li>
+                <li>
+                  <a href="element-badge.html">badge</a>
+                </li>
+                <li>
+                  <a href="element-modal.html">modal</a>
+                </li>
+                <li>
+                  <a href="element-tab.html">tabs</a>
+                </li>
+                <li>
+                  <a href="element-popover.html">popover</a>
+                </li>
+                <li>
+                  <a href="element-tooltip.html">tooltip</a>
+                </li>
+                <li>
+                  <a href="element-card.html">card</a>
+                </li>
+                <li>
+                  <a href="element-progressbar.html">progress bar</a>
+                </li>
+                <li>
+                  <a href="element-pagination.html">pagination</a>
+                </li>
+              </ul>
+            </li>
+            <li className="menu-item">
+              <a href="javascript:void(0);">
+                <div className="icon-item">
+                  <i data-feather="slack" />
+                </div>
+                <span>Icons</span>
+                <i className="fa fa-angle-down" />
+              </a>
+              <ul className="submenu-list">
+                <li>
+                  <a href="element-fontaw-icon.html">Font Awesome</a>
+                </li>
+                <li>
+                  <a href="element-themify-icon.html">Themify</a>
+                </li>
+                <li>
+                  <a href="element-feather-icon.html">Feather</a>
+                </li>
+                <li>
+                  <a href="element-icoicon.html">icoicon</a>
+                </li>
+                <li>
+                  <a href="element-flag-icon.html">flag</a>
+                </li>
+              </ul>
+            </li>
+            <li className="menu-item">
+              <a href="faq.html">
+                <div className="icon-item">
+                  <i data-feather="help-circle" />
+                </div>
+                <span>faq</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+    </div>
   );
 };
 
