@@ -24,6 +24,8 @@ import Dashboard from "./Dashboard/Pages/Dashboard/Dashboard";
 import Blogposter from "./Dashboard/Pages/Blogposter/Blogposter";
 import BlogposterAdd from "./Dashboard/Pages/Blogposter/BlogposterAdd";
 import DashboardMain from "./Dashboard/Pages/DashboardMain/DashboardMain";
+import DashboardBanner from "./Dashboard/Pages/DashboardBanner/DashboardBanner";
+import Addbanner from "./Dashboard/Pages/DashboardBanner/Addbanner";
 
 
 function App() {
@@ -55,6 +57,8 @@ function App() {
         <Route path="/blogposter" element={isLoggedIn === "true" ? <Blogposter /> : <LoginArea />} />
         <Route path="/blogposter-add" element={isLoggedIn === "true" ? <BlogposterAdd /> : <LoginArea />} />
         <Route path="/dashboard-area" element={isLoggedIn === "true" ? <DashboardMain /> : <LoginArea />} />
+        <Route path="/dashboard-banner" element={isLoggedIn === "true" ? <DashboardBanner /> : <LoginArea />} />
+        <Route path="/dashboard-banner-add" element={isLoggedIn === "true" ? <Addbanner /> : <LoginArea />} />
         
 
         <Route path="*" element={<PageError />} />

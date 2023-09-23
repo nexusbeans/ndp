@@ -157,7 +157,7 @@ export default function Home() {
         </section>
         <section className="section_ourvision">
           <Container>
-            <TitleWraper MainTitle={"Our Vision"} subTitle={"Our Vision"} />
+            {/* <TitleWraper MainTitle={"Our Vision"} subTitle={"Our Vision"} /> */}
             <Row className="whatsbook">
               {/* <div class="col-md-3 col-sm-6">
                     <div class="serviceBox">
@@ -219,7 +219,7 @@ export default function Home() {
           </Container>
         </section>
 
-        <section className="section_msgDrop reviewpadd">
+        {/* <section className="section_msgDrop reviewpadd">
           <Container>
             <TitleWraper
               MainTitle={"Contact with Us"}
@@ -232,7 +232,7 @@ export default function Home() {
                 </div>
               </Col>
               <Col md={6} className="rightform">
-                {/* <form onSubmit={handleSubmit} method="post" className="rightform_elements">
+                <form onSubmit={handleSubmit} method="post" className="rightform_elements">
                   <input type="hidden" value="HOME_PAGE_FORM" name="Form_Name" id="HOME_PAGE_FORM" />
                   <div id="blocks" className="form-group">
                     <div className="col-md-12">
@@ -327,7 +327,7 @@ export default function Home() {
                       </Button>
                     </div>
                   </div>
-                </form> */}
+                </form>
 
                 <HubspotForm
                   portalId="43797893"
@@ -339,7 +339,7 @@ export default function Home() {
               </Col>
             </div>
           </Container>
-        </section>
+        </section> */}
       </main>
       <Footer />
     </>

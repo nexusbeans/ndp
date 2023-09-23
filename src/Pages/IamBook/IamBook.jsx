@@ -193,10 +193,10 @@ export default function IamBook() {
                   teachings of the Bhagavad Gita and the Yoga Sutras of
                   Patanjali have guided his spiritual interests. Discovering the
                   ancient wisdom hidden in spiritual texts or in the minds of
-                  yogis brings joy to his heart. Inspired by Ashish, this book
+                  yogis brings joy to his heart. Inspired by Sri Ashish, this book
                   was written as an expression of that joy. Anil believes that
                   the spiritual mysticism has a perfect repeatable method which
-                  remains to be explained by science.
+                  remains to be explained by science.fdg
                 </p>
               </Col>
             </Row>

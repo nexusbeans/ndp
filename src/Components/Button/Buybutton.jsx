@@ -39,17 +39,17 @@ const Buybutton = () => {
     <>
       <div className="buy_nowBtnItem">
         <div id="country-1" className={countryId === 'country-1' ? 'showElements' : 'hideElements'}>
-          <a className="buyButton" target="_blank" rel="noopener noreferrer" href="https://adoholic.in">
+          <a className="buyButton" target="_blank" rel="noopener noreferrer" href="https://www.amazon.com/gp/aw/d/B0CH2CW7PT/ref=tmm_pap_swatch_0?ie=UTF8&qid=1693799292&sr=8-1">
             BuyNow <span><img src={BuyIcon} alt="buyicon" /> </span>
           </a>
         </div>
         <div id="country-2" className={countryId === 'country-2' ? 'showElements' : 'hideElements'}>
-          {/* <a className="buyButton" target="_blank" rel="noopener noreferrer" href="https://www.amazon.in/">
+          <a className="buyButton" target="_blank" rel="noopener noreferrer" href="https://amzn.eu/d/3n48rUW">
             BuyNow <span><img src={BuyIcon} alt="buyicon" /> </span>
-          </a> */}
-          <Modals ButtonModalTitle={"BUYNOW"}
+          </a>
+          {/* <Modals ButtonModalTitle={"BUYNOW"}
                       bodydata={"Book Will Be Available From 1st September 2023"}
-                    />
+                    /> */}
         </div>
         {/* <div id="country-3" className={countryId === 'country-3' ? 'showElements' : 'hideElements'}>
         <a className="buyButton"  target="_blank" rel="noopener noreferrer" href="https://www.flipkart.com/">
@@ -70,7 +70,7 @@ const Buybutton = () => {
           id="not-found"
           className={countryId === 'not-found' ? 'showElements' : 'hideElements'}
         >
-          <a className="buyButton" target="_blank" rel="noopener noreferrer" href="https://www.amazon.com/">
+          <a className="buyButton" target="_blank" rel="noopener noreferrer" href="https://www.amazon.com/gp/aw/d/B0CH2CW7PT/ref=tmm_pap_swatch_0?ie=UTF8&qid=1693799292&sr=8-1">
             BuyNow <span><img src={BuyIcon} alt="buyicon" /> </span>
           </a>
         </div>

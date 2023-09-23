@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import DynamicImage from "../../../Components/DynamicImage";
+import { FaFile, FaGauge, FaImage } from "react-icons/fa6";
 
 const Dashboardslidebar = () => {
   const logOut = () => {
@@ -368,20 +369,49 @@ const Dashboardslidebar = () => {
               <h5>Dashboards</h5>
             </li>
             <li className="menu-item">
-              <a href="index.html">
+              <Link to="/dashboard">
                 <div className="icon-item">
-                  <i data-feather="home" />
+                 <FaGauge/>
                 </div>
-                <span>default</span>
-              </a>
+                <span>Dashboards Area</span>
+              </Link>
+            </li>
+            <li className="cdxmenu-title">
+              <h5>pages</h5>
             </li>
             <li className="menu-item">
-              <a href="ecommerce.html">
+              <Link onClick={() => handleMenuClick(1)}>
                 <div className="icon-item">
-                  <i data-feather="airplay" />
+                <FaFile/>
                 </div>
-                <span>ecommerce</span>
-              </a>
+                <span>blog</span>
+                <i className="fa fa-angle-down" />
+              </Link>
+              <ul className={`submenu-list ${isMenuOpen[1] ? 'd-block' : ''}`}>
+                <li>
+                  <Link to="/blogposter">blog list</Link>
+                </li>
+                <li>
+                  <Link to="/blogposter-add">blog-add</Link>
+                </li>
+              </ul>
+            </li>
+            <li className="menu-item">
+              <Link onClick={() => handleMenuClick(3)}>
+                <div className="icon-item">
+                  <FaImage/>
+                </div>
+                <span>Front Banner</span>
+                <i className="fa fa-angle-down" />
+              </Link>
+              <ul className={`submenu-list ${isMenuOpen[3] ? 'd-block' : ''}`}>
+                <li>
+                  <Link to="/dashboard-banner">Banner list</Link>
+                </li>
+                <li>
+                  <Link to="/dashboard-banner-add">Banner Add</Link>
+                </li>
+              </ul>
             </li>
             <li className="cdxmenu-title">
               <h5>application</h5>
@@ -494,55 +524,8 @@ const Dashboardslidebar = () => {
                 <span>invoice</span>
               </a>
             </li>
-            <li className="cdxmenu-title">
-              <h5>pages</h5>
-            </li>
-            <li className="menu-item">
-              <Link onClick={() => handleMenuClick(1)}>
-                <div className="icon-item">
-                  <i data-feather="command" />
-                </div>
-                <span>blog</span>
-                <i className="fa fa-angle-down" />
-              </Link>
-              <ul className={`submenu-list ${isMenuOpen[1] ? 'd-block' : ''}`}>
-                <li>
-                  <Link to="/blogposter">blog list</Link>
-                </li>
-                <li>
-                  <Link to="/blogposter-add">blog-add</Link>
-                </li>
-              </ul>
-            </li>
-            <li className="menu-item">
-              <a href="javascript:void(0);">
-                <div className="icon-item">
-                  <i data-feather="key" />
-                </div>
-                <span>Authentication</span>
-                <i className="fa fa-angle-down" />
-              </a>
-              <ul className="submenu-list">
-                <li>
-                  <a href="login.html">login </a>
-                </li>
-                <li>
-                  <a href="register.html">register</a>
-                </li>
-                <li>
-                  <a href="forgot-password.html">forgot password</a>
-                </li>
-                <li>
-                  <a href="new-password.html">reset password</a>
-                </li>
-                <li>
-                  <a href="verify-email.html">verify email</a>
-                </li>
-                <li>
-                  <a href="verify-pin.html">verify pin</a>
-                </li>
-              </ul>
-            </li>
+
+
             <li className="menu-item">
               <a href="error-page.html">
                 <div className="icon-item">
@@ -601,206 +584,8 @@ const Dashboardslidebar = () => {
                 <span>gallery</span>
               </a>
             </li>
-            <li className="cdxmenu-title">
-              <h5>Components</h5>
-            </li>
-            <li className="menu-item">
-              <a href="javascript:void(0);">
-                <div className="icon-item">
-                  {" "}
-                  <i data-feather="book" />
-                </div>
-                <span>form</span>
-                <i className="fa fa-angle-down" />
-              </a>
-              <ul className="submenu-list">
-                <li>
-                  <a href="element-input.html">form element</a>
-                </li>
-                <li>
-                  <a href="element-checkbox-radio.html">checkbox &amp; radio</a>
-                </li>
-                <li>
-                  <a href="element-datepicker.html">datepicker</a>
-                </li>
-                <li>
-                  <a href="element-uidatepicker.html">ui datepicker</a>
-                </li>
-                <li>
-                  <a href="element-datetimepicker.html">datetimepicker</a>
-                </li>
-                <li>
-                  <a href="form.html">basic form</a>
-                </li>
-                <li>
-                  <a href="form-validation.html">validation</a>
-                </li>
-              </ul>
-            </li>
-            <li className="menu-item">
-              <a href="javascript:void(0);">
-                <div className="icon-item">
-                  {" "}
-                  <i data-feather="database" />
-                </div>
-                <span>Table</span>
-                <i className="fa fa-angle-down" />
-              </a>
-              <ul className="submenu-list">
-                <li>
-                  <a href="data-table.html">Datatable</a>
-                </li>
-                <li>
-                  <a href="data-table-advance.html">Datatable Advance</a>
-                </li>
-                <li>
-                  <a href="data-table-ajax.html">Datatable Ajax</a>
-                </li>
-              </ul>
-            </li>
-            <li className="menu-item">
-              <a href="javascript:void(0);">
-                <div className="icon-item">
-                  <i data-feather="layout" />
-                </div>
-                <span>Advance element</span>
-                <i className="fa fa-angle-down" />
-              </a>
-              <ul className="submenu-list">
-                <li>
-                  <a href="timeline-one.html">timeline one</a>
-                </li>
-                <li>
-                  <a href="timeline-two.html">timeline two</a>
-                </li>
-                <li>
-                  <a href="element-select2.html">select 2</a>
-                </li>
-                <li>
-                  <a href="element-switch.html">switch</a>
-                </li>
-                <li>
-                  <a href="element-dropzone.html">dropzone</a>
-                </li>
-                <li>
-                  <a href="element-rangeslider.html">range slider</a>
-                </li>
-                <li>
-                  <a href="bootstrap-notify.html">bootstrap notify</a>
-                </li>
-                <li>
-                  <a href="element-sweetalert2.html">sweetalert2</a>
-                </li>
-                <li>
-                  <a href="element-scrollbar.html">scrollbar</a>
-                </li>
-                <li>
-                  <a href="element-lightbox.html">light box</a>
-                </li>
-              </ul>
-            </li>
-            <li className="menu-item">
-              <a href="javascript:void(0);">
-                <div className="icon-item">
-                  <i data-feather="layout" />
-                </div>
-                <span>Componet</span>
-                <i className="fa fa-angle-down" />
-              </a>
-              <ul className="submenu-list">
-                <li>
-                  <a href="element-typography.html">typography</a>
-                </li>
-                <li>
-                  <a href="element-color.html">color</a>
-                </li>
-                <li>
-                  <a href="element-themeclass.html">helper class</a>
-                </li>
-                <li>
-                  <a href="element-alert.html">Alert</a>
-                </li>
-                <li>
-                  <a href="element-avtar.html">Avtar</a>
-                </li>
-                <li>
-                  <a href="element-button.html">Button</a>
-                </li>
-                <li>
-                  <a href="element-grid.html">grid</a>
-                </li>
-                <li>
-                  <a href="element-dropdown.html">Dropdown</a>
-                </li>
-                <li>
-                  <a href="element-breadcrumb.html">Breadcrumb</a>
-                </li>
-                <li>
-                  <a href="element-collapse.html">Collapse</a>
-                </li>
-                <li>
-                  <a href="element-accordion.html">Accordion</a>
-                </li>
-                <li>
-                  <a href="element-badge.html">badge</a>
-                </li>
-                <li>
-                  <a href="element-modal.html">modal</a>
-                </li>
-                <li>
-                  <a href="element-tab.html">tabs</a>
-                </li>
-                <li>
-                  <a href="element-popover.html">popover</a>
-                </li>
-                <li>
-                  <a href="element-tooltip.html">tooltip</a>
-                </li>
-                <li>
-                  <a href="element-card.html">card</a>
-                </li>
-                <li>
-                  <a href="element-progressbar.html">progress bar</a>
-                </li>
-                <li>
-                  <a href="element-pagination.html">pagination</a>
-                </li>
-              </ul>
-            </li>
-            <li className="menu-item">
-              <a href="javascript:void(0);">
-                <div className="icon-item">
-                  <i data-feather="slack" />
-                </div>
-                <span>Icons</span>
-                <i className="fa fa-angle-down" />
-              </a>
-              <ul className="submenu-list">
-                <li>
-                  <a href="element-fontaw-icon.html">Font Awesome</a>
-                </li>
-                <li>
-                  <a href="element-themify-icon.html">Themify</a>
-                </li>
-                <li>
-                  <a href="element-feather-icon.html">Feather</a>
-                </li>
-                <li>
-                  <a href="element-icoicon.html">icoicon</a>
-                </li>
-                <li>
-                  <a href="element-flag-icon.html">flag</a>
-                </li>
-              </ul>
-            </li>
-            <li className="menu-item">
-              <a href="faq.html">
-                <div className="icon-item">
-                  <i data-feather="help-circle" />
-                </div>
-                <span>faq</span>
-              </a>
-            </li>
+           
+
           </ul>
         </div>
       </aside>

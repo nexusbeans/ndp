@@ -1,10 +1,81 @@
-import React from "react";
+import React, { useState } from "react";
 import Dashboardslidebar from "../../ComponentDashboard/Dashboardslidebar/Dashboardslidebar";
 import DashboardFooter from "../../ComponentDashboard/DashboardFooter/DashboardFooter";
-import { CKEditor } from '@ckeditor/ckeditor5-react';
-import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function BlogposterAdd() {
+  const [BlogTitle, BlogTitleset] = useState("");
+  const [Blogdescription, Blogdescriptionset] = useState("");
+  const [BlogDate, BlogDateset] = useState("");
+  const [Blogername, Blogernameset] = useState("");
+  const [Blogimage, Blogimageset] = useState("");
+  const [Blogbuttonurl, Blogbuttonurlset] = useState("");
+
+  const navigate = useNavigate();
+
+  const handlesubmitblog = async (e) => {
+    e.preventDefault();
+    const BlogdataGet = {
+      BlogTitle,
+      Blogdescription,
+      BlogDate,
+      Blogername,
+      Blogbuttonurl,
+      Blogimage,
+    };
+    console.log(BlogdataGet);
+
+    const res = await axios
+      .post("http://localhost:5000/blogpostdata", BlogdataGet)
+
+      .then((res) => {
+        alert("Saved successfully.");
+        navigate("/blogposter-add");
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  };
+
+  // function covertToBase64(e) {
+  //   console.log(e);
+  //   var reader = new FileReader();
+  //   reader.readAsDataURL(e.target.files[0]);
+  //   reader.onload = () => {
+  //     console.log(reader.result); //base64encoded string
+  //     Blogimageset(reader.result);
+  //   };
+  //   reader.onerror = (error) => {
+  //     console.log("Error: ", error);
+  //   };
+  // }
+
+  function covertToBase64(e) {
+    var file = e.target.files[0];
+
+    // Check if the file size is within the limit (200KB or 200,000 bytes)
+    if (file.size > 200000) {
+      alert("File size exceeds the limit (200KB).");
+      window.location.reload(true);
+      return;
+    }
+
+    console.log(file);
+
+    var reader = new FileReader();
+    reader.readAsDataURL(file);
+
+    reader.onload = () => {
+      console.log(reader.result);
+      Blogimageset(reader.result);
+    };
+
+    reader.onerror = (error) => {
+      console.log("Error: ", error);
+    };
+  }
+
   return (
     <>
       <Dashboardslidebar />
@@ -20,10 +91,10 @@ function BlogposterAdd() {
                     </a>
                   </li>
                   <li className="breadcrumb-item">
-                    <a href="javascript:void(0);">ecommerce</a>
+                    <Link>ecommerce</Link>
                   </li>
                   <li className="breadcrumb-item active">
-                    <a href="javascript:void(0);">add product</a>
+                    <Link>add product</Link>
                   </li>
                 </ul>
               </div>
@@ -50,210 +121,83 @@ function BlogposterAdd() {
           <div className="theme-body cdxshopping-cart">
             <div className="custom-container">
               <div className="row">
-                <div className="col-lg-6">
-                  <div className="card">
-                    <div className="card-body">
-                      <div className="info-group">
-                        <form>
+                <div className="col-lg-12">
+                  <form onSubmit={handlesubmitblog}>
+                    <div className="card">
+                      <div className="card-body">
+                        <div className="info-group">
                           <div className="form-group">
-                            <label className="form-label">Product Name</label>
+                            <label className="form-label">image upload</label>
                             <input
                               className="form-control"
-                              type="text"
-                              placeholder="Enter Your Product Name"
+                              accept="image/*"
+                              type="file"
+                              onChange={covertToBase64}
                             />
                           </div>
                           <div className="form-group">
                             <label className="form-label">
-                              Product Description
+                              Blog Title Name
                             </label>
-                            <textarea
-                              id="crowenkeditor"
-                              placeholder="Enter YourProduct Description"
-                              defaultValue={""}
+                            <input
+                              className="form-control"
+                              type="text"
+                              placeholder="Enter Your Blog Name"
+                              onChange={(e) => BlogTitleset(e.target.value)}
                             />
                           </div>
                           <div className="form-group">
-                            <div className="small-group">
-                              <div>
-                                <label className="form-label">Categories</label>
-                                <select className="form-select">
-                                  <option>Select Categories</option>
-                                  <option>Fashion</option>
-                                  <option>Cosmetics</option>
-                                  <option>Sweater</option>
-                                  <option>Dress</option>
-                                  <option>Shirt</option>
-                                  <option>Sandel</option>
-                                  <option>Jacket</option>
-                                  <option>Pent</option>
-                                </select>
-                              </div>
-                              <div>
-                                <label className="form-label">Brand</label>
-                                <select className="form-select">
-                                  <option>Select Brand</option>
-                                  <option>Zara</option>
-                                  <option>Cartier</option>
-                                  <option>Lululemon</option>
-                                  <option>Moncler</option>
-                                  <option>Fendi</option>
-                                  <option>Old Navy</option>
-                                  <option>Moncler</option>
-                                  <option>Delhiwear</option>
-                                </select>
-                              </div>
-                            </div>
+                            <label className="form-label">Bloger name</label>
+                            <input
+                              className="form-control"
+                              type="text"
+                              placeholder="Enter Your Blog Name"
+                              onChange={(e) => Blogernameset(e.target.value)}
+                            />
+                          </div>
+                          <div className="form-group">
+                            <label className="form-label">Bloger Date</label>
+                            <input
+                              className="form-control"
+                              type="text"
+                              placeholder="Bloger Date"
+                              onChange={(e) => BlogDateset(e.target.value)}
+                            />
                           </div>
                           <div className="form-group mb-0">
-                            <label className="form-label">Comment</label>
+                            <label className="form-label">
+                              Blog description
+                            </label>
                             <textarea
                               className="form-control"
                               placeholder="Enter Your Comment"
                               defaultValue={""}
+                              onChange={(e) =>
+                                Blogdescriptionset(e.target.value)
+                              }
                             />
-                          </div>
-                        </form>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-lg-6">
-                  <div className="card">
-                    <div className="card-body">
-                      <form
-                        className="dropzone needsclick"
-                        id="demo-upload"
-                        action="/upload"
-                      >
-                        <div className="dz-message needsclick">
-                          <div className="upload-icon">
-                            <i className="fa fa-cloud-upload" />
-                          </div>
-                          <h3>Drop files here or click to upload.</h3>
-                          <p>
-                            (This is just a demo dropzone. Selected files are
-                            <strong>not actually uploaded.)</strong>
-                          </p>
-                        </div>
-                      </form>
-                      <div
-                        className="preview-dropzon"
-                        style={{ display: "none" }}
-                      >
-                        <div className="dz-preview dz-file-preview">
-                          <div className="dz-image">
-                            <img data-dz-thumbnail="" src="" alt="" />
-                          </div>
-                          <div className="dz-details">
-                            <div className="dz-size">
-                              <span data-dz-size="" />
-                            </div>
-                            <div className="dz-filename">
-                              <span data-dz-name="" />
-                            </div>
-                          </div>
-                          <div className="dz-progress">
-                            <span
-                              className="dz-upload"
-                              data-dz-uploadprogress=""
-                            />
-                          </div>
-                          <div className="dz-success-mark">
-                            <i className="fa fa-check" aria-hidden="true" />
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="card">
-                    <div className="card-body">
-                      <div className="info-group">
-                        <form>
-                          <div className="form-group">
-                            <label className="form-label">Price</label>
-                            <input
-                              className="form-control"
-                              type="text"
-                              placeholder="Enter Product Price"
-                            />
-                          </div>
-                          <div className="form-group mb-0">
-                            <label className="form-label">Status</label>
-                            <div className="small-group">
-                              <div>
-                                <div className="chek-group">
-                                  <span className="custom-check-input custom-chek">
-                                    <input
-                                      className="form-check-input"
-                                      type="radio"
-                                      id="pricerange_1"
-                                      name="Status"
-                                    />
-                                  </span>
-                                  <label
-                                    className="ml-5"
-                                    htmlFor="pricerange_1"
-                                  >
-                                    Online
-                                  </label>
-                                </div>
-                              </div>
-                              <div>
-                                <div className="chek-group">
-                                  <span className="custom-check-input custom-chek">
-                                    <input
-                                      className="form-check-input"
-                                      type="radio"
-                                      id="pricerange_2"
-                                      name="Status"
-                                    />
-                                  </span>
-                                  <label
-                                    className="ml-5"
-                                    htmlFor="pricerange_2"
-                                  >
-                                    Offline
-                                  </label>
-                                </div>
-                              </div>
-                              <div>
-                                <div className="chek-group">
-                                  <span className="custom-check-input custom-chek">
-                                    <input
-                                      className="form-check-input"
-                                      type="radio"
-                                      id="pricerange_3"
-                                      name="Status"
-                                    />
-                                  </span>
-                                  <label
-                                    className="ml-5"
-                                    htmlFor="pricerange_3"
-                                  >
-                                    Draft
-                                  </label>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </form>
+                    <div className="col-lg-12">
+                      <div className="group-button text-end">
+                        <button
+                          className="btn btn-success"
+                          type="submit"
+                          onSubmit={handlesubmitblog}
+                        >
+                          Add
+                        </button>
+                        <button
+                          className="btn btn-danger ml-15"
+                          onSubmit={handlesubmitblog}
+                        >
+                          cancle
+                        </button>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div className="col-lg-12">
-                  <div className="group-button text-end">
-                    <a className="btn btn-success" href="javascript:void(0)">
-                      Add
-                    </a>
-                    <a
-                      className="btn btn-danger ml-15"
-                      href="javascript:void(0)"
-                    >
-                      cancle
-                    </a>
-                  </div>
+                  </form>
                 </div>
               </div>
             </div>

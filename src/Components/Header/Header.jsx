@@ -92,6 +92,11 @@ export default function Header() {
                         </NavLink>
                       </li>
                       <li>
+                        <a href="https://ndpfoundation.medium.com/" className="header zoom">
+                          Blog
+                        </a>
+                      </li>
+                      <li>
                         <div className="dropdown">
                           <NavLink to="/i-am-book" className="header zoom">“I AM” – Book </NavLink>
                           <div className="dropdown-content">
@@ -167,12 +172,12 @@ export default function Header() {
                           Contact Us
                         </NavLink>
                       </li>
-                      <li>
+                      {/* <li>
                         <NavLink to="/signup-dashboard" className={({ isActive, isPending }) =>
                           isPending ? "pending" : isActive ? "active header zoom" : "header zoom"}>
                           Login
                         </NavLink>
-                      </li>
+                      </li> */}
                     </ul>
                   </nav>
                   <div className="mobile_elmenets">
