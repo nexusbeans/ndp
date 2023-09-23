@@ -5,6 +5,7 @@ import {
   FaYoutube,
   FaInstagram,
   FaLinkedinIn,
+  FaX,
 } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
@@ -13,6 +14,16 @@ const SocialIcons = () => {
     <>
       <div className="social_iconElements">
         <ul className="icon_fab d-flex">
+          
+        <li>
+            <Link
+              to="https://x.com/ndp_iam?s=21&t=CR3iCQf61dV5tljbmnDqHQ"
+              className="Icon_fab__link" target="_blank"
+            >
+              <FaX />
+            </Link>{" "}
+          </li>
+
           <li>
             <Link
               to="https://www.facebook.com/profile.php?id=100095348732723"

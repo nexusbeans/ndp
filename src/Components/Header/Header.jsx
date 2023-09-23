@@ -92,8 +92,8 @@ export default function Header() {
                         </NavLink>
                       </li>
                       <li>
-                        <a href="https://ndpfoundation.medium.com/" className="header zoom">
-                          Blog
+                        <a href="https://ndpfoundation.medium.com/" className="header zoom" target="_blank" rel="noreferrer">
+                          Blogs
                         </a>
                       </li>
                       <li>
